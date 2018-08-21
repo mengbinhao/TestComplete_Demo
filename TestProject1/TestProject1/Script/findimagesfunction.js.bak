@@ -1,0 +1,21 @@
+﻿function openImagesByIndex(index, imageList){
+  let ret = {};
+  let rows = patientList.witems.count - 1;
+  for (let i = 0; i < rows; i++) {
+    let findId = patientList.witems.item(i).Text('ID');
+    if (strictEqual(findId, id)) {
+      ret.id = patientList.witems.item(i).Text('ID');
+      ret.name = patientList.witems.item(i).Text('Name');
+      ret.gender = patientList.witems.item(i).Text('Gender');
+      ret.age = patientList.witems.item(i).Text('Age');
+      ret.height = patientList.witems.item(i).Text('Height');
+      ret.weight = patientList.witems.item(i).Text('Weight');
+      ret.phone = patientList.witems.item(i).Text('Phone');
+      ret.address = patientList.witems.item(i).Text('Address');
+      ret.createTime = patientList.witems.item(i).Text('Create Time');
+      return ret;
+    }
+  }
+  return ret;
+}
+module.exports.findPatientById = findPatientById;

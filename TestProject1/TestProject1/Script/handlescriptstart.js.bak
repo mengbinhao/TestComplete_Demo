@@ -1,0 +1,5 @@
+﻿var indelplanUI = require("indelplanUI");
+
+function GeneralEvents_OnStartTest(Sender) {
+    Project.Variables.indel = indelplanUI.initUI();
+}

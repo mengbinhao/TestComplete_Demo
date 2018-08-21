@@ -1,0 +1,910 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<Root signature="{362A8EE5-675E-43A9-869D-06ECE80B0CB4}" version="12.0">
+	<children>
+		<child name="Stores" key="{5BAC6E6C-A071-4D05-82D2-F2B59D0DD516}" type="Stores" typeId="{5238AF17-5FE2-48FF-8BCC-9803A975A4F4}" pluginName="Stores">
+			<data path="Stores\Stores.tcStores" />
+		</child>
+		<child name="TestedApps" key="{EC13F775-5A54-4740-87EC-1D88AC9388E0}" type="Tested Applications" typeId="{90D101C8-80C7-48D4-9055-2E451B9BCD75}" pluginName="">
+			<data path="TestedApps\TestedApps.tcTAs" />
+		</child>
+		<child name="NameMapping" key="{6AF20C7C-3B73-4CB7-8221-2FCFFBC0801C}" type="Name Mapping" typeId="{5DCBAC3B-D39C-497C-9BE8-744CBADD37AA}" pluginName="NameMapping">
+			<data path="NameMapping\NameMapping.tcNM" />
+		</child>
+		<child name="KeywordTests" key="{3FFEFD4B-B906-47F6-B757-F77033193658}" type="Keyword Testing" typeId="{9576DAFD-0ADD-41A8-9897-C72F150AF6BB}" pluginName="Keyword Testing">
+			<data path="KeywordTests\KeywordTests.tcKDT" />
+		</child>
+		<child name="Script" key="{AC843B13-0161-41F9-9513-13C1CD910D02}" type="Script" typeId="{9252F941-DB23-4FCA-AA50-858B33BB4A19}" pluginName="Script">
+			<data path="Script\Script.tcScript" />
+		</child>
+		<child name="Events" key="{B6403E4A-8B61-4C58-A5F2-7C940D1EABB0}" type="Events" typeId="{E7ABA87F-E873-4452-9921-6F4BAAEB2BCC}" pluginName="">
+			<data path="Events\Events.tcAX" />
+		</child>
+		<child name="ImageRepository" key="{C18F89FA-AE9B-4EB5-8732-2F1153954F3D}" type="Image Repository" typeId="{E7C36009-4A66-4899-99AE-DEFC5C22C057}" pluginName="">
+			<data path="ImageRepository\ImageRepository.tcIR" />
+		</child>
+	</children>
+	<folders>
+		<folder caption="Advanced" description="A logical folder that is used to organize project items and elements." moniker="{69583268-92F3-49FA-B573-C831F5ABC27B}">
+			<references>
+				<ref key="{AC843B13-0161-41F9-9513-13C1CD910D02}" />
+				<ref key="{B6403E4A-8B61-4C58-A5F2-7C940D1EABB0}" />
+				<ref key="{C18F89FA-AE9B-4EB5-8732-2F1153954F3D}" />
+			</references>
+		</folder>
+	</folders>
+	<config language="{90F89436-9452-4F95-9882-6B5210079F13}" />
+	<testItems key="{F752D210-EF01-40B9-BDA2-E617EC1DA411}">
+		<children>
+			<testItem name="All" key="{94D93621-8C95-4A37-8BA1-6077B09E2E23}" group="True" enabled="False" testMoniker="" count="1" timeout="0" stopOnError="2" stopOnException="2" description="">
+				<testParameters />
+				<children>
+					<testItem name="login_and_logout" key="{B51B59D7-D2C7-410A-9C04-252E0F94EC89}" group="True" enabled="True" testMoniker="" count="1" timeout="0" stopOnError="2" stopOnException="2" description="">
+						<testParameters />
+						<children>
+							<testItem name="launchwithlogic" key="{64721CC9-A222-44D4-99FB-740E7C541CB7}" group="False" enabled="True" testMoniker="{7F9FA413-E4BC-4613-9A2E-0D5597A168C9}launchWithLogic" count="1" timeout="2" stopOnError="1" stopOnException="1" description="">
+								<testParameters />
+								<children />
+							</testItem>
+							<testItem name="login" key="{A081C105-4F2B-42CD-A531-D319F9F8CBC2}" group="False" enabled="True" testMoniker="{A303ABA3-29A1-40E4-B9EA-685430CF0937}login" count="1" timeout="0" stopOnError="2" stopOnException="2" description="">
+								<testParameters>
+									<param0 name="username" type="3" localVarName="username" localVarLevel="1" value="" />
+									<param1 name="password" type="3" localVarName="password" localVarLevel="1" value="" />
+								</testParameters>
+								<children />
+							</testItem>
+							<testItem name="logout" key="{AA6805C7-4356-49F7-8497-302ACB78EF74}" group="False" enabled="True" testMoniker="{42373CDE-C63F-47E9-A1A8-BDB57F55A2F8}logout" count="1" timeout="0" stopOnError="2" stopOnException="2" description="">
+								<testParameters />
+								<children />
+							</testItem>
+							<testItem name="exit" key="{A1A7188C-7619-44A5-AEAA-5C3224ED09AB}" group="False" enabled="True" testMoniker="{4562BB8E-9BF5-44DC-8B46-A42A91A50538}exit" count="1" timeout="0" stopOnError="2" stopOnException="2" description="">
+								<testParameters />
+								<children />
+							</testItem>
+						</children>
+					</testItem>
+					<testItem name="usermanagement" key="{0435AB0E-E54C-4B4F-BCD2-DE4914992EEE}" group="True" enabled="True" testMoniker="" count="1" timeout="0" stopOnError="2" stopOnException="2" description="">
+						<testParameters />
+						<children>
+							<testItem name="launchwithlogic" key="{29A33DB8-7425-4BEF-9061-28BC5977C60B}" group="False" enabled="True" testMoniker="{7F9FA413-E4BC-4613-9A2E-0D5597A168C9}launchWithLogic" count="1" timeout="2" stopOnError="1" stopOnException="1" description="">
+								<testParameters />
+								<children />
+							</testItem>
+							<testItem name="login" key="{6233401C-4001-4821-8158-672F6DF41C04}" group="False" enabled="True" testMoniker="{A303ABA3-29A1-40E4-B9EA-685430CF0937}login" count="1" timeout="0" stopOnError="2" stopOnException="2" description="">
+								<testParameters>
+									<param0 name="username" type="3" localVarName="username" localVarLevel="1" value="" />
+									<param1 name="password" type="3" localVarName="password" localVarLevel="1" value="" />
+								</testParameters>
+								<children />
+							</testItem>
+							<testItem name="adduser" key="{5DBDF859-8E19-4151-804A-24375189FCC2}" group="False" enabled="True" testMoniker="{F85E1C22-E146-440A-8570-EBFA048DD670}addUser" count="1" timeout="0" stopOnError="2" stopOnException="2" description="">
+								<testParameters>
+									<param0 name="newusername" type="3" localVarName="newusername" localVarLevel="1" value="" />
+									<param1 name="newuserpassword" type="3" localVarName="newuserpassword" localVarLevel="1" value="" />
+									<param2 name="usertype" type="3" localVarName="newusertype" localVarLevel="1" value="" />
+								</testParameters>
+								<children />
+							</testItem>
+							<testItem name="edituser" key="{C8A2E0B0-7F1B-4B99-98E6-157C9D029AD1}" group="False" enabled="True" testMoniker="{DB884D76-E677-4522-8EBA-7F92EC1187E1}editUser" count="1" timeout="0" stopOnError="2" stopOnException="2" description="">
+								<testParameters>
+									<param0 name="editusername" type="3" localVarName="newusername" localVarLevel="1" value="" />
+									<param1 name="edituserpassword" type="3" localVarName="edituserpassword" localVarLevel="1" value="" />
+									<param2 name="editusertype" type="3" localVarName="editusertype" localVarLevel="1" value="" />
+								</testParameters>
+								<children />
+							</testItem>
+							<testItem name="deleteuser" key="{D553A874-E4A9-418A-B7CD-C64B9CE88182}" group="False" enabled="True" testMoniker="{5F6D9CC8-87AA-4A20-975B-6307804FFA21}deleteUser" count="1" timeout="0" stopOnError="2" stopOnException="2" description="">
+								<testParameters>
+									<param0 name="deleteusername" type="3" localVarName="newusername" localVarLevel="1" value="" />
+								</testParameters>
+								<children />
+							</testItem>
+							<testItem name="logout" key="{73B36119-F9F1-4A41-BE26-3CB8DA446411}" group="False" enabled="True" testMoniker="{42373CDE-C63F-47E9-A1A8-BDB57F55A2F8}logout" count="1" timeout="0" stopOnError="2" stopOnException="2" description="">
+								<testParameters />
+								<children />
+							</testItem>
+							<testItem name="exit" key="{9C3CA43B-F4CF-4D05-9098-0311B3E654ED}" group="False" enabled="True" testMoniker="{4562BB8E-9BF5-44DC-8B46-A42A91A50538}exit" count="1" timeout="0" stopOnError="2" stopOnException="2" description="">
+								<testParameters />
+								<children />
+							</testItem>
+						</children>
+					</testItem>
+					<testItem name="patientmanagement" key="{22A6DF95-8859-4AB3-BB86-A06F6428A5D9}" group="True" enabled="True" testMoniker="" count="1" timeout="0" stopOnError="2" stopOnException="2" description="">
+						<testParameters />
+						<children>
+							<testItem name="launchwithlogic" key="{F879E05D-7BF4-43F2-BCAB-EC604B6939F8}" group="False" enabled="True" testMoniker="{7F9FA413-E4BC-4613-9A2E-0D5597A168C9}launchWithLogic" count="1" timeout="2" stopOnError="1" stopOnException="1" description="">
+								<testParameters />
+								<children />
+							</testItem>
+							<testItem name="login" key="{EEFE2A23-2571-4A9D-928F-F63EB58C8FA8}" group="False" enabled="True" testMoniker="{A303ABA3-29A1-40E4-B9EA-685430CF0937}login" count="1" timeout="0" stopOnError="2" stopOnException="2" description="">
+								<testParameters>
+									<param0 name="username" type="3" localVarName="username" localVarLevel="1" value="" />
+									<param1 name="password" type="3" localVarName="password" localVarLevel="1" value="" />
+								</testParameters>
+								<children />
+							</testItem>
+							<testItem name="addpatient" key="{30305D2E-0D0D-4F06-A05B-75749731C892}" group="False" enabled="True" testMoniker="{12DC4B05-CC3D-434C-B495-635437086ECC}addpatient" count="1" timeout="0" stopOnError="2" stopOnException="2" description="">
+								<testParameters>
+									<param0 name="name" type="3" localVarName="newpatientname" localVarLevel="1" value="" />
+									<param1 name="id" type="3" localVarName="newpatientid" localVarLevel="1" value="" />
+								</testParameters>
+								<children />
+							</testItem>
+							<testItem name="editpatient" key="{DB18DDEB-A664-4950-B3B4-D38B88F21752}" group="False" enabled="True" testMoniker="{83FBE314-FB37-4219-AC9E-B9C6B66EC613}editpatient" count="1" timeout="0" stopOnError="2" stopOnException="2" description="">
+								<testParameters>
+									<param0 name="patientId" type="3" localVarName="newpatientid" localVarLevel="1" value="" />
+									<param1 name="editname" type="3" localVarName="editpatientname" localVarLevel="1" value="" />
+								</testParameters>
+								<children />
+							</testItem>
+							<testItem name="deletepatient" key="{6648D729-1F40-479C-8B02-3F9B71061375}" group="False" enabled="True" testMoniker="{5657FD70-101F-4B3E-9ED6-C1345CE45A72}deletepatient" count="1" timeout="0" stopOnError="2" stopOnException="2" description="">
+								<testParameters>
+									<param0 name="patientId" type="3" localVarName="newpatientid" localVarLevel="1" value="" />
+								</testParameters>
+								<children />
+							</testItem>
+							<testItem name="logout" key="{24F385A6-CCC4-4F68-BADE-D8D71B7C4A7C}" group="False" enabled="True" testMoniker="{42373CDE-C63F-47E9-A1A8-BDB57F55A2F8}logout" count="1" timeout="0" stopOnError="2" stopOnException="2" description="">
+								<testParameters />
+								<children />
+							</testItem>
+							<testItem name="exit" key="{A2DD8E8C-227D-4EA4-B74D-0B785D454A05}" group="False" enabled="True" testMoniker="{4562BB8E-9BF5-44DC-8B46-A42A91A50538}exit" count="1" timeout="0" stopOnError="2" stopOnException="2" description="">
+								<testParameters />
+								<children />
+							</testItem>
+						</children>
+					</testItem>
+				</children>
+			</testItem>
+			<testItem name="smoke" key="{FF55FEB6-957B-4B4B-BD15-A5ACFB73729C}" group="True" enabled="False" testMoniker="" count="1" timeout="0" stopOnError="2" stopOnException="2" description="">
+				<testParameters />
+				<children>
+					<testItem name="launchwithlogic" key="{6D227A76-3D82-417C-B74F-AA769AA03725}" group="False" enabled="True" testMoniker="{7F9FA413-E4BC-4613-9A2E-0D5597A168C9}launchWithLogic" count="1" timeout="2" stopOnError="1" stopOnException="1" description="">
+						<testParameters />
+						<children />
+					</testItem>
+					<testItem name="login" key="{CD220F50-D66C-4B4A-B883-94181E98F7DB}" group="False" enabled="True" testMoniker="{A303ABA3-29A1-40E4-B9EA-685430CF0937}login" count="1" timeout="0" stopOnError="2" stopOnException="2" description="">
+						<testParameters>
+							<param0 name="username" type="3" localVarName="username" localVarLevel="1" value="" />
+							<param1 name="password" type="3" localVarName="password" localVarLevel="1" value="" />
+						</testParameters>
+						<children />
+					</testItem>
+					<testItem name="addpatient" key="{742DD818-BCB7-493A-84C4-4BDD09E5E5BB}" group="False" enabled="True" testMoniker="{12DC4B05-CC3D-434C-B495-635437086ECC}addpatient" count="1" timeout="0" stopOnError="2" stopOnException="2" description="">
+						<testParameters>
+							<param0 name="name" type="3" localVarName="newpatientname" localVarLevel="1" value="" />
+							<param1 name="id" type="3" localVarName="newpatientid" localVarLevel="1" value="" />
+						</testParameters>
+						<children />
+					</testItem>
+					<testItem name="gotopatientdetail" key="{3149FE68-8FA8-4AF7-85B0-536B6868AA93}" group="False" enabled="True" testMoniker="{4E5FD4B9-B434-485D-A5F5-B7B5E45D0908}gotopatientdetail" count="1" timeout="0" stopOnError="2" stopOnException="2" description="">
+						<testParameters>
+							<param0 name="patientId" type="3" localVarName="newpatientid" localVarLevel="1" value="" />
+						</testParameters>
+						<children />
+					</testItem>
+					<testItem name="addcontour" key="{F55677F4-ABFD-41EF-BC7D-3A344D538E7B}" group="False" enabled="True" testMoniker="{32471BD3-A098-45B3-98D5-EA97C0ED88FB}addcontour" count="1" timeout="0" stopOnError="2" stopOnException="2" description="">
+						<testParameters>
+							<param0 name="treatPart" type="3" localVarName="treatpart" localVarLevel="1" value="" />
+						</testParameters>
+						<children />
+					</testItem>
+					<testItem name="sketchcontour" key="{36BEDFEF-035A-495A-9157-D9C5EC11939F}" group="False" enabled="True" testMoniker="{E416AECB-4C07-4B50-90D0-7C906EED0D80}sketchcontour" count="1" timeout="0" stopOnError="2" stopOnException="2" description="">
+						<testParameters>
+							<param0 name="x1" type="3" localVarName="areaX1" localVarLevel="1" value="" />
+							<param1 name="y1" type="3" localVarName="areaY1" localVarLevel="1" value="" />
+							<param2 name="x2" type="3" localVarName="areaX2" localVarLevel="1" value="" />
+							<param3 name="y2" type="3" localVarName="areaY2" localVarLevel="1" value="" />
+							<param4 name="x3" type="3" localVarName="areaX3" localVarLevel="1" value="" />
+							<param5 name="y3" type="3" localVarName="areaY3" localVarLevel="1" value="" />
+						</testParameters>
+						<children />
+					</testItem>
+					<testItem name="gotomainpage" key="{DB2D0B10-F90B-448E-9605-BDDA38E3C535}" group="False" enabled="True" testMoniker="{8FB1A63F-BFC5-41CA-8DC8-D645C84626FB}gotomainpage" count="1" timeout="0" stopOnError="2" stopOnException="2" description="">
+						<testParameters />
+						<children />
+					</testItem>
+					<testItem name="gotopatientdetail" key="{12DA1DBD-46E9-487D-966C-94956036EA45}" group="False" enabled="True" testMoniker="{4E5FD4B9-B434-485D-A5F5-B7B5E45D0908}gotopatientdetail" count="1" timeout="0" stopOnError="2" stopOnException="2" description="">
+						<testParameters>
+							<param0 name="patientId" type="3" localVarName="newpatientid" localVarLevel="1" value="" />
+						</testParameters>
+						<children />
+					</testItem>
+					<testItem name="addtreatcourse" key="{B618F632-1942-493D-908F-FBE8242EBD88}" group="False" enabled="True" testMoniker="{CA5EB1C8-F5BA-4DA5-81E5-F7A421BF3317}addtreatcourse" count="1" timeout="0" stopOnError="2" stopOnException="2" description="">
+						<testParameters />
+						<children />
+					</testItem>
+					<testItem name="addplan" key="{A4775C62-D9AB-47F5-8F5E-1DF0A4D0B2D0}" group="False" enabled="True" testMoniker="{3C6C5078-4ECF-475B-9138-306E646B1FEF}addplan" count="1" timeout="0" stopOnError="2" stopOnException="2" description="">
+						<testParameters />
+						<children />
+					</testItem>
+					<testItem name="gotoplandesign" key="{187479B9-57FC-41B1-A388-4D1F591149A9}" group="False" enabled="True" testMoniker="{DE2E367A-3F7D-4B52-B17F-E29B9D69E9FC}gotoplandesign" count="1" timeout="0" stopOnError="2" stopOnException="2" description="">
+						<testParameters />
+						<children />
+					</testItem>
+					<testItem name="makeplan" key="{DFA673A3-7B60-4F79-8A00-CE796BA6D206}" group="False" enabled="True" testMoniker="{3C396E2A-CF90-4606-880A-697AB9EFBD91}makeplan" count="1" timeout="0" stopOnError="2" stopOnException="2" description="">
+						<testParameters>
+							<param0 name="percentage" type="3" localVarName="percentage" localVarLevel="1" value="" />
+							<param1 name="dosevalue" type="3" localVarName="dosevalue" localVarLevel="1" value="" />
+							<param2 name="confirmusername" type="3" localVarName="username" localVarLevel="1" value="" />
+							<param3 name="confirmpassword" type="3" localVarName="password" localVarLevel="1" value="" />
+							<param4 name="x" type="3" localVarName="pointX" localVarLevel="1" value="" />
+							<param5 name="y" type="3" localVarName="pointY" localVarLevel="1" value="" />
+						</testParameters>
+						<children />
+					</testItem>
+					<testItem name="gotomainpage" key="{A3C13744-B1F0-46DB-996D-987AC2B84ED7}" group="False" enabled="True" testMoniker="{8FB1A63F-BFC5-41CA-8DC8-D645C84626FB}gotomainpage" count="1" timeout="0" stopOnError="2" stopOnException="2" description="">
+						<testParameters />
+						<children />
+					</testItem>
+					<testItem name="deletepatient" key="{963F0817-19A5-4075-8A3D-1FBA06023B87}" group="False" enabled="True" testMoniker="{5657FD70-101F-4B3E-9ED6-C1345CE45A72}deletepatient" count="1" timeout="0" stopOnError="2" stopOnException="2" description="">
+						<testParameters>
+							<param0 name="patientId" type="3" localVarName="newpatientid" localVarLevel="1" value="" />
+						</testParameters>
+						<children />
+					</testItem>
+					<testItem name="logout" key="{2F684C4E-98AE-42FB-91E1-F195EB06DBAF}" group="False" enabled="True" testMoniker="{42373CDE-C63F-47E9-A1A8-BDB57F55A2F8}logout" count="1" timeout="0" stopOnError="2" stopOnException="2" description="">
+						<testParameters />
+						<children />
+					</testItem>
+					<testItem name="exit" key="{1840327E-38BA-47C8-969C-BDB511B83937}" group="False" enabled="True" testMoniker="{4562BB8E-9BF5-44DC-8B46-A42A91A50538}exit" count="1" timeout="0" stopOnError="2" stopOnException="2" description="">
+						<testParameters />
+						<children />
+					</testItem>
+				</children>
+			</testItem>
+			<testItem name="cases" key="{877D6CDF-8563-400F-82CE-66B1E5415C68}" group="True" enabled="False" testMoniker="" count="1" timeout="0" stopOnError="2" stopOnException="2" description="">
+				<testParameters />
+				<children>
+					<testItem name="patientmanagement" key="{9AFE79C3-9CE7-4721-B059-E8859A20A334}" group="True" enabled="True" testMoniker="" count="1" timeout="0" stopOnError="2" stopOnException="2" description="">
+						<testParameters />
+						<children>
+							<testItem name="case016" key="{7EDD5070-2F01-42E9-8FA4-E0E660C36310}" group="False" enabled="True" testMoniker="{7369E56D-E08B-415E-AA86-068716DDD21E}case016" count="1" timeout="0" stopOnError="2" stopOnException="2" description="">
+								<testParameters>
+									<param0 name="username" type="3" localVarName="username" localVarLevel="1" value="" />
+									<param1 name="password" type="3" localVarName="password" localVarLevel="1" value="" />
+								</testParameters>
+								<children />
+							</testItem>
+						</children>
+					</testItem>
+				</children>
+			</testItem>
+			<testItem name="bug" key="{D550842E-9132-4321-95A1-0E5A082515CE}" group="True" enabled="False" testMoniker="" count="1" timeout="0" stopOnError="2" stopOnException="2" description="">
+				<testParameters />
+				<children>
+					<testItem name="defualtsort" key="{0A1387D1-0887-45C6-8AA6-DE1B7876896C}" group="False" enabled="True" testMoniker="{2408EB04-756E-4DC7-9C7D-7912FD70DA7D}defualtsort" count="1" timeout="0" stopOnError="2" stopOnException="2" description="">
+						<testParameters>
+							<param0 name="username" type="3" localVarName="username" localVarLevel="1" value="" />
+							<param1 name="password" type="3" localVarName="password" localVarLevel="1" value="" />
+						</testParameters>
+						<children />
+					</testItem>
+				</children>
+			</testItem>
+		</children>
+	</testItems>
+	<variables key="{E49587B3-76C8-4ED6-94EC-B7DED7D37C22}">
+		<data Version="3">
+			<Items>
+				<Variable Name="username" Type="{123F0C0F-44B4-4BAF-B0E6-F3F89FD873B5}" Local="False">
+					<DefValue StrValue="6F0075007200" />
+				</Variable>
+				<Variable Name="password" Type="{123F0C0F-44B4-4BAF-B0E6-F3F89FD873B5}" Local="False">
+					<DefValue StrValue="310032003300" />
+				</Variable>
+				<Variable Name="newusername" Type="{123F0C0F-44B4-4BAF-B0E6-F3F89FD873B5}" Local="False">
+					<DefValue StrValue="7400650073007400" />
+				</Variable>
+				<Variable Name="newuserpassword" Type="{123F0C0F-44B4-4BAF-B0E6-F3F89FD873B5}" Local="False">
+					<DefValue StrValue="310032003300" />
+				</Variable>
+				<Variable Name="newusertype" Type="{123F0C0F-44B4-4BAF-B0E6-F3F89FD873B5}" Local="False">
+					<DefValue StrValue="54006500630068006E0069006300690061006E00" />
+				</Variable>
+				<Variable Name="editusertype" Type="{123F0C0F-44B4-4BAF-B0E6-F3F89FD873B5}" Local="False">
+					<DefValue StrValue="560069007300690074006F007200" />
+				</Variable>
+				<Variable Name="edituserpassword" Type="{123F0C0F-44B4-4BAF-B0E6-F3F89FD873B5}" Local="False">
+					<DefValue StrValue="3100320033003400" />
+				</Variable>
+				<Variable Name="newpatientname" Type="{123F0C0F-44B4-4BAF-B0E6-F3F89FD873B5}" Local="False">
+					<DefValue StrValue="7A007400650073007400" />
+				</Variable>
+				<Variable Name="newpatientid" Type="{123F0C0F-44B4-4BAF-B0E6-F3F89FD873B5}" Local="False">
+					<DefValue StrValue="7A007400650073007400" />
+				</Variable>
+				<Variable Name="editpatientname" Type="{123F0C0F-44B4-4BAF-B0E6-F3F89FD873B5}" Local="False">
+					<DefValue StrValue="7A0074006500730074007A007400650073007400" />
+				</Variable>
+				<Variable Name="treatpart" Type="{123F0C0F-44B4-4BAF-B0E6-F3F89FD873B5}" Local="False">
+					<DefValue StrValue="590041004E00470020004400410020005A0048004F004E004700" />
+				</Variable>
+				<Variable Name="percentage" Type="{123F0C0F-44B4-4BAF-B0E6-F3F89FD873B5}" Local="False">
+					<DefValue StrValue="35003000" />
+				</Variable>
+				<Variable Name="dosevalue" Type="{123F0C0F-44B4-4BAF-B0E6-F3F89FD873B5}" Local="False">
+					<DefValue StrValue="3200300030003000" />
+				</Variable>
+				<Variable Name="pointX" Type="{123F0C0F-44B4-4BAF-B0E6-F3F89FD873B5}" Local="False">
+					<DefValue StrValue="380031003400" />
+				</Variable>
+				<Variable Name="pointY" Type="{123F0C0F-44B4-4BAF-B0E6-F3F89FD873B5}" Local="False">
+					<DefValue StrValue="350030003300" />
+				</Variable>
+				<Variable Name="areaX1" Type="{123F0C0F-44B4-4BAF-B0E6-F3F89FD873B5}" Local="False">
+					<DefValue StrValue="370039003200" />
+				</Variable>
+				<Variable Name="areaY1" Type="{123F0C0F-44B4-4BAF-B0E6-F3F89FD873B5}" Local="False">
+					<DefValue StrValue="340033003800" />
+				</Variable>
+				<Variable Name="areaX2" Type="{123F0C0F-44B4-4BAF-B0E6-F3F89FD873B5}" Local="False">
+					<DefValue StrValue="370039003200" />
+				</Variable>
+				<Variable Name="areaY2" Type="{123F0C0F-44B4-4BAF-B0E6-F3F89FD873B5}" Local="False">
+					<DefValue StrValue="350035003400" />
+				</Variable>
+				<Variable Name="areaX3" Type="{123F0C0F-44B4-4BAF-B0E6-F3F89FD873B5}" Local="False">
+					<DefValue StrValue="380037003600" />
+				</Variable>
+				<Variable Name="areaY3" Type="{123F0C0F-44B4-4BAF-B0E6-F3F89FD873B5}" Local="False">
+					<DefValue StrValue="350031003300" />
+				</Variable>
+				<Variable Name="indel" Type="{F38B9AD1-7B22-410F-95FC-6D9420FDE947}" Local="False">
+					<DefValue />
+				</Variable>
+			</Items>
+		</data>
+	</variables>
+	<settings key="{DB18F155-6CB4-4426-8A8F-E6FDCA37C84C}">
+		<settingsVersion value="12.50" />
+		<setting name="JavaFXOpenApp_NodeByClassNameFilters" type="6" rowIndex="8" colIndex="2">
+			<columns>
+				<column type="1" enabled="True" />
+				<column type="5" enabled="True" />
+				<column type="1" enabled="True" />
+			</columns>
+			<data>
+				<row val0="False" val1="*" val2="False" />
+				<row val0="True" val1="javafx.scene.SubScene" val2="True" />
+				<row val0="True" val1="javafx.scene.control.Control" val2="True" />
+				<row val0="True" val1="javafx.scene.web.WebView" val2="False" />
+				<row val0="False" val1="javafx.scene.canvas.Canvas" val2="True" />
+				<row val0="False" val1="javafx.scene.image.ImageView" val2="True" />
+				<row val0="False" val1="javafx.scene.media.MediaView" val2="True" />
+				<row val0="True" val1="com.sun.javafx.scene.control.skin.ContextMenuContent$MenuItemContainer" val2="True" />
+				<row val0="True" val1="com.sun.javafx.scene.control.ContextMenuContent$MenuItemContainer" val2="True" />
+			</data>
+		</setting>
+		<setting name="{42651A7C-4287-4C91-AE26-98CBD2EA9355}" type="1" value="False" />
+		<setting name="{A2568CC8-7E8E-42C5-A87D-B69684A1E616}" type="1" value="False" />
+		<setting name="{3EADAFE2-0CD4-4B1E-A2A9-B184E94FDCC7}" type="6" rowIndex="1" colIndex="0">
+			<columns>
+				<column type="5" enabled="True" />
+			</columns>
+			<data>
+				<row val0="UTF-16" />
+				<row val0="UTF-8" />
+				<row val0="ANSI" />
+				<row val0="Auto" />
+			</data>
+		</setting>
+		<setting name="RecreateActiveXObjects" type="1" value="False" />
+		<setting name="{6F8262CE-7343-484E-81B4-8F04EA5533B0}" type="1" value="False" />
+		<setting name="{0BE15905-46A9-40D6-9BE2-892EC4AABBD4}" type="1" value="False" />
+		<setting name="{9273E75A-1D1D-4F5F-9421-28A4BD60D485}" type="1" value="True" />
+		<setting name="{239AE5E0-D898-415D-8ECB-EBEB31D3F66F}" type="6" rowIndex="2" colIndex="1">
+			<columns>
+				<column type="1" enabled="True" />
+				<column type="5" enabled="True" />
+			</columns>
+			<data>
+				<row val0="False" val1="*" />
+				<row val0="True" val1="DirectUIHWND" />
+				<row val0="True" val1="Windows.UI.Core.CoreWindow" />
+			</data>
+		</setting>
+		<setting name="{E3AC1830-9216-4DC9-AB7B-884F3B0E9A48}" type="2" value="0" />
+		<setting name="{7E9D3E8B-DFF5-4737-A877-E94B6B932BCD}" type="1" value="True" />
+		<setting name="{0CC2421A-8395-402E-B303-80AE4D4658A4}" type="1" value="True" />
+		<setting name="{6BA39D6A-88C9-49B1-A310-A31F46136DFB}" type="1" value="True" />
+		<setting name="{2FCB2EB2-336E-4FD4-96A3-8710A73ADDD8}" type="1" value="True" />
+		<setting name="{FE195F25-7DC0-457F-9336-71ED39243753}" type="5" value="126_0_0_0_97_113_115_111_1_0_0_0_4_0_0_0_114_0_111_0_111_0_116_0_1_0_0_0_9_0_0_0_102_0_111_0_114_0_109_0_97_0_116_0_107_0_101_0_121_0_1_0_0_0_38_0_0_0_123_0_66_0_65_0_55_0_52_0_53_0_49_0_54_0_57_0_45_0_70_0_51_0_52_0_68_0_45_0_52_0_55_0_49_0_48_0_45_0_66_0_51_0_55_0_70_0_45_0_68_0_53_0_69_0_70_0_69_0_56_0_65_0_53_0_49_0_51_0_51_0_57_0_125_0_1_0_0_0_16_0_0_0_112_0_110_0_103_0_99_0_111_0_110_0_102_0_105_0_103_0_117_0_114_0_97_0_116_0_105_0_111_0_110_0_2_0_0_0_16_0_0_0_99_0_111_0_109_0_112_0_114_0_101_0_115_0_115_0_105_0_111_0_110_0_108_0_101_0_118_0_101_0_108_0_0_0_0_0_4_0_0_0_10_0_0_0_105_0_110_0_116_0_101_0_114_0_108_0_97_0_99_0_101_0_100_0_5_0_0_0_0_0_0_0_0_0_" />
+		<setting name="{C32B04F8-59F6-4F95-8E50-12818E0DECC7}" type="6" rowIndex="3" colIndex="0">
+			<columns>
+				<column type="5" enabled="True" />
+			</columns>
+			<data>
+				<row val0="pmLowest" />
+				<row val0="pmLower" />
+				<row val0="pmNormal" />
+				<row val0="pmHigher" />
+				<row val0="pmHighest" />
+			</data>
+		</setting>
+		<setting name="{3FC03B2F-1B76-433D-86AE-20B18B2CA600}" type="1" value="True" />
+		<setting name="{A4D0B1B0-14DA-4AFA-8AFC-E82D0400E7E9}" type="1" value="True" />
+		<setting name="{542B9FA0-35EA-4C4D-BF0B-661005CB94E9}" type="2" value="60000" />
+		<setting name="CountProcessesOfAllUsers" type="1" value="True" />
+		<setting name="{949057FA-CBDC-4A23-BB7F-9A25DCAE8729}" type="6" rowIndex="1" colIndex="0">
+			<columns>
+				<column type="5" enabled="True" />
+			</columns>
+			<data>
+				<row val0="Off" />
+				<row val0="Capture images" />
+			</data>
+		</setting>
+		<setting name="{95E3327A-7433-4A00-9257-6E9A4B4F1795}" type="6" rowIndex="0" colIndex="0">
+			<columns>
+				<column type="5" enabled="True" />
+			</columns>
+			<data>
+				<row val0="ID" />
+				<row val0="Name" />
+			</data>
+		</setting>
+		<setting name="{EF07B18F-C1B0-489E-84EF-A6A0A578C45C}" type="6" rowIndex="0" colIndex="0">
+			<columns>
+				<column type="5" enabled="True" />
+			</columns>
+			<data>
+				<row val0="Top-level parent" />
+				<row val0="Desktop" />
+			</data>
+		</setting>
+		<setting name="{0DEF6033-13D4-4335-97E9-CC6F1FC04342}" type="1" value="True" />
+		<setting name="{DF56DCEA-130B-4D36-8893-5FDC090AFB17}" type="1" value="False" />
+		<setting name="{829BC6CA-56D1-46A4-89B9-E15802964005}" type="1" value="False" />
+		<setting name="CLRBridge_SelectedComponents" type="6" rowIndex="-1" colIndex="1">
+			<columns>
+				<column type="5" enabled="True" />
+				<column type="1" enabled="True" />
+			</columns>
+			<data />
+		</setting>
+		<setting name="{85CD048A-29FF-4ABF-95A6-B915AEA2C10D}" type="1" value="False" />
+		<setting name="{2044DC7F-423E-4668-8114-68D23AE97AD6}" type="2" value="50" />
+		<setting name="Recording_TestedAppsOnly" type="1" value="False" />
+		<setting name="{FB1CAF99-7FA6-447C-B963-D862CA8BFF89}" type="2" value="3000" />
+		<setting name="{3B76535B-58AD-456C-837E-091A5C480F6C}" type="1" value="True" />
+		<setting name="{3AE91BBD-F37D-40E6-B49D-D2F1EF68E285}" type="1" value="False" />
+		<setting name="{D852BFD9-D446-4748-906F-1FA580D41304}" type="6" rowIndex="0" colIndex="1">
+			<columns>
+				<column type="1" enabled="True" />
+				<column type="5" enabled="True" />
+			</columns>
+			<data>
+				<row val0="True" val1="%PRODUCT_LOCATION%\Open Apps\Flex\FlashInjector.swf" />
+			</data>
+		</setting>
+		<setting name="{90FD1116-F071-44C8-AB72-F1916C2B3A1B}" type="1" value="False" />
+		<setting name="{323FACDA-38E8-4C1B-B22C-99E0AB90EADC}" type="5" value="" />
+		<setting name="JavaFXOpenApp_ExposedCustomNodes" type="6" rowIndex="-1" colIndex="2">
+			<columns>
+				<column type="1" enabled="True" />
+				<column type="5" enabled="True" />
+				<column type="5" enabled="True" />
+			</columns>
+			<data />
+		</setting>
+		<setting name="{CE0B0B5B-F813-482E-BBEC-6E12A96D3B83}" type="1" value="False" />
+		<setting name="{D5773345-4407-4A8A-ACE6-0F0A9C8787C8}" type="1" value="False" />
+		<setting name="{C8F95D39-4AC0-4855-9D60-6E7E3BD87B30}" type="1" value="False" />
+		<setting name="{ABE9C069-5D2D-4FBA-B1B0-FF96C0F0B1F6}" type="6" rowIndex="3" colIndex="0">
+			<columns>
+				<column type="5" enabled="True" />
+			</columns>
+			<data>
+				<row val0="DOM" />
+				<row val0="Tag" />
+				<row val0="Hybrid" />
+				<row val0="Tree" />
+			</data>
+		</setting>
+		<setting name="{4FD668CC-C8C3-46B4-A220-8DDE5CD7A39F}" type="6" rowIndex="-1" colIndex="2">
+			<columns>
+				<column type="1" enabled="True" />
+				<column type="5" enabled="True" />
+				<column type="5" enabled="True" />
+			</columns>
+			<data />
+		</setting>
+		<setting name="TextRecognizer_AcceptedProcesses" type="6" rowIndex="-1" colIndex="1">
+			<columns>
+				<column type="1" enabled="True" />
+				<column type="5" enabled="True" />
+			</columns>
+			<data />
+		</setting>
+		<setting name="{AF49D9D4-83CD-4BEA-BF27-8D70D88AC840}" type="1" value="False" />
+		<setting name="RunStandaloneServer" type="1" value="False" />
+		<setting name="{6BE019A2-A836-4B31-84D9-F9DE78869D51}" type="6" rowIndex="0" colIndex="0">
+			<columns>
+				<column type="5" enabled="True" />
+			</columns>
+			<data>
+				<row val0="Tree" />
+				<row val0="Flat" />
+			</data>
+		</setting>
+		<setting name="{F7C29680-06BB-4F85-B0E3-C06AE2282A66}" type="1" value="True" />
+		<setting name="{596CA0D0-27CB-40D3-BAA5-BC1CECFF25AC}" type="6" rowIndex="-1" colIndex="2">
+			<columns>
+				<column type="1" enabled="True" />
+				<column type="5" enabled="True" />
+				<column type="5" enabled="True" />
+			</columns>
+			<data />
+		</setting>
+		<setting name="{0BD6AE2E-E5D9-4AD0-9BF3-2483D329B22A}" type="1" value="True" />
+		<setting name="JavaBridge_ClassPaths" type="6" rowIndex="-1" colIndex="0">
+			<columns>
+				<column type="5" enabled="True" />
+			</columns>
+			<data />
+		</setting>
+		<setting name="{3FC2A7B4-F4AF-4807-8D37-C3EE096DD330}" type="2" value="1024" />
+		<setting name="{9EB8E8E6-D2F2-4A8A-ADFB-492E8C0EAFEF}" type="2" value="10000" />
+		<setting name="{47A56F4F-F2D3-4697-BEC8-632B29D5A344}" type="6" rowIndex="11" colIndex="1">
+			<columns>
+				<column type="1" enabled="True" />
+				<column type="5" enabled="True" />
+			</columns>
+			<data>
+				<row val0="False" val1="*" />
+				<row val0="True" val1="MsoCommandBar*" />
+				<row val0="True" val1="_Ww*" />
+				<row val0="True" val1="OpusApp" />
+				<row val0="True" val1="Vfp*" />
+				<row val0="True" val1="bosa_sdm_Microsoft Word *" />
+				<row val0="False" val1="Internet Explorer_Server" />
+				<row val0="True" val1="XTPToolBar" />
+				<row val0="True" val1="XTPDockingPaneTabbedContainer" />
+				<row val0="True" val1="XTPTaskPanel" />
+				<row val0="True" val1="XTPReport" />
+				<row val0="True" val1="XTPPopupBar" />
+			</data>
+		</setting>
+		<setting name="{1DB8307D-FA4B-43E7-8E11-9F8F41ABD7E9}" type="1" value="True" />
+		<setting name="TextRecognizer_AcceptedWindows" type="6" rowIndex="-1" colIndex="1">
+			<columns>
+				<column type="1" enabled="True" />
+				<column type="5" enabled="True" />
+			</columns>
+			<data />
+		</setting>
+		<setting name="{33C0A94E-7F58-493C-BCCC-91685352F9B4}" type="6" rowIndex="0" colIndex="0">
+			<columns>
+				<column type="5" enabled="True" />
+			</columns>
+			<data>
+				<row val0="*" />
+			</data>
+		</setting>
+		<setting name="{18FD096E-E6B8-4D3D-9619-71670FC81D48}" type="1" value="False" />
+		<setting name="{15C8845F-53E4-4045-9800-74766ABC4B34}" type="2" value="0" />
+		<setting name="{1FEF5DC6-5F46-4CCA-A31E-7C325204900B}" type="6" rowIndex="30" colIndex="4">
+			<columns>
+				<column type="2" enabled="True" />
+				<column type="2" enabled="True" />
+				<column type="1" enabled="True" />
+				<column type="1" enabled="True" />
+				<column type="5" enabled="True" />
+				<column type="5" enabled="True" />
+				<column type="5" enabled="True" />
+				<column type="5" enabled="True" />
+				<column type="5" enabled="True" />
+				<column type="2" enabled="True" />
+			</columns>
+			<data>
+				<row val0="-1" val1="-1" val2="True" val3="True" val4="Yahoo! UI library" val5="" val6="" val7="" val8="Wildcard&#13;&#10;RegExp" val9="0" />
+				<row val0="0" val1="-1" val2="False" val3="True" val4="Do not use IDs starting with &quot;yui-gen&quot;" val5="Wildcard" val6="yui-gen*" val7="" val8="Wildcard&#13;&#10;RegExp" val9="0" />
+				<row val0="0" val1="-1" val2="False" val3="True" val4="Do not use IDs containing &quot;yui_3_&quot;" val5="Wildcard" val6="*yui_3_*" val7="" val8="Wildcard&#13;&#10;RegExp" val9="0" />
+				<row val0="-1" val1="-1" val2="True" val3="True" val4="jQuery UI library" val5="" val6="" val7="" val8="Wildcard&#13;&#10;RegExp" val9="0" />
+				<row val0="3" val1="-1" val2="False" val3="True" val4="Do not use IDs starting with &quot;ui-id-&quot;" val5="Wildcard" val6="ui-id-*" val7="" val8="Wildcard&#13;&#10;RegExp" val9="0" />
+				<row val0="-1" val1="-1" val2="True" val3="True" val4="Dojo toolkit" val5="" val6="" val7="" val8="Wildcard&#13;&#10;RegExp" val9="0" />
+				<row val0="5" val1="-1" val2="False" val3="True" val4="Do not use IDs starting with &quot;dijit_&quot;" val5="Wildcard" val6="dijit_*" val7="" val8="Wildcard&#13;&#10;RegExp" val9="0" />
+				<row val0="-1" val1="-1" val2="True" val3="True" val4="Other" val5="" val6="" val7="" val8="Wildcard&#13;&#10;RegExp" val9="0" />
+				<row val0="7" val1="-1" val2="False" val3="True" val4="Do not use IDs containing GUID" val5="RegExp" val6="\h+-\h+-\h+-\h+-\h+" val7="" val8="Wildcard&#13;&#10;RegExp" val9="0" />
+				<row val0="7" val1="-1" val2="False" val3="True" val4="Remove leading characters from IDs like &quot;c1114509959-searchform&quot;" val5="RegExp" val6="^[A-Za-z](\d\d\d\d\d+){[A-Za-z-]*}$" val7="$1" val8="Wildcard&#13;&#10;RegExp" val9="0" />
+				<row val0="7" val1="-1" val2="False" val3="True" val4="Remove trailing digits from IDs like &quot;unique-123456&quot;" val5="RegExp" val6="^{[A-Za-z-]+}(\d\d\d\d\d+)$" val7="$1" val8="Wildcard&#13;&#10;RegExp" val9="0" />
+				<row val0="-1" val1="-1" val2="True" val3="True" val4="ASP.NET" val5="" val6="" val7="" val8="Wildcard&#13;&#10;RegExp" val9="0" />
+				<row val0="11" val1="-1" val2="False" val3="True" val4="Do not use IDs ending with a string like &quot;ctl00&quot;" val5="RegExp" val6="^(.*[-_$])?(ctl[0-9]+)$" val7="" val8="Wildcard&#13;&#10;RegExp" val9="0" />
+				<row val0="11" val1="-1" val2="False" val3="True" val4="Remove GUIDs and ctl00-like prefixes from Sharepoint IDs" val5="RegExp" val6="(.+?_(\h+_\h+_\h+_\h+_\h+))+(.*ctr?l[0-9]+)?[_$]?{.*}$" val7="$1" val8="Wildcard&#13;&#10;RegExp" val9="0" />
+				<row val0="11" val1="-1" val2="False" val3="True" val4="For IDs containing a string like &quot;ctl00_&quot;, leave only symbols after this string" val5="RegExp" val6=".*(ctl[0-9]+[-_$]+){.*}" val7="$1" val8="Wildcard&#13;&#10;RegExp" val9="0" />
+				<row val0="-1" val1="-1" val2="True" val3="True" val4="Sencha ExtJS" val5="" val6="" val7="" val8="Wildcard&#13;&#10;RegExp" val9="0" />
+				<row val0="15" val1="-1" val2="False" val3="True" val4="Do not use IDs containing &quot;ext-gen&quot;" val5="RegExp" val6="^(.*-)?ext-gen" val7="" val8="Wildcard&#13;&#10;RegExp" val9="0" />
+				<row val0="15" val1="-1" val2="False" val3="True" val4="Do not use IDs containing &quot;ext-comp&quot;" val5="RegExp" val6="^(.*-)?ext-comp" val7="" val8="Wildcard&#13;&#10;RegExp" val9="0" />
+				<row val0="15" val1="-1" val2="False" val3="True" val4="Do not use IDs starting with &quot;extdd-&quot;" val5="Wildcard" val6="extdd-*" val7="" val8="Wildcard&#13;&#10;RegExp" val9="0" />
+				<row val0="15" val1="-1" val2="False" val3="True" val4="Remove digits from IDs like &quot;treepicker-1038&quot; or &quot;treepicker-1038-inputEl&quot;" val5="RegExp" val6="^{[A-Za-z-]+}-{\d\d\d\d+}{.*}$" val7="$1$3" val8="Wildcard&#13;&#10;RegExp" val9="0" />
+				<row val0="-1" val1="-1" val2="True" val3="True" val4="Sencha Touch" val5="" val6="" val7="" val8="Wildcard&#13;&#10;RegExp" val9="0" />
+				<row val0="20" val1="-1" val2="False" val3="True" val4="Remove dynamic parts of Sencha Touch IDs" val5="RegExp" val6="^ext-{.*}-\d+$" val7="$1" val8="Wildcard&#13;&#10;RegExp" val9="0" />
+				<row val0="-1" val1="-1" val2="True" val3="True" val4="JavaServer Faces" val5="" val6="" val7="" val8="Wildcard&#13;&#10;RegExp" val9="0" />
+				<row val0="22" val1="-1" val2="False" val3="True" val4="Do not use IDs like &quot;_t14&quot;" val5="RegExp" val6="^{_t}{[0-9]+}$" val7="" val8="Wildcard&#13;&#10;RegExp" val9="0" />
+				<row val0="22" val1="-1" val2="False" val3="True" val4="Do not use IDs like &quot;j_id23&quot; or &quot;j_idt23&quot;" val5="RegExp" val6="^{j_idt?}{[0-9]+}$" val7="" val8="Wildcard&#13;&#10;RegExp" val9="0" />
+				<row val0="22" val1="-1" val2="False" val3="True" val4="Remove all but the last part of IDs like &quot;frm:menuLinks:0:link&quot;" val5="RegExp" val6="(.+):{[^0-9]+}$" val7="$1" val8="Wildcard&#13;&#10;RegExp" val9="0" />
+				<row val0="22" val1="-1" val2="False" val3="True" val4="Do not use IDs like &quot;frm:menuLinks:3:link&quot;" val5="RegExp" val6="(.+):(.*)" val7="" val8="Wildcard&#13;&#10;RegExp" val9="0" />
+				<row val0="-1" val1="-1" val2="True" val3="True" val4="Google Web Toolkit" val5="" val6="" val7="" val8="Wildcard&#13;&#10;RegExp" val9="0" />
+				<row val0="27" val1="-1" val2="False" val3="True" val4="Remove all but the last part of IDs like &quot;gwt-uid-370_runButton&quot;" val5="RegExp" val6="^(gwt-uid-[0-9]+)(_{.*})?$" val7="$1" val8="Wildcard&#13;&#10;RegExp" val9="0" />
+				<row val0="27" val1="-1" val2="False" val3="True" val4="Remove dynamic parts of Sencha GXT IDs" val5="RegExp" val6="^(x-((widget)|(auto))-.*[0-9]+)([-_]{.*})?$" val7="$1" val8="Wildcard&#13;&#10;RegExp" val9="0" />
+				<row val0="-1" val1="-1" val2="True" val3="True" val4="Custom" val5="" val6="" val7="" val8="Wildcard&#13;&#10;RegExp" val9="0" />
+			</data>
+		</setting>
+		<setting name="{7A4EE551-25FE-4C1A-8967-FA26B3C27AD7}" type="6" rowIndex="11" colIndex="9">
+			<columns>
+				<column type="2" enabled="True" />
+				<column type="2" enabled="True" />
+				<column type="1" enabled="True" />
+				<column type="1" enabled="True" />
+				<column type="1" enabled="True" />
+				<column type="5" enabled="True" />
+				<column type="5" enabled="True" />
+				<column type="2" enabled="True" />
+				<column type="2" enabled="True" />
+				<column type="4" enabled="True" />
+			</columns>
+			<data>
+				<row val0="-1" val1="-1" val2="False" val3="True" val4="False" val5="Apple iPad" val6="Mozilla/5.0 (iPad; CPU OS 9_1 like Mac OS X) AppleWebKit/601.1.46 (KHTML, like Gecko) Version/9.0 Mobile/13B143 Safari/601.1" val7="1024" val8="768" val9="2" />
+				<row val0="-1" val1="-1" val2="False" val3="True" val4="False" val5="Apple iPhone 4" val6="Mozilla/5.0 (iPhone; CPU iPhone OS 9_1 like Mac OS X) AppleWebKit/601.1.46 (KHTML, like Gecko) Version/9.0 Mobile/13B143 Safari/601.1" val7="320" val8="480" val9="2" />
+				<row val0="-1" val1="-1" val2="False" val3="True" val4="False" val5="Apple iPhone 5" val6="Mozilla/5.0 (iPhone; CPU iPhone OS 9_1 like Mac OS X) AppleWebKit/601.1.46 (KHTML, like Gecko) Version/9.0 Mobile/13B143 Safari/601.1" val7="320" val8="568" val9="2" />
+				<row val0="-1" val1="-1" val2="False" val3="True" val4="False" val5="Apple iPhone 6" val6="Mozilla/5.0 (iPhone; CPU iPhone OS 9_1 like Mac OS X) AppleWebKit/601.1.46 (KHTML, like Gecko) Version/9.0 Mobile/13B143 Safari/601.1" val7="375" val8="667" val9="2" />
+				<row val0="-1" val1="-1" val2="False" val3="True" val4="False" val5="Apple iPhone 6 Plus" val6="Mozilla/5.0 (iPhone; CPU iPhone OS 9_1 like Mac OS X) AppleWebKit/601.1.46 (KHTML, like Gecko) Version/9.0 Mobile/13B143 Safari/601.1" val7="414" val8="736" val9="3" />
+				<row val0="-1" val1="-1" val2="False" val3="True" val4="False" val5="Blackberry Z30" val6="Mozilla/5.0 (BB10; Touch) AppleWebKit/537.10+ (KHTML, like Gecko) Version/10.0.9.2372 Mobile Safari/537.10+" val7="360" val8="640" val9="2" />
+				<row val0="-1" val1="-1" val2="False" val3="True" val4="False" val5="Google Nexus 6" val6="Mozilla/5.0 (Linux; Android 5.1.1; Nexus 6 Build/LYZ28E) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/48.0.2564.23 Mobile Safari/537.36" val7="412" val8="732" val9="3.5" />
+				<row val0="-1" val1="-1" val2="False" val3="True" val4="False" val5="Google Nexus 7" val6="Mozilla/5.0 (Linux; Android 4.3; Nexus 7 Build/JSS15Q) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/48.0.2564.23 Safari/537.36" val7="960" val8="600" val9="2" />
+				<row val0="-1" val1="-1" val2="False" val3="True" val4="False" val5="Google Nexus 10" val6="Mozilla/5.0 (Linux; Android 4.3; Nexus 10 Build/JSS15Q) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/48.0.2564.23 Safari/537.36" val7="1280" val8="800" val9="2" />
+				<row val0="-1" val1="-1" val2="False" val3="True" val4="False" val5="Nokia Lumia 520" val6="Mozilla/5.0 (compatible; MSIE 10.0; Windows Phone 8.0; Trident/6.0; IEMobile/10.0; ARM; Touch; NOKIA; Lumia 520)" val7="320" val8="533" val9="1.39999997615814" />
+				<row val0="-1" val1="-1" val2="False" val3="True" val4="False" val5="Samsung Galaxy Note 3" val6="Mozilla/5.0 (Linux; U; Android 4.3; en-us; SM-N900T Build/JSS15J) AppleWebKit/534.30 (KHTML, like Gecko) Version/4.0 Mobile Safari/534.30" val7="360" val8="640" val9="3" />
+				<row val0="-1" val1="-1" val2="False" val3="True" val4="False" val5="Samsung Galaxy S5" val6="Mozilla/5.0 (Linux; Android 5.0; SM-G900P Build/LRX21T) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/48.0.2564.23 Mobile Safari/537.36" val7="360" val8="640" val9="2" />
+			</data>
+		</setting>
+		<setting name="{3EDDD87D-14FB-46FB-9609-CEDE76C0CED7}" type="1" value="False" />
+		<setting name="{45AE3709-5569-4F74-BD85-C222C71981ED}" type="1" value="True" />
+		<setting name="DraggingDelay" type="2" value="5" />
+		<setting name="ObjectMapping_Objects" type="6" rowIndex="-1" colIndex="3">
+			<columns>
+				<column type="5" enabled="True" />
+				<column type="5" enabled="True" />
+				<column type="2" enabled="True" />
+				<column type="2" enabled="True" />
+			</columns>
+			<data />
+		</setting>
+		<setting name="{A892B59C-EC27-4ABB-8305-4F885C9BC8CA}" type="6" rowIndex="1" colIndex="0">
+			<columns>
+				<column type="5" enabled="True" />
+			</columns>
+			<data>
+				<row val0="Depth-first" />
+				<row val0="Breadth-first" />
+			</data>
+		</setting>
+		<setting name="{24DB98D6-5EF8-47BF-977E-C2FD2C5F5FB3}" type="5" value="Log" />
+		<setting name="{3BAA9083-AE46-48CE-BFF4-A656DECF8E2F}" type="1" value="False" />
+		<setting name="{3E8BAA4F-EA09-4DD1-BD8E-DA765C8CF39B}" type="1" value="True" />
+		<setting name="{BE6D588C-BDC7-42E0-8BAE-3E3D8B0F7E83}" type="1" value="True" />
+		<setting name="{F544BC81-7A86-4230-B1FC-1B685211A0B4}" type="5" value="Format: PNG; Compression level: 4" />
+		<setting name="JavaOpenApp_DoNotRecognizeChildSWTAsParent" type="1" value="False" />
+		<setting name="{E47A2931-EE5D-42D2-8CB7-3796DE597AA1}" type="5" value="" />
+		<setting name="{94ACE9B9-2204-49E3-89A5-87766C9A615E}" type="6" rowIndex="-1" colIndex="0">
+			<columns>
+				<column type="5" enabled="True" />
+			</columns>
+			<data />
+		</setting>
+		<setting name="{98C6A210-59EF-4CD6-AA7E-B41953DEC74A}" type="1" value="False" />
+		<setting name="{74CC9F3B-2E52-4B16-844A-9EE33532B51E}" type="1" value="False" />
+		<setting name="{08E45C74-68E0-4E05-913F-298DE287E8FF}" type="6" rowIndex="0" colIndex="0">
+			<columns>
+				<column type="5" enabled="True" />
+			</columns>
+			<data>
+				<row val0="ID" />
+				<row val0="Name" />
+			</data>
+		</setting>
+		<setting name="StandaloneServerPort" type="2" value="4444" />
+		<setting name="{40B91E08-D498-460E-B175-0E9FB75CB271}" type="1" value="True" />
+		<setting name="{BF9B6482-CEA1-4402-BA61-9702404F1F12}" type="1" value="True" />
+		<setting name="{C3267834-69E4-4CD8-B16A-B60A9BB8A3B4}" type="1" value="False" />
+		<setting name="{1398B0BE-92B7-4650-A467-751B8FAAB738}" type="6" rowIndex="0" colIndex="0">
+			<columns>
+				<column type="5" enabled="True" />
+			</columns>
+			<data>
+				<row val0="Update existing frames and capture new frames, if needed" />
+				<row val0="Update existing frames only" />
+			</data>
+		</setting>
+		<setting name="ApplicationHangingProcessFilterMode" type="6" rowIndex="4" colIndex="0">
+			<columns>
+				<column type="5" enabled="True" />
+			</columns>
+			<data>
+				<row val0="Use all processes" />
+				<row val0="Use only tested applications" />
+				<row val0="Use only selected processes" />
+				<row val0="Ignore selected processes" />
+				<row val0="Ignore all processes" />
+			</data>
+		</setting>
+		<setting name="ApplicationHangingProcessList" type="6" rowIndex="-1" colIndex="0">
+			<columns>
+				<column type="5" enabled="True" />
+			</columns>
+			<data />
+		</setting>
+		<setting name="{3A4F97B3-D3D3-41E5-BE37-C419B02D488A}" type="6" rowIndex="-1" colIndex="0">
+			<columns>
+				<column type="5" enabled="True" />
+				<column type="5" enabled="True" />
+				<column type="2" enabled="True" />
+				<column type="2" enabled="True" />
+				<column type="5" enabled="True" />
+				<column type="1" enabled="True" />
+			</columns>
+			<data />
+		</setting>
+		<setting name="ApplicationHangingTimeout" type="2" value="30000" />
+		<setting name="CLRBridge_PreferredApartmentModel" type="6" rowIndex="0" colIndex="0">
+			<columns>
+				<column type="5" enabled="True" />
+			</columns>
+			<data>
+				<row val0="Does not matter" />
+				<row val0="Single-threaded apartment" />
+				<row val0="Multi-threaded apartment" />
+			</data>
+		</setting>
+		<setting name="{C371F52C-2F81-459B-8A40-380AAA4FB590}" type="1" value="True" />
+		<setting name="{EF65967B-5D67-41D0-9E90-1E07D7ECE759}" type="6" rowIndex="9" colIndex="0">
+			<columns>
+				<column type="5" enabled="True" />
+			</columns>
+			<data>
+				<row val0="NativeSlObject" />
+				<row val0="NativeWebObject" />
+				<row val0="NativeVBObject" />
+				<row val0="NativeDelphiObject" />
+				<row val0="NativeTextObject" />
+				<row val0="NativeJavaObject" />
+				<row val0="NativeChromeObject" />
+				<row val0="NativeClrObject" />
+				<row val0="NativeCPPObject" />
+				<row val0="NativeFirefoxObject" />
+				<row val0="NativeJavaFXObject" />
+				<row val0="NativeQtObject" />
+				<row val0="NativeUIAObject" />
+				<row val0="NativeMSAA" />
+			</data>
+		</setting>
+		<setting name="KeyPressingDelay" type="2" value="0" />
+		<setting name="{5B70169C-3929-4B5F-BC46-0FD984BECF45}" type="1" value="True" />
+		<setting name="{AE3F26D8-A5BD-4172-9F50-F2B9D1D03611}" type="1" value="True" />
+		<setting name="{7A29E7FF-985C-4095-9EEC-261B86F6AB0F}" type="1" value="True" />
+		<setting name="CLRBridge_PreferredArchitecture" type="6" rowIndex="1" colIndex="0">
+			<columns>
+				<column type="5" enabled="True" />
+			</columns>
+			<data>
+				<row val0="The same as the operating system" />
+				<row val0="32-bit" />
+				<row val0="64-bit" />
+			</data>
+		</setting>
+		<setting name="JavaFXOpenApp_DoNotRecognizeJavaFXStageAsAWTComponent" type="1" value="True" />
+		<setting name="{890C6D5A-4706-498E-A6EA-CA765851BB97}" type="6" rowIndex="0" colIndex="0">
+			<columns>
+				<column type="5" enabled="True" />
+			</columns>
+			<data>
+				<row val0="Use all processes" />
+				<row val0="Use only tested applications" />
+				<row val0="Use only selected processes" />
+				<row val0="Ignore selected processes" />
+			</data>
+		</setting>
+		<setting name="{E5242A20-9B70-4540-AEFD-7012791D3284}" type="1" value="True" />
+		<setting name="JavaBridge_Classes" type="6" rowIndex="-1" colIndex="0">
+			<columns>
+				<column type="5" enabled="True" />
+			</columns>
+			<data />
+		</setting>
+		<setting name="{D80391D4-892F-4CEC-865E-B7FACB3FAC84}" type="2" value="10" />
+		<setting name="MouseMovementDelay" type="2" value="0" />
+		<setting name="{A383BA1A-68CF-40AE-9FCD-B3E554E9ADD7}" type="6" rowIndex="1" colIndex="0">
+			<columns>
+				<column type="5" enabled="True" />
+			</columns>
+			<data>
+				<row val0="Off" />
+				<row val0="Capture images" />
+			</data>
+		</setting>
+		<setting name="{BC2725AB-C90D-4761-BEB2-ABACE30FE554}" type="1" value="True" />
+		<setting name="AgOpenApp_ExtendedSilverlightObjectTree" type="1" value="False" />
+		<setting name="StandaloneServerAdditionalOptions" type="5" value="" />
+		<setting name="{0787AA13-4C49-418A-A688-B23BE9F226F4}" type="1" value="False" />
+		<setting name="{DB42CEAB-BFC4-40DB-9F48-9197D35FB5E2}" type="6" rowIndex="30" colIndex="4">
+			<columns>
+				<column type="2" enabled="True" />
+				<column type="2" enabled="True" />
+				<column type="1" enabled="True" />
+				<column type="1" enabled="True" />
+				<column type="5" enabled="True" />
+				<column type="5" enabled="True" />
+				<column type="5" enabled="True" />
+				<column type="5" enabled="True" />
+				<column type="5" enabled="True" />
+				<column type="2" enabled="True" />
+			</columns>
+			<data>
+				<row val0="-1" val1="-1" val2="True" val3="True" val4="Yahoo! UI library" val5="" val6="" val7="" val8="Wildcard&#13;&#10;RegExp" val9="0" />
+				<row val0="0" val1="-1" val2="False" val3="True" val4="Do not use IDs starting with &quot;yui-gen&quot;" val5="Wildcard" val6="yui-gen*" val7="" val8="Wildcard&#13;&#10;RegExp" val9="0" />
+				<row val0="0" val1="-1" val2="False" val3="True" val4="Do not use IDs containing &quot;yui_3_&quot;" val5="Wildcard" val6="*yui_3_*" val7="" val8="Wildcard&#13;&#10;RegExp" val9="0" />
+				<row val0="-1" val1="-1" val2="True" val3="True" val4="jQuery UI library" val5="" val6="" val7="" val8="Wildcard&#13;&#10;RegExp" val9="0" />
+				<row val0="3" val1="-1" val2="False" val3="True" val4="Do not use IDs starting with &quot;ui-id-&quot;" val5="Wildcard" val6="ui-id-*" val7="" val8="Wildcard&#13;&#10;RegExp" val9="0" />
+				<row val0="-1" val1="-1" val2="True" val3="True" val4="Dojo toolkit" val5="" val6="" val7="" val8="Wildcard&#13;&#10;RegExp" val9="0" />
+				<row val0="5" val1="-1" val2="False" val3="True" val4="Do not use IDs starting with &quot;dijit_&quot;" val5="Wildcard" val6="dijit_*" val7="" val8="Wildcard&#13;&#10;RegExp" val9="0" />
+				<row val0="-1" val1="-1" val2="True" val3="True" val4="Other" val5="" val6="" val7="" val8="Wildcard&#13;&#10;RegExp" val9="0" />
+				<row val0="7" val1="-1" val2="False" val3="True" val4="Do not use IDs containing GUID" val5="RegExp" val6="\h+-\h+-\h+-\h+-\h+" val7="" val8="Wildcard&#13;&#10;RegExp" val9="0" />
+				<row val0="7" val1="-1" val2="False" val3="True" val4="Remove leading characters from IDs like &quot;c1114509959-searchform&quot;" val5="RegExp" val6="^[A-Za-z](\d\d\d\d\d+){[A-Za-z-]*}$" val7="$1" val8="Wildcard&#13;&#10;RegExp" val9="0" />
+				<row val0="7" val1="-1" val2="False" val3="True" val4="Remove trailing digits from IDs like &quot;unique-123456&quot;" val5="RegExp" val6="^{[A-Za-z-]+}(\d\d\d\d\d+)$" val7="$1" val8="Wildcard&#13;&#10;RegExp" val9="0" />
+				<row val0="-1" val1="-1" val2="True" val3="True" val4="ASP.NET" val5="" val6="" val7="" val8="Wildcard&#13;&#10;RegExp" val9="0" />
+				<row val0="11" val1="-1" val2="False" val3="True" val4="Do not use IDs ending with a string like &quot;ctl00&quot;" val5="RegExp" val6="^(.*[-_$])?(ctl[0-9]+)$" val7="" val8="Wildcard&#13;&#10;RegExp" val9="0" />
+				<row val0="11" val1="-1" val2="False" val3="True" val4="Remove GUIDs and ctl00-like prefixes from Sharepoint IDs" val5="RegExp" val6="(.+?_(\h+_\h+_\h+_\h+_\h+))+(.*ctr?l[0-9]+)?[_$]?{.*}$" val7="$1" val8="Wildcard&#13;&#10;RegExp" val9="0" />
+				<row val0="11" val1="-1" val2="False" val3="True" val4="Remove all but the last part of IDs like &quot;ctl00_MainContent_username&quot;" val5="RegExp" val6=".*(ctl[0-9]+)(.*)[-_$]+{[^_0-9]+}{[_0-9]*}$" val7="$1$2" val8="Wildcard&#13;&#10;RegExp" val9="0" />
+				<row val0="-1" val1="-1" val2="True" val3="True" val4="Sencha ExtJS" val5="" val6="" val7="" val8="Wildcard&#13;&#10;RegExp" val9="0" />
+				<row val0="15" val1="-1" val2="False" val3="True" val4="Do not use IDs containing &quot;ext-gen&quot;" val5="RegExp" val6="^(.*-)?ext-gen" val7="" val8="Wildcard&#13;&#10;RegExp" val9="0" />
+				<row val0="15" val1="-1" val2="False" val3="True" val4="Do not use IDs containing &quot;ext-comp&quot;" val5="RegExp" val6="^(.*-)?ext-comp" val7="" val8="Wildcard&#13;&#10;RegExp" val9="0" />
+				<row val0="15" val1="-1" val2="False" val3="True" val4="Do not use IDs starting with &quot;extdd-&quot;" val5="Wildcard" val6="extdd-*" val7="" val8="Wildcard&#13;&#10;RegExp" val9="0" />
+				<row val0="15" val1="-1" val2="False" val3="True" val4="Remove digits from IDs like &quot;treepicker-1038&quot; or &quot;treepicker-1038-inputEl&quot;" val5="RegExp" val6="^{[A-Za-z-]+}-{\d\d\d\d+}{.*}$" val7="$1$3" val8="Wildcard&#13;&#10;RegExp" val9="0" />
+				<row val0="-1" val1="-1" val2="True" val3="True" val4="Sencha Touch" val5="" val6="" val7="" val8="Wildcard&#13;&#10;RegExp" val9="0" />
+				<row val0="20" val1="-1" val2="False" val3="True" val4="Remove dynamic parts of Sencha Touch IDs" val5="RegExp" val6="^ext-{.*}-\d+$" val7="$1" val8="Wildcard&#13;&#10;RegExp" val9="0" />
+				<row val0="-1" val1="-1" val2="True" val3="True" val4="JavaServer Faces" val5="" val6="" val7="" val8="Wildcard&#13;&#10;RegExp" val9="0" />
+				<row val0="22" val1="-1" val2="False" val3="True" val4="Do not use IDs like &quot;_t14&quot;" val5="RegExp" val6="^{_t}{[0-9]+}$" val7="" val8="Wildcard&#13;&#10;RegExp" val9="0" />
+				<row val0="22" val1="-1" val2="False" val3="True" val4="Do not use IDs like &quot;j_id23&quot; or &quot;j_idt23&quot;" val5="RegExp" val6="^{j_idt?}{[0-9]+}$" val7="" val8="Wildcard&#13;&#10;RegExp" val9="0" />
+				<row val0="22" val1="-1" val2="False" val3="True" val4="Remove all but the last part of IDs like &quot;frm:menuLinks:0:link&quot;" val5="RegExp" val6="(.+):{[^0-9]+}$" val7="$1" val8="Wildcard&#13;&#10;RegExp" val9="0" />
+				<row val0="22" val1="-1" val2="False" val3="True" val4="Do not use IDs like &quot;frm:menuLinks:3:link&quot;" val5="RegExp" val6="(.+):(.*)" val7="" val8="Wildcard&#13;&#10;RegExp" val9="0" />
+				<row val0="-1" val1="-1" val2="True" val3="True" val4="Google Web Toolkit" val5="" val6="" val7="" val8="Wildcard&#13;&#10;RegExp" val9="0" />
+				<row val0="27" val1="-1" val2="False" val3="True" val4="Remove all but the last part of IDs like &quot;gwt-uid-370_runButton&quot;" val5="RegExp" val6="^(gwt-uid-[0-9]+)(_{.*})?$" val7="$1" val8="Wildcard&#13;&#10;RegExp" val9="0" />
+				<row val0="27" val1="-1" val2="False" val3="True" val4="Remove dynamic parts of Sencha GXT IDs" val5="RegExp" val6="^(x-((widget)|(auto))-.*[0-9]+)([-_]{.*})?$" val7="$1" val8="Wildcard&#13;&#10;RegExp" val9="0" />
+				<row val0="-1" val1="-1" val2="True" val3="True" val4="Custom" val5="" val6="" val7="" val8="Wildcard&#13;&#10;RegExp" val9="0" />
+			</data>
+		</setting>
+		<setting name="{ACFF4EF1-2D8D-4A5B-A55F-6F64DF82662B}" type="6" rowIndex="0" colIndex="0">
+			<columns>
+				<column type="5" enabled="True" />
+			</columns>
+			<data>
+				<row val0="None" />
+				<row val0="Apple iPad" />
+				<row val0="Apple iPhone 4" />
+				<row val0="Apple iPhone 5" />
+				<row val0="Apple iPhone 6" />
+				<row val0="Apple iPhone 6 Plus" />
+				<row val0="Blackberry Z30" />
+				<row val0="Google Nexus 6" />
+				<row val0="Google Nexus 7" />
+				<row val0="Google Nexus 10" />
+				<row val0="Nokia Lumia 520" />
+				<row val0="Samsung Galaxy Note 3" />
+				<row val0="Samsung Galaxy S5" />
+			</data>
+		</setting>
+	</settings>
+	<analysis key="{3D7A3258-DFDF-4DEF-8766-D45F1705580A}" />
+	<scc key="{00000000-0000-0000-0000-000000000000}" name="">
+		<data />
+	</scc>
+	<issueTracking key="{A6251D72-F713-4C2D-A619-ACDC592B2F2F}">
+		<Templates>
+			<Template Id="{1EB17ADF-E4EB-404D-97DC-AD758A1E8C1D}" ConnectionId="{00000000-0000-0000-0000-000000000000}" Description="This template is used by TestComplete&apos;s Log subsystem to post test results to an issue-tracking system. You can also use it at your desire." Name="CreateWorkItem" IsSystem="True" ItemTypeName="" ProjectName="" IsEditing="False" ItemId="">
+				<Fields>
+					<Field ItemId="{7D85766B-337B-4E5A-B6C5-947B7A23078C}" AliasIsRequired="True" DBFieldNameIsRequired="False" Value="" DBFieldName="" Alias="Subject" />
+					<Field ItemId="{34A4BDF8-C242-4B3E-BA6A-86D525FBD811}" AliasIsRequired="True" DBFieldNameIsRequired="False" Value="" DBFieldName="" Alias="Description" />
+				</Fields>
+			</Template>
+		</Templates>
+	</issueTracking>
+</Root>

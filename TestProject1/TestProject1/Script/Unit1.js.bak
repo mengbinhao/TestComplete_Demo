@@ -1,0 +1,24 @@
+﻿function Test1(username, password)
+{
+  //Runs the "IndelPlanV2_0" tested application.
+  TestedApps.IndelPlanV2_0.Run();
+  //Performs a single click on the specified button.
+  //launch popup
+  Aliases.INDELP_1.MessageBox2.qt_msgbox_buttonbox.buttonOk.ClickButton();
+}
+
+function launch_handle_exception(username, password)
+{
+  if(Aliases.INDELP_1.logonClass.Exists == false)
+  {
+    //Runs a script routine.
+    startup();
+  }
+  else
+  {
+    //Closes the specified Window object.
+    Aliases.INDELP_1.logonClass.Close();
+    //Runs a script routine.
+    startup();
+  }
+}

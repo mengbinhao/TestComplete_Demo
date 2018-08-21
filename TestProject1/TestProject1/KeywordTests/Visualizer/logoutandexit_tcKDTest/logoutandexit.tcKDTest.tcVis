@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<Root signature="{42D2222C-ACA2-405F-8E67-05D5C42EB839}" version="2">
+	<data key="{18379EC3-20B3-42D8-A29A-3435BA13AC8B}">
+		<item typeId="{87B03792-E854-4F5D-9F33-165F1F874209}" version="2" lineNo="0" kind="0" dateTime="43314.0705555556" objectName="Aliases.INDELP_1.IntergratedGamaClass.centralWidget.stackedWidget.page.PatientManagementWidget.groupBox.frame.pushButton_Logout" objectLeft="23" objectTop="929" objectRight="221" objectBottom="989" clickPointX="145" clickPointY="959" imageFileName="tcvi504604531132400.png" storageFileName="" needUpdate="False" rectColor="255" />
+		<item typeId="{87B03792-E854-4F5D-9F33-165F1F874209}" version="2" lineNo="1" kind="0" dateTime="43314.0706134259" objectName="Aliases.INDELP_1.logonClass" objectLeft="0" objectTop="0" objectRight="654" objectBottom="488" clickPointX="-1" clickPointY="-1" imageFileName="tcvi504609273132403.png" storageFileName="" needUpdate="False" rectColor="255" />
+	</data>
+</Root>

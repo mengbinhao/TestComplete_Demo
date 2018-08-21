@@ -1,0 +1,186 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<Root signature="{9252F941-DB23-4FCA-AA50-858B33BB4A19}" version="11.40">
+	<children>
+		<child name="login" key="{A303ABA3-29A1-40E4-B9EA-685430CF0937}" type="Script Unit" typeId="{291CAE9C-4D20-4F33-8B5F-D48B587F3D65}" pluginName="Script">
+			<data path="login.js" />
+		</child>
+		<child name="launch" key="{E7DF3A26-8E6E-4666-BE1E-FED484719C32}" type="Script Unit" typeId="{291CAE9C-4D20-4F33-8B5F-D48B587F3D65}" pluginName="Script">
+			<data path="launch.js" />
+		</child>
+		<child name="hanle_popup_while_launch" key="{8E0E0842-302B-4EC1-A194-C802B3D3ADB2}" type="Script Unit" typeId="{291CAE9C-4D20-4F33-8B5F-D48B587F3D65}" pluginName="Script">
+			<data path="hanle_popup_while_launch.js" />
+		</child>
+		<child name="test" key="{0DAC15B0-AF8F-4527-8527-0AD3E0A66AF4}" type="Script Unit" typeId="{291CAE9C-4D20-4F33-8B5F-D48B587F3D65}" pluginName="Script">
+			<data path="test.js" />
+		</child>
+		<child name="exit" key="{4562BB8E-9BF5-44DC-8B46-A42A91A50538}" type="Script Unit" typeId="{291CAE9C-4D20-4F33-8B5F-D48B587F3D65}" pluginName="Script">
+			<data path="exit.js" />
+		</child>
+		<child name="logout" key="{42373CDE-C63F-47E9-A1A8-BDB57F55A2F8}" type="Script Unit" typeId="{291CAE9C-4D20-4F33-8B5F-D48B587F3D65}" pluginName="Script">
+			<data path="logout.js" />
+		</child>
+		<child name="adduser" key="{F85E1C22-E146-440A-8570-EBFA048DD670}" type="Script Unit" typeId="{291CAE9C-4D20-4F33-8B5F-D48B587F3D65}" pluginName="Script">
+			<data path="adduser.js" />
+		</child>
+		<child name="deleteuser" key="{5F6D9CC8-87AA-4A20-975B-6307804FFA21}" type="Script Unit" typeId="{291CAE9C-4D20-4F33-8B5F-D48B587F3D65}" pluginName="Script">
+			<data path="deleteuser.js" />
+		</child>
+		<child name="edituser" key="{DB884D76-E677-4522-8EBA-7F92EC1187E1}" type="Script Unit" typeId="{291CAE9C-4D20-4F33-8B5F-D48B587F3D65}" pluginName="Script">
+			<data path="edituser.js" />
+		</child>
+		<child name="userfunction" key="{CFEE1AA1-9C7D-4719-8E00-0C642529247A}" type="Script Unit" typeId="{291CAE9C-4D20-4F33-8B5F-D48B587F3D65}" pluginName="Script">
+			<data path="userfunction.js" />
+		</child>
+		<child name="utilsfunction" key="{B89D97FB-95B2-4F2B-87FB-71CD590BD523}" type="Script Unit" typeId="{291CAE9C-4D20-4F33-8B5F-D48B587F3D65}" pluginName="Script">
+			<data path="utilsfunction.js" />
+		</child>
+		<child name="addpatient" key="{12DC4B05-CC3D-434C-B495-635437086ECC}" type="Script Unit" typeId="{291CAE9C-4D20-4F33-8B5F-D48B587F3D65}" pluginName="Script">
+			<data path="addpatient.js" />
+		</child>
+		<child name="editpatient" key="{83FBE314-FB37-4219-AC9E-B9C6B66EC613}" type="Script Unit" typeId="{291CAE9C-4D20-4F33-8B5F-D48B587F3D65}" pluginName="Script">
+			<data path="editpatient.js" />
+		</child>
+		<child name="deletepatient" key="{5657FD70-101F-4B3E-9ED6-C1345CE45A72}" type="Script Unit" typeId="{291CAE9C-4D20-4F33-8B5F-D48B587F3D65}" pluginName="Script">
+			<data path="deletepatient.js" />
+		</child>
+		<child name="variableutils" key="{A1C6572B-1292-455E-A4C9-802A9F409696}" type="Script Unit" typeId="{291CAE9C-4D20-4F33-8B5F-D48B587F3D65}" pluginName="Script">
+			<data path="variableutils.js" />
+		</child>
+		<child name="inputfields" key="{B1A0B5C5-A943-4B9E-9BF0-C98FF280EDA8}" type="Script Unit" typeId="{291CAE9C-4D20-4F33-8B5F-D48B587F3D65}" pluginName="Script">
+			<data path="inputfields.js" />
+		</child>
+		<child name="addcontour" key="{32471BD3-A098-45B3-98D5-EA97C0ED88FB}" type="Script Unit" typeId="{291CAE9C-4D20-4F33-8B5F-D48B587F3D65}" pluginName="Script">
+			<data path="addcontour.js" />
+		</child>
+		<child name="gotopatientdetail" key="{4E5FD4B9-B434-485D-A5F5-B7B5E45D0908}" type="Script Unit" typeId="{291CAE9C-4D20-4F33-8B5F-D48B587F3D65}" pluginName="Script">
+			<data path="gotopatientdetail.js" />
+		</child>
+		<child name="imagesfunction" key="{EBD49C87-26C1-425B-806F-D3E469B96EAA}" type="Script Unit" typeId="{291CAE9C-4D20-4F33-8B5F-D48B587F3D65}" pluginName="Script">
+			<data path="imagesfunction.js" />
+		</child>
+		<child name="sketchcontour" key="{E416AECB-4C07-4B50-90D0-7C906EED0D80}" type="Script Unit" typeId="{291CAE9C-4D20-4F33-8B5F-D48B587F3D65}" pluginName="Script">
+			<data path="sketchcontour.js" />
+		</child>
+		<child name="changepatientdetailtab" key="{5A141BB0-C530-4687-8A4E-0A46916E218C}" type="Script Unit" typeId="{291CAE9C-4D20-4F33-8B5F-D48B587F3D65}" pluginName="Script">
+			<data path="changepatientdetailtab.js" />
+		</child>
+		<child name="addtreatcourse" key="{CA5EB1C8-F5BA-4DA5-81E5-F7A421BF3317}" type="Script Unit" typeId="{291CAE9C-4D20-4F33-8B5F-D48B587F3D65}" pluginName="Script">
+			<data path="addtreatcourse.js" />
+		</child>
+		<child name="addplan" key="{3C6C5078-4ECF-475B-9138-306E646B1FEF}" type="Script Unit" typeId="{291CAE9C-4D20-4F33-8B5F-D48B587F3D65}" pluginName="Script">
+			<data path="addplan.js" />
+		</child>
+		<child name="gotomainpage" key="{8FB1A63F-BFC5-41CA-8DC8-D645C84626FB}" type="Script Unit" typeId="{291CAE9C-4D20-4F33-8B5F-D48B587F3D65}" pluginName="Script">
+			<data path="gotomainpage.js" />
+		</child>
+		<child name="gotoplandesign" key="{DE2E367A-3F7D-4B52-B17F-E29B9D69E9FC}" type="Script Unit" typeId="{291CAE9C-4D20-4F33-8B5F-D48B587F3D65}" pluginName="Script">
+			<data path="gotoplandesign.js" />
+		</child>
+		<child name="makeplan" key="{3C396E2A-CF90-4606-880A-697AB9EFBD91}" type="Script Unit" typeId="{291CAE9C-4D20-4F33-8B5F-D48B587F3D65}" pluginName="Script">
+			<data path="makeplan.js" />
+		</child>
+		<child name="indelplanUI" key="{55F4436C-95C1-45CB-BE81-A348CD1F3645}" type="Script Unit" typeId="{291CAE9C-4D20-4F33-8B5F-D48B587F3D65}" pluginName="Script">
+			<data path="indelplanUI.js" />
+		</child>
+		<child name="launchwithlogic" key="{7F9FA413-E4BC-4613-9A2E-0D5597A168C9}" type="Script Unit" typeId="{291CAE9C-4D20-4F33-8B5F-D48B587F3D65}" pluginName="Script">
+			<data path="launchwithlogic.js" />
+		</child>
+		<child name="addtargetpoint" key="{90F9B2C8-8FCF-4ED4-8B6F-33C056E2587B}" type="Script Unit" typeId="{291CAE9C-4D20-4F33-8B5F-D48B587F3D65}" pluginName="Script">
+			<data path="addtargetpoint.js" />
+		</child>
+		<child name="addtargetarea" key="{9511F1A6-1F90-4BA7-8695-E2AFE44CEB22}" type="Script Unit" typeId="{291CAE9C-4D20-4F33-8B5F-D48B587F3D65}" pluginName="Script">
+			<data path="addtargetarea.js" />
+		</child>
+		<child name="addcontourlib" key="{750B1C46-63F6-4456-852E-3DE42CD01C39}" type="Script Unit" typeId="{291CAE9C-4D20-4F33-8B5F-D48B587F3D65}" pluginName="Script">
+			<data path="addcontourlib.js" />
+		</child>
+		<child name="findItemInList" key="{3CC71404-AB15-4392-8D0D-40C44695F278}" type="Script Unit" typeId="{291CAE9C-4D20-4F33-8B5F-D48B587F3D65}" pluginName="Script">
+			<data path="findItemInList.js" />
+		</child>
+		<child name="case016" key="{7369E56D-E08B-415E-AA86-068716DDD21E}" type="Script Unit" typeId="{291CAE9C-4D20-4F33-8B5F-D48B587F3D65}" pluginName="Script">
+			<data path="case016.js" />
+		</child>
+		<child name="defualtsort" key="{2408EB04-756E-4DC7-9C7D-7912FD70DA7D}" type="Script Unit" typeId="{291CAE9C-4D20-4F33-8B5F-D48B587F3D65}" pluginName="Script">
+			<data path="defualtsort.js" />
+		</child>
+		<child name="handlescriptstop" key="{6C7E3408-3208-4F5D-B4D9-D49D42499346}" type="Script Unit" typeId="{291CAE9C-4D20-4F33-8B5F-D48B587F3D65}" pluginName="Script">
+			<data path="handlescriptstop.js" />
+		</child>
+		<child name="handlescriptstart" key="{27307299-C680-429A-9FC0-0B0EFC80020A}" type="Script Unit" typeId="{291CAE9C-4D20-4F33-8B5F-D48B587F3D65}" pluginName="Script">
+			<data path="handlescriptstart.js" />
+		</child>
+	</children>
+	<folders>
+		<folder caption="usermanagement" description="A logical folder that is used to organize project items and elements." moniker="">
+			<references>
+				<ref key="{F85E1C22-E146-440A-8570-EBFA048DD670}" />
+				<ref key="{5F6D9CC8-87AA-4A20-975B-6307804FFA21}" />
+				<ref key="{DB884D76-E677-4522-8EBA-7F92EC1187E1}" />
+				<ref key="{CFEE1AA1-9C7D-4719-8E00-0C642529247A}" />
+			</references>
+		</folder>
+		<folder caption="loginlogout" description="A logical folder that is used to organize project items and elements." moniker="">
+			<references>
+				<ref key="{A303ABA3-29A1-40E4-B9EA-685430CF0937}" />
+				<ref key="{42373CDE-C63F-47E9-A1A8-BDB57F55A2F8}" />
+				<ref key="{B1A0B5C5-A943-4B9E-9BF0-C98FF280EDA8}" />
+				<ref key="{7F9FA413-E4BC-4613-9A2E-0D5597A168C9}" />
+			</references>
+		</folder>
+		<folder caption="utils" description="A logical folder that is used to organize project items and elements." moniker="">
+			<references>
+				<ref key="{B89D97FB-95B2-4F2B-87FB-71CD590BD523}" />
+				<ref key="{3CC71404-AB15-4392-8D0D-40C44695F278}" />
+			</references>
+		</folder>
+		<folder caption="patientmanagement" description="A logical folder that is used to organize project items and elements." moniker="">
+			<references>
+				<ref key="{12DC4B05-CC3D-434C-B495-635437086ECC}" />
+				<ref key="{83FBE314-FB37-4219-AC9E-B9C6B66EC613}" />
+				<ref key="{5657FD70-101F-4B3E-9ED6-C1345CE45A72}" />
+				<ref key="{4E5FD4B9-B434-485D-A5F5-B7B5E45D0908}" />
+				<ref key="{7369E56D-E08B-415E-AA86-068716DDD21E}" />
+			</references>
+		</folder>
+		<folder caption="exception" description="A logical folder that is used to organize project items and elements." moniker="">
+			<references>
+				<ref key="{8E0E0842-302B-4EC1-A194-C802B3D3ADB2}" />
+				<ref key="{A1C6572B-1292-455E-A4C9-802A9F409696}" />
+				<ref key="{6C7E3408-3208-4F5D-B4D9-D49D42499346}" />
+				<ref key="{27307299-C680-429A-9FC0-0B0EFC80020A}" />
+			</references>
+		</folder>
+		<folder caption="contour" description="A logical folder that is used to organize project items and elements." moniker="">
+			<references>
+				<ref key="{32471BD3-A098-45B3-98D5-EA97C0ED88FB}" />
+				<ref key="{EBD49C87-26C1-425B-806F-D3E469B96EAA}" />
+				<ref key="{E416AECB-4C07-4B50-90D0-7C906EED0D80}" />
+				<ref key="{9511F1A6-1F90-4BA7-8695-E2AFE44CEB22}" />
+				<ref key="{750B1C46-63F6-4456-852E-3DE42CD01C39}" />
+			</references>
+		</folder>
+		<folder caption="plan" description="A logical folder that is used to organize project items and elements." moniker="">
+			<references>
+				<ref key="{CA5EB1C8-F5BA-4DA5-81E5-F7A421BF3317}" />
+				<ref key="{3C6C5078-4ECF-475B-9138-306E646B1FEF}" />
+				<ref key="{DE2E367A-3F7D-4B52-B17F-E29B9D69E9FC}" />
+				<ref key="{3C396E2A-CF90-4606-880A-697AB9EFBD91}" />
+				<ref key="{90F9B2C8-8FCF-4ED4-8B6F-33C056E2587B}" />
+			</references>
+		</folder>
+		<folder caption="common" description="A logical folder that is used to organize project items and elements." moniker="">
+			<references>
+				<ref key="{4562BB8E-9BF5-44DC-8B46-A42A91A50538}" />
+				<ref key="{E7DF3A26-8E6E-4666-BE1E-FED484719C32}" />
+				<ref key="{5A141BB0-C530-4687-8A4E-0A46916E218C}" />
+				<ref key="{8FB1A63F-BFC5-41CA-8DC8-D645C84626FB}" />
+				<ref key="{55F4436C-95C1-45CB-BE81-A348CD1F3645}" />
+			</references>
+		</folder>
+		<folder caption="bugs" description="A logical folder that is used to organize project items and elements." moniker="">
+			<references>
+				<ref key="{2408EB04-756E-4DC7-9C7D-7912FD70DA7D}" />
+			</references>
+		</folder>
+	</folders>
+</Root>

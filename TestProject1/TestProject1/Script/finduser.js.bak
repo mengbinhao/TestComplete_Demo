@@ -1,0 +1,13 @@
+﻿function finduser(findusername, userlist){
+  let ret = '';
+  let rows = userlist.wRowCount - 1;
+  while (rows >= 0) {
+    let username = userlist.wValue(rows, 'User Name');
+    if (username === findusername) {
+      ret = username;
+      return ret;
+    }
+    rows--;
+  }
+  return ret;
+}

@@ -1,0 +1,23 @@
+﻿const USER_TYPE = ['Visitor', 'PlanningPhysicist', 'RadiationPhysicist', 'RadiationTherapist', 'ChiefDoctor', 'Technician'];
+
+function getUserType() {
+    return USER_TYPE;
+}
+
+function findUser(findusername, userlist) {
+  let ret = [];
+  let rows = userlist.wRowCount - 1;
+  while (rows >= 0) {
+    let username = userlist.wValue(rows, 'User Name');
+    if (strictEqual(username, findusername)) {
+      ret[0] = username;
+      ret[1] = rows;
+      return ret;
+    }
+    rows--;
+  }
+  return ret;
+}
+
+module.exports.getUserType = getUserType;
+module.exports.findUser = findUser;

@@ -1,0 +1,4 @@
+﻿function GeneralEvents_OnUnexpectedWindow(Sender, Window, LogParams)
+{
+  
+}
