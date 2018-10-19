@@ -35,7 +35,7 @@
 	<config language="{90F89436-9452-4F95-9882-6B5210079F13}" />
 	<testItems key="{F752D210-EF01-40B9-BDA2-E617EC1DA411}">
 		<children>
-			<testItem name="All" key="{94D93621-8C95-4A37-8BA1-6077B09E2E23}" group="True" enabled="False" testMoniker="" count="1" timeout="0" stopOnError="2" stopOnException="2" description="">
+			<testItem name="All" key="{94D93621-8C95-4A37-8BA1-6077B09E2E23}" group="True" enabled="True" testMoniker="" count="1" timeout="0" stopOnError="2" stopOnException="2" description="">
 				<testParameters />
 				<children>
 					<testItem name="login_and_logout" key="{B51B59D7-D2C7-410A-9C04-252E0F94EC89}" group="True" enabled="True" testMoniker="" count="1" timeout="0" stopOnError="2" stopOnException="2" description="">
@@ -355,7 +355,7 @@
 		</data>
 	</variables>
 	<settings key="{DB18F155-6CB4-4426-8A8F-E6FDCA37C84C}">
-		<settingsVersion value="12.50" />
+		<settingsVersion value="12.60" />
 		<setting name="JavaFXOpenApp_NodeByClassNameFilters" type="6" rowIndex="8" colIndex="2">
 			<columns>
 				<column type="1" enabled="True" />
