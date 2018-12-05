@@ -1,9 +1,0 @@
-﻿function inputfields(login,username, password) {
-  login.lineEdit_Username.Click(60, 12);
-  login.lineEdit_Username.Keys(username);
-  login.lineEdit_Password.Click(51, 11);
-  login.lineEdit_Password.Keys(password);
-  login.pushButton.ClickButton();
-}
-
-module.exports.inputfields = inputfields;

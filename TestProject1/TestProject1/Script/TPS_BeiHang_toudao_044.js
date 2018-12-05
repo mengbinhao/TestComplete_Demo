@@ -1,0 +1,46 @@
+﻿var login = require("login");
+var exitwithlogic = require("exitwithlogic");
+var logout = require("logout");
+var launchwithlogic = require("launchwithlogic");
+var inputrelated = require("inputrelated");
+var globalconstant = require("globalconstant");
+
+function checkAddnewUserInputCharacter(loginUserName, loginPassword) {    
+    let indel = Project.Variables.indel,
+        userManagemant = indel.user_management,
+        newUser = indel.new_user,
+        usernameInput = newUser.lineEdit_UserName,
+        passwordInput = newUser.lineEdit_Password;
+
+    launchwithlogic.launchWithLogic();
+    login.login(loginUserName, loginPassword);
+    
+    indel.PatientManagementWidget.groupBox.frame.pushButton_UserManage.ClickButton();
+    
+    userManagemant.pushButton_newUser.ClickButton();
+
+    //username input valid 30 characters
+    inputrelated.checkNewInput(globalconstant.obj.numberAndLetter, globalconstant.obj.userMaxLength, usernameInput, 0);
+    
+    //username input great than 30 characters
+    inputrelated.checkNewInput(globalconstant.obj.numberAndLetter, globalconstant.obj.userMaxLength + 1, usernameInput, 1);
+    
+    //username input invalid characters
+    inputrelated.checkNewInput(globalconstant.obj.wrongInput, globalconstant.obj.userMaxLength, usernameInput, 1);
+    
+    //password input valid characters
+    inputrelated.checkNewInput(globalconstant.obj.numberAndLetter, globalconstant.obj.passMaxLength, passwordInput, 0);
+    
+    //password input great than 30 characters
+    inputrelated.checkNewInput(globalconstant.obj.numberAndLetter,globalconstant.obj. passMaxLength + 1, passwordInput, 1);
+    
+    //password input invalid characters
+    inputrelated.checkNewInput(globalconstant.obj.wrongInput, globalconstant.obj.passMaxLength, passwordInput, 1);
+
+    newUser.pushButton_Cancel.ClickButton();
+    
+    userManagemant.pushButton_Exit.ClickButton();
+    
+    logout.logout();
+    exitwithlogic.exitWithLogic()
+}

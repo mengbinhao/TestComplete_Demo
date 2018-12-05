@@ -1,0 +1,23 @@
+﻿var login = require("login");
+var exitwithlogic = require("exitwithlogic");
+var logout = require("logout");
+var launchwithlogic = require("launchwithlogic");
+
+function checkServerPath(loginUserName, loginPassword) {    
+    let indel = Project.Variables.indel,
+        serverPathBox = indel.DlgOptionClass.tabWidget.qt_tabwidget_stackedwidget.tab.groupBox_2;
+
+    launchwithlogic.launchWithLogic();
+    login.login(loginUserName, loginPassword);
+    
+    indel.PatientManagementWidget.groupBox.frame.pushButton_SystemSetting.ClickButton();
+
+    aqObject.CheckProperty(serverPathBox.label_3, "VisibleOnScreen", cmpEqual, true);
+    aqObject.CheckProperty(serverPathBox.label_5, "VisibleOnScreen", cmpEqual, true);
+    aqObject.CheckProperty(serverPathBox.label_14, "VisibleOnScreen", cmpEqual, true);
+    
+    indel.DlgOptionClass.pushButton_Cancel.ClickButton();
+    
+    logout.logout();
+    exitwithlogic.exitWithLogic()
+}

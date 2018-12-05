@@ -1,0 +1,207 @@
+﻿var utilsfunction = require("utilsfunction");
+var finditeminlist = require("finditeminlist");
+var globalconstant = require("globalconstant");
+var filefunction = require("filefunction");
+
+//Add Machine
+//DO not consider TMR and OAR
+function addMachine(newConfigName, indel) {
+    __addMachineOrCancel(newConfigName, indel, true);
+}
+
+function addMachineThenCancel(newConfigName, indel) {
+    __addMachineOrCancel(newConfigName, indel, false);
+}
+
+function __addMachineOrCancel(newConfigName, indel, isAdd) {
+    if(!utilsfunction.checkParamNull(newConfigName)) {
+        Log.Error("Please input valid newConfigName");
+        //Runner.Stop(true) do not pass globle param (like indel), after cases all fail
+        Runner.Stop(true);
+    }
+    
+    indel.machine_management.pushButton.ClickButton();
+    indel.InputMachineDialog.LineEdit.SetText(newConfigName);
+    indel.InputMachineDialog.DialogButtonBox.buttonOk.ClickButton();
+    
+    if (isAdd) {
+        indel.machine_physical_configs.pushButton.ClickButton();
+        indel.machine_TMR_popup.qt_msgbox_buttonbox.buttonYes.ClickButton();
+        indel.machine_OAR_popup.qt_msgbox_buttonbox.buttonYes.ClickButton();
+        indel.machine_confirm_popup.qt_msgbox_buttonbox.buttonOk.ClickButton();
+        indel.dirtyData.set(globalconstant.obj.machine, newConfigName);
+        //for refresh
+        utilsfunction.delay(5000);
+    } else {
+        indel.machine_physical_configs.pushButton_2.ClickButton();
+    }
+}
+
+//Now only support some prooerties in General Information tab
+//MachineSN、HalfTime、SourceRotateRate、FocusDoseRate、GammaRaysAverageEnergy、Max Treatment Time is not same as UI
+function editMachine(editConfigName, editMachineTab = '0', editMachineProperty, editMachinePropertyValue, indel, isDel) {
+    let configList = indel.machine_management.ConfigList,
+        machinePhysicalConfigs = indel.machine_physical_configs,
+        tabWidget = machinePhysicalConfigs.tabWidget,
+        machineConfigNameColumn = globalconstant.obj.machineConfigNameColumn,
+        objectName = globalconstant.obj.objectName,
+        inputPrefix = globalconstant.obj.inputPrefix,
+        itemColumn = globalconstant.obj.itemColumn,
+        currentColumn = globalconstant.obj.currentColumn,
+        phyDataChangeViewList = indel.PhyDataChangeViewerClass.treeWidget_PhyDataChangeView;
+        
+    if (!utilsfunction.checkParamNull(editConfigName, editMachineProperty)) {
+        Log.Error("Please input valid editConfigName or editProperty");
+        //Runner.Stop(true) do not pass globle param (like indel), after cases all fail
+        Runner.Stop(true);
+    }
+
+    let ret =  finditeminlist.isItemInListReturnIndex(editConfigName, machineConfigNameColumn, configList);
+    
+    //Will continue excute if does not pass
+    //so need to hanle below code
+    if (!strictEqual(ret, -1)) {
+        configList.ClickCell(ret, machineConfigNameColumn);
+        indel.machine_management.pushButton_2.ClickButton();
+        
+        //handle edit default config
+        if (indel.machine_edit_default_popup.Exists) {
+            indel.machine_edit_default_popup.qt_msgbox_buttonbox.buttonNo.ClickButton();
+        }
+        //handle popup does not display
+        if (!machinePhysicalConfigs.Exists) {
+            return globalconstant.obj.emptyStr;
+        }       
+        if (!utilsfunction.checkParamRange(Number(editMachineTab), 0, tabWidget.wTabCount - 1)) {
+            Log.Error("Please input valid editMachineTab");
+            //Runner.Stop(true) do not pass globle param (like indel), after cases all fail
+            Runner.Stop(true);
+        }
+        tabWidget.setCurrentIndex(editMachineTab);
+        
+        let child = utilsfunction.findChildObject(__getMacineTab(editMachineTab, indel), objectName, inputPrefix+editMachineProperty);
+        // return if not find
+        if (child == null) return globalconstant.obj.emptyStr;
+        child.SetText(editMachinePropertyValue)
+        
+        machinePhysicalConfigs.pushButton.ClickButton();
+        indel.machine_TMR_popup.qt_msgbox_buttonbox.buttonYes.ClickButton();
+        indel.machine_OAR_popup.qt_msgbox_buttonbox.buttonYes.ClickButton();
+        indel.machine_confirm_popup.qt_msgbox_buttonbox.buttonOk.ClickButton();
+        aqObject.CheckProperty(indel.PhyDataChangeViewerClass, "Exists", cmpEqual, true);
+        if (isDel) {
+            indel.PhyDataChangeViewerClass.pushButton_Ok.ClickButton();         
+        } else {
+            indel.PhyDataChangeViewerClass.pushButton_Cancel.ClickButton();         
+        }
+    } else {
+        Log.Error(Project.TestItems.Current.Name + ' can not find machine to edit editConfigName = ' + editConfigName);
+    }
+}
+
+function __getMacineTab(editMachineTab, indel) {
+     let temp = indel.machine_physical_configs.tabWidget.qt_tabwidget_stackedwidget;
+     let tab = {
+         '0' : temp.tab,
+         '1' : temp.tab_2,
+         '2' : temp.tab_3,
+         '3' : temp.tab_4,
+         '4' : temp.tab_5,
+         '5' : temp.tab_6,
+         '6' : temp.tab_7,
+         '7' : temp.tab_8.groupBox
+     }
+    return tab[editMachineTab];
+}
+
+//Delete machine
+function deleteMachine(delConfigName, indel) {
+  __deleteMachineOrCancel(delConfigName, indel, true);
+}
+
+function deleteMachineThenCancel(delConfigName, indel) {
+  __deleteMachineOrCancel(delConfigName, indel, false);
+}
+
+function __deleteMachineOrCancel(delConfigName, indel, isDelete) {
+    let machineManagement = indel.machine_management,
+        configList = machineManagement.ConfigList;
+    
+    if(!utilsfunction.checkParamNull(delConfigName)) {
+        Log.Error("Please input valid delConfigName");
+        //Runner.Stop(true) do not pass globle param (like indel), after cases all fail
+        Runner.Stop(true);
+    }
+
+    let ret =  finditeminlist.isItemInListReturnIndex(delConfigName, globalconstant.obj.machineConfigNameColumn, configList);
+
+    if (!strictEqual(ret, -1)) {
+        configList.ClickCell(ret, globalconstant.obj.machineConfigNameColumn);
+        machineManagement.pushButton_3.ClickButton();
+        if (indel.machine_delete_default_config_popup.Exists) {
+            indel.machine_delete_default_config_popup.qt_msgbox_buttonbox.buttonOk.ClickButton();
+            return;
+        }
+        aqObject.CheckProperty(indel.machine_delete_popup, "Exists", cmpEqual, true);
+        if (isDelete) {
+            indel.machine_delete_popup.qt_msgbox_buttonbox.buttonYes.ClickButton();
+            utilsfunction.delay(5000);
+        } else {
+            indel.machine_delete_popup.qt_msgbox_buttonbox.buttonNo.ClickButton();
+        }
+    } else {
+        Log.Warning('can not find machine to delete, delConfigName = ' + delConfigName);
+    }
+}
+
+function getExportFolder() {
+    let exportFolder = aqFileSystem.GetFileDrive(TestedApps.Items(0).Path) + globalconstant.obj.backslash + globalconstant.obj.exportFolder;
+    filefunction.createFolder(exportFolder);
+    return exportFolder;
+}
+
+function importMachine(exportFolder, exportName, indel) {
+    let pathAndName = exportFolder + globalconstant.obj.backslash + exportName;
+    indel.machine_dlgImportConfigs.cbx_N.ComboBox.Edit.SetText(pathAndName);
+    indel.machine_dlgImportConfigs.btn_O.Click();
+    indel.machine_physical_configs.pushButton.ClickButton();
+    indel.machine_TMR_popup.qt_msgbox_buttonbox.buttonYes.ClickButton();
+    indel.machine_OAR_popup.qt_msgbox_buttonbox.buttonYes.ClickButton();
+    indel.machine_confirm_popup.qt_msgbox_buttonbox.buttonOk.ClickButton();
+    //if data is big, need to wait a bit long
+    utilsfunction.delay(10000);
+    
+    //if input wrong path
+    if (indel.machine_dlgImportConfigs.Import_Configs.Exists) {
+        indel.machine_dlgImportConfigs.Import_Configs.CtrlNotifySink.btn_.Exists.Click();
+        indel.machine_dlgImportConfigs.btn_.Click();
+    }
+    
+    //if exist import config
+    if (indel.machine_import_exist_popup.Exists) {
+        indel.machine_import_exist_popup.qt_msgbox_buttonbox.buttonOk.ClickButton();
+    }
+}
+
+function exportMachine(exportFolder, exportName, indel) {
+    let pathAndName = exportFolder + globalconstant.obj.backslash + exportName;
+    indel.machine_dlgExportConfigs.DUIViewWndClassName.Item.FloatNotifySink.ComboBox.Edit.SetText(pathAndName);
+    indel.machine_dlgExportConfigs.btn_S.Click();
+    if (indel.machine_export_exist_popup.Exists) {
+        indel.machine_export_exist_popup.Item.CtrlNotifySink.btn_Y.Click();
+    }
+}
+
+function setCurrentMachine() {
+    
+}
+
+module.exports.addMachine = addMachine;
+module.exports.addMachineThenCancel = addMachineThenCancel;
+module.exports.editMachine = editMachine;
+module.exports.deleteMachine = deleteMachine;
+module.exports.deleteMachineThenCancel = deleteMachineThenCancel;
+module.exports.importMachine = importMachine;
+module.exports.exportMachine = exportMachine;
+module.exports.getExportFolder = getExportFolder;
+module.exports.setCurrentMachine = setCurrentMachine;

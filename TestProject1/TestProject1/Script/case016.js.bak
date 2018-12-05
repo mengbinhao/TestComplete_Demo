@@ -7,7 +7,7 @@ var indelplanUI = require("indelplanUI");
 function case016(username, password) {    
     launchwithlogic.launchWithLogic();
     login.login(username, password);
-    let indel = indelplanUI.getUI();
+    let indel = Project.Variables.indel;
     
     aqObject.CheckProperty(indel.patientManagementWidget.groupBox.groupBox_6.lineEdit_SearchPatient, "Visible", cmpEqual, true);
     aqObject.CheckProperty(indel.patientManagementWidget.groupBox.groupBox_2.radioButton_AllDate, "Visible", cmpEqual, true);

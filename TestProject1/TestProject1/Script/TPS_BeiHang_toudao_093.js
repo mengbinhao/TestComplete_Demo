@@ -1,0 +1,40 @@
+﻿var login = require("login");
+var exitwithlogic = require("exitwithlogic");
+var logout = require("logout");
+var launchwithlogic = require("launchwithlogic");
+var physicalparameterutils = require("physicalparameterutils");
+var finditeminlist = require("finditeminlist");
+var globalconstant = require("globalconstant");
+
+function setCurrentMachineManagement(loginUserName, loginPassword, newConfigName) {    
+    let indel = Project.Variables.indel,
+        machineList = indel.machine_management.ConfigList,
+        machineConfigNameColumn = globalconstant.obj.machineConfigNameColumn;
+        
+    launchwithlogic.launchWithLogic();
+    login.login(loginUserName, loginPassword);
+
+    indel.PatientManagementWidget.groupBox.frame.pushButton_PhyData.ClickButton();
+
+    //add first
+    physicalparameterutils.addMachine(indel, newConfigName);
+    
+    let ret =  finditeminlist.isItemInListReturnIndex(newConfigName, machineConfigNameColumn, machineList);
+    
+    if (!strictEqual(ret, -1)) {
+        machineList.ClickCell(ret, machineConfigNameColumn);
+        indel.machine_management.pushButton_5.ClickButton();
+        aqObject.CheckProperty(indel.machine_setCurrent_popup, "Exists", cmpEqual, true);
+        indel.machine_setCurrent_popup.qt_msgbox_buttonbox.buttonOk.ClickButton();
+    } else {
+        Log.Error(`${Project.TestItems.Current.Name} can not find machine to operation`);
+    }
+    
+    //clear dirty data
+    physicalparameterutils.deleteMachine(indel, newConfigName);
+    
+    indel.machine_management.Close();
+     
+    logout.logout();
+    exitwithlogic.exitWithLogic()
+}

@@ -1,19 +1,17 @@
 ﻿var login = require("login");
-var exit = require("exit");
+var exitwithlogic = require("exitwithlogic");
 var logout = require("logout");
 var launchwithlogic = require("launchwithlogic");
-var indelplanUI = require("indelplanUI");
 
 function defualtsort(username, password) {
-    launchwithlogic.launchWithLogic();
-    login.login(username, password);
-    
     let indel = Project.Variables.indel;
+    launchwithlogic.launchWithlogic();
+    login.login(username, password);
 
-    aqObject.CheckProperty(indel.patientManagementWidget.groupBox.groupBox_2.radioButton_AllDate, "checked", cmpEqual, true);
+    aqObject.CheckProperty(indel.PatientManagementWidget.groupBox.groupBox_2.radioButton_AllDate, "checked", cmpEqual, true);
     
     logout.logout();
-    exit.exit();
+    exitwithlogic.exitWithLogic()
 }
 
 

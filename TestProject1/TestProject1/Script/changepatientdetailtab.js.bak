@@ -1,50 +1,36 @@
-﻿var indelplanUI = require("indelplanUI");
-var utilsfunction = require("utilsfunction");
+﻿var utilsfunction = require("utilsfunction");
+var globalconstant = require("globalconstant");
 
-function changepatientdetailtab(tabName) {
-    let indel = indelplanUI.getUI();
+function changePatientDetailTab(indel, tabName) {
   
-    if(!utilsfunction.paramCheck(tabName) || !checkTabNameExists(tabName, indel.tabWidget)) {
-        Log.Error("Please input valid tabName");
+    if(!utilsfunction.checkParamNull(tabName) || !checkTabExists(tabName, indel.tabWidget)) {
+        Log.Error(`Please input valid tabName=${tabName}`);
         Runner.Stop(true);
     }
     
-    if (canSwitch(tabName, indel.tabWidget.wFocusedTab)) {
-        indel.tabWidget.ClickTab(tabName);
-        utilsfunction.delay(10000);
-    }
+    indel.tabWidget.ClickTab(tabName);
     
-    if (strictEqual(tabName, 'Contour')) {
-        if (indel.contour_to_plan_popup.Exists) {
-            indel.contour_to_plan_popup.qt_msgbox_buttonbox.buttonYes.ClickButton();
-        }
-        aqObject.CheckProperty(indel.contourGUIClass.groupBox_4.AddToLib, "Visible", cmpEqual, true);
-    } else  if (strictEqual(tabName, 'PlanDesign')) {
-        if (indel.contour_to_plan_popup.Exists) {
-            indel.contour_to_plan_popup.qt_msgbox_buttonbox.buttonYes.ClickButton();
-        }
-        aqObject.CheckProperty(indel.planListClass, "Visible", cmpEqual, true);
-    } else {
-        aqObject.CheckProperty(indel.patientDataClass.groupBox_7.pushButton_GamaReg, "Visible", cmpEqual, true);
+    if (globalconstant.obj.contour === tabName && indel.contour_switchtab_nostudy_popup.Exists) {
+        indel.contour_switchtab_nostudy_popup.qt_msgbox_buttonbox.buttonOk.ClickButton();
     }
 }
 
-function checkTabNameExists(tabName, tabWidget) {
+function checkTabExists(tabName, tabWidget) {
     let tabs = [];
     for (let i = 0; i < tabWidget.wTabCount; i++) {
-        tabs[i] = tabWidget.wTabCaption(i);
+        if (tabName === tabWidget.wTabCaption(i)) return true;
     }
-    return tabs.includes(tabName) ? true : false;
+    return false;
 }
 
-function canSwitch(tabName, currentIndex) {
-    //PlanDesign popup a dialog so can not change tab
-    if (strictEqual(currentIndex, 2)) {
-        return false;
-    }
-    return !strictEqual(getTabIndex(tabName), currentIndex) ? true : false;
-}
-
+//function canSwitch(tabName, currentIndex) {
+//    //PlanDesign popup a dialog so can not change tab
+//    if (strictEqual(currentIndex, 2)) {
+//        return false;
+//    }
+//    return !strictEqual(getTabIndex(tabName), currentIndex) ? true : false;
+//}
+//
 function getTabIndex(tabName) {
     let tabMapping = {
         'PatientManagement' : 0,
@@ -53,3 +39,9 @@ function getTabIndex(tabName) {
     }
     return tabMapping[tabName];
 }
+
+function getTabName(indel) {
+    return indel.tabWidget.wTabCaption(wFocusedTab);
+}
+
+module.exports.changePatientDetailTab = changePatientDetailTab;

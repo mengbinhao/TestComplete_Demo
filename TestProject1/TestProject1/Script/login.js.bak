@@ -1,41 +1,45 @@
-﻿var indelplanUI = require("indelplanUI");
-var inputfields = require("inputfields");
-var utilsfunction = require("utilsfunction");
+﻿var utilsfunction = require("utilsfunction");
 
-function login(username, password) {
+function login(loginUserName, loginPassword) {
     let indel = Project.Variables.indel;
     
-    if(!utilsfunction.paramCheck(username, password)) {
-        Log.Error("Please input valid username or password");
-        //Runner.Stop(true) do not pass globle param (like indel), after cases all fail
+    if(!utilsfunction.checkParamNull(loginUserName, loginPassword)) {
+        Log.Error(`Please input valid loginUserName=${loginUserName} or loginPassword=${loginPassword}`);
         //Runner.Stop(true) do not pass globle param (like indel), after cases all fail
         Runner.Stop(true);
     }
     
-    inputfields.inputfields(indel.login, username, password);
+    __inputFields(indel.logonClass, loginUserName, loginPassword);
   
-    if (indel.user_logged_popup.Exists) {
-        indel.user_logged_popup.qt_msgbox_buttonbox.buttonOk.ClickButton();
+    if (indel.login_logged_popup.Exists) {
+        indel.login_logged_popup.qt_msgbox_buttonbox.buttonOk.ClickButton();
         utilsfunction.delay(60000);
-        inputfields.inputfields(indel.login, username, password);
+        __inputFields(indel.logonClass, loginUserName, loginPassword);
     }
   
-    if (indel.user_non_normal_exit_popup.Exists) {
-        indel.user_non_normal_exit_popup.qt_msgbox_buttonbox.buttonYes.ClickButton();
+    if (indel.login_nonnormal_popup.Exists) {
+        indel.login_nonnormal_popup.qt_msgbox_buttonbox.buttonYes.ClickButton();
     }
+
     
-    /*
-    if (indel.data_save_pop.Exists) {
-        indel.data_save_pop.qt_msgbox_buttonbox.buttonYes.ClickButton();
+    if (indel.login_data_save_popup.Exists) {
+        indel.login_data_save_popup.qt_msgbox_buttonbox.buttonNo.ClickButton();
     }
     
     //Abort
     if (indel.ReloadClass.Exists) {
         indel.ReloadClass.pushButton_3.ClickButton();
     }
-    */
-    
-    aqObject.CheckProperty(indel.patientManagementWidget.groupBox.frame.groupBox_3.label_UserName, "QtText", cmpEqual, "User Name: " + username);
+
+    aqObject.CheckProperty(indel.PatientManagementWidget.groupBox.frame.groupBox_3.label_UserName, "QtText", cmpEqual, "User Name: " + loginUserName);
+}
+
+function __inputFields(login, loginUserName, loginPassword) {
+  login.lineEdit_Username.Click();
+  login.lineEdit_Username.Keys(loginUserName);
+  login.lineEdit_Password.Click();
+  login.lineEdit_Password.Keys(loginPassword);
+  login.pushButton.ClickButton();
 }
 
 module.exports.login = login;

@@ -1,5 +1,0 @@
-﻿function login(username, password)
-{
-  //Runs the "IndelPlanV2_0" tested application.
-  TestedApps.IndelPlanV2_0.Run();
-}

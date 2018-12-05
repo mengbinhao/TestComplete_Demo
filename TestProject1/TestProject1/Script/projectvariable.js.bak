@@ -1,0 +1,12 @@
+﻿var globalconstant = require("globalconstant");
+
+function getVariableValue(variableName) {
+    let ret = globalconstant.obj.emptyStr;
+    var Variables = Project.Variables;
+    if (Variables.VariableExists(variableName)) {
+      ret = Variables.GetVariableDefaultValue(variableName);
+    }
+    return ret; 
+}
+
+module.exports.getVariableValue = getVariableValue;

@@ -1,6 +1,141 @@
-﻿const USER_TYPE = ['Visitor', 'PlanningPhysicist', 'RadiationPhysicist', 'RadiationTherapist', 'ChiefDoctor', 'Technician'];
+﻿var utilsfunction = require("utilsfunction");
+var finditeminlist = require("finditeminlist");
+var globalconstant = require("globalconstant");
 
-function getUserType() {
+const USER_TYPE = ['Visitor', 'PlanningPhysicist', 'RadiationPhysicist', 'RadiationTherapist', 'ChiefDoctor', 'Technician'];
+
+function __getUserType() {
     return USER_TYPE;
 }
 
+//Add user related
+function addUser(newUserName, newUserPassword, newUserConfirmPassword, newUserType, indel) {
+    __addUserOrCancel(newUserName, newUserPassword, newUserConfirmPassword, newUserType, indel, true);
+}
+
+function addUserThenCancel(newUserName, newUserPassword, newUserConfirmPassword, newUserType, indel) {
+    __addUserOrCancel(newUserName, newUserPassword, newUserConfirmPassword, newUserType, indel, false);
+}
+
+function __addUserOrCancel(newUserName, newUserPassword, newUserConfirmPassword, newUserType, indel, isAdd) {
+    if(!utilsfunction.checkParamNull(newUserName,newUserPassword)) {
+        Log.Error("Please input valid newusername or newuserpassword");
+        //Runner.Stop(true) do not pass globle param (like indel), after cases all fail
+        Runner.Stop(true);
+    }
+    
+    __fillUserInfo(newUserName, newUserPassword, newUserConfirmPassword, newUserType, indel);
+    
+    if (isAdd) {
+        indel.new_user.pushButton_OK.ClickButton();
+        indel.dirtyData.set(globalconstant.obj.user, newUserName);
+    } else {
+        indel.new_user.pushButton_Cancel.ClickButton();
+    }
+}
+
+function __fillUserInfo(newUserName, newUserPassword, newUserConfirmPassword, newUserType, indel) {
+    indel.user_management.pushButton_NewUser.ClickButton();
+    //input user info
+    indel.new_user.lineEdit_UserName.Keys(newUserName);
+    indel.new_user.lineEdit_Password.Click();
+    indel.new_user.lineEdit_Password.Keys(newUserPassword);
+    indel.new_user.lineEdit_PasswordConfirm.Click();
+    indel.new_user.lineEdit_PasswordConfirm.Keys(newUserConfirmPassword ? newUserConfirmPassword : newUserPassword);
+    
+    __choiceUserType(newUserType, indel);
+}
+
+function __choiceUserType(newUserType, indel) {
+    if (newUserType && __getUserType().includes(newUserType)) {
+        indel.new_user.comboBox_UserType.ClickItem(newUserType);
+    }
+}
+
+//Edit user
+function editUser(editUserName,editUserPassword,editUserType, indel) {
+    let userManagement = indel.user_management,
+        userList = userManagement.UserList;
+
+    if (!utilsfunction.checkParamNull(editUserPassword,editUserType)) {
+        Log.Error("Please input valid edituserpassword or usertype");
+        //Runner.Stop(true) do not pass globle param (like indel), after cases all fail
+        Runner.Stop(true);
+    }
+
+    let ret =  finditeminlist.isItemInListReturnIndex(editUserName, globalconstant.obj.userNameColumn, userList);
+    
+    //Will continue excute if does not pass
+    //so need to hanle below code
+    if (!strictEqual(ret, -1)) {
+        userList.ClickCell(ret, globalconstant.obj.userNameColumn);
+        userManagement.pushButton_EditUser.ClickButton();
+        //handle popup does not display
+        if (!indel.new_user.Exists) {
+            return globalconstant.obj.emptyStr;
+        }
+        indel.new_user.lineEdit_Password.Click();
+        indel.new_user.lineEdit_Password.Clear();
+        indel.new_user.lineEdit_Password.Keys(editUserPassword);
+        indel.new_user.lineEdit_PasswordConfirm.Click();
+        indel.new_user.lineEdit_PasswordConfirm.Clear();
+        indel.new_user.lineEdit_PasswordConfirm.Keys(editUserPassword);
+    
+        __choiceUserType(editUserType, indel);
+    
+        indel.new_user.pushButton_OK.ClickButton();
+    
+        //re-find the row index, maybe the sequence changes
+        ret =  finditeminlist.isItemInListReturnIndex(editUserName, globalconstant.obj.userNameColumn, userList);
+    
+        return finditeminlist.findFieldValue(ret, globalconstant.obj.userTypeColumn, userList);
+    } else {
+        Log.Warning('can not find user to edit editusername = ' + editUserName);
+    }
+    return globalconstant.obj.emptyStr;
+}
+
+//Delete user related
+function deleteUser(deleteUserName, indel) {
+  __deleteUserOrCancel(deleteUserName, indel, true);
+}
+
+function deleteUserThenCancel(deleteUserName, indel) {
+  __deleteUserOrCancel(deleteUserName, indel, false);
+}
+
+function __deleteUserOrCancel(deleteUserName, indel, isDelete) {
+    let userManagement = indel.user_management,
+        userList = userManagement.UserList;
+    
+    if(!utilsfunction.checkParamNull(deleteUserName)) {
+        Log.Error("Please input valid deleteusername");
+        //Runner.Stop(true) do not pass globle param (like indel), after cases all fail
+        Runner.Stop(true);
+    }
+
+    let ret =  finditeminlist.isItemInListReturnIndex(deleteUserName, globalconstant.obj.userNameColumn, userList);
+  
+    if (!strictEqual(ret, -1)) {
+        userList.ClickCell(ret, globalconstant.obj.userNameColumn);
+        userManagement.pushButton_DelUser.ClickButton();
+        if (indel.delete_current_user_pop.Exists) {
+            indel.delete_current_user_pop.qt_msgbox_buttonbox.buttonOk.ClickButton();
+            return;
+        }
+        aqObject.CheckProperty(indel.delete_user_popup, "Exists", cmpEqual, true);
+        if (isDelete) {
+            indel.delete_user_popup.qt_msgbox_buttonbox.buttonYes.ClickButton();
+        } else {
+            indel.delete_user_popup.qt_msgbox_buttonbox.buttonNo.ClickButton();
+        }
+    } else {
+        Log.Warning('can not find user to delete, deleteusername = ' + deleteUserName);
+    }
+}
+
+module.exports.addUser = addUser;
+module.exports.addUserThenCancel = addUserThenCancel;
+module.exports.editUser = editUser;
+module.exports.deleteUser = deleteUser;
+module.exports.deleteUserThenCancel = deleteUserThenCancel;

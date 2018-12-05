@@ -1,0 +1,49 @@
+﻿var login = require("login");
+var exitwithlogic = require("exitwithlogic");
+var logout = require("logout");
+var launchwithlogic = require("launchwithlogic");
+var globalconstant = require("globalconstant");
+var physicalparameterutils = require("physicalparameterutils");
+var finditeminlist = require("finditeminlist");
+
+function checkMachineTab(loginUserName, loginPassword, newConfigName) {    
+    let indel = Project.Variables.indel,
+        machineList = indel.machine_management.ConfigList,
+        tab = indel.machine_physical_configs.tabWidget.qt_tabwidget_stackedwidget.tab_4,
+        tabIndex = 3;
+        
+    launchwithlogic.launchWithLogic();
+    login.login(loginUserName, loginPassword);
+
+    indel.PatientManagementWidget.groupBox.frame.pushButton_PhyData.ClickButton();
+    
+    //add first
+    physicalparameterutils.addMachine(indel, newConfigName);
+    
+    let ret =  finditeminlist.isItemInListReturnIndex(newConfigName, globalconstant.obj.machineConfigNameColumn, machineList);
+    
+    if (!strictEqual(ret, -1)) { 
+        machineList.ClickCell(ret, globalconstant.obj.machineConfigNameColumn);
+        indel.machine_management.pushButton_2.ClickButton();
+        indel.machine_physical_configs.tabWidget.setCurrentIndex(tabIndex);
+        
+        aqObject.CheckProperty(tab.groupBox_5, "title", cmpEqual, 'Frame Range');
+        aqObject.CheckProperty(tab.label_74, "text", cmpStartsWith, 'Dome Iso Distance(mm)');
+        aqObject.CheckProperty(tab.label_75, "text", cmpStartsWith, 'Gantry Rotate Time(Sec)');
+        aqObject.CheckProperty(tab.groupBox_14, "title", cmpEqual, 'Mark Points');
+        aqObject.CheckProperty(tab.groupBox_15, "title", cmpEqual, 'Coordinate Offset');
+        aqObject.CheckProperty(tab.groupBox_6, "title", cmpEqual, 'DRR');
+
+        indel.machine_physical_configs.pushButton_2.ClickButton();
+    } else {
+        Log.Error(`${Project.TestItems.Current.Name} error`);
+    }
+
+    //clear dirty data
+    physicalparameterutils.deleteMachine(indel, newConfigName);
+    
+    indel.machine_management.Close();
+    
+    logout.logout();
+    exitwithlogic.exitWithLogic()
+}

@@ -1,0 +1,53 @@
+﻿var login = require("login");
+var exit = require("exit");
+var logout = require("logout");
+var launchwithlogic = require("launchwithlogic");
+var userfunction = require("userfunction");
+var finditeminlist = require("finditeminlist");
+var globalconstant = require("globalconstant");
+
+function changeUserPasswordThenCancel(loginUserName, loginUserName, newUserName, newUserPassword, editUserPassword) {    
+    let indel = Project.Variables.indel,
+        userManagemant = indel.user_management,
+        userList = userManagemant.userList,
+        newUser = indel.new_user,
+        passwordInput = newUser.lineEdit_Password,
+        confirmPasswordInput = newUser.lineEdit_PasswordConfirm;
+    
+    launchwithlogic.launchWithLogic();
+    login.login(loginUserName, loginPassword);
+    
+    indel.PatientManagementWidget.groupBox.frame.pushButton_UserManage.ClickButton();
+
+    //add new user first
+    userfunction.addUser(newUserName, newUserPassword, null, null, indel);
+    
+    let ret =  finditeminlist.isItemInListReturnIndex(newUserName, globalconstant.obj.userNameColumn, userList);
+    
+    if (!strictEqual(ret, -1)) {
+         userList.ClickCell(ret, globalconstant.obj.userNameColumn);
+         userManagemant.pushButton_EditUser.ClickButton();
+         passwordInput.clear();
+         confirmPasswordInput.clear();
+         passwordInput.Keys(editUserPassword);
+         confirmPasswordInput.Keys(editUserPassword);
+         newUser.pushButton_Cancel.ClickButton();
+         userManagemant.pushButton_Exit.ClickButton();
+         logout.logout();
+         login.login(newUserName, newUserPassword);
+         logout.logout();
+         login.login(loginUserName, loginUserName);
+     } else {
+         Log.Error('can not find user to operation');
+     }
+ 
+    indel.PatientManagementWidget.groupBox.frame.pushButton_UserManage.ClickButton();
+    
+    //clear dirty data
+    userfunction.deleteUser(newUserName, indel);
+    
+    userManagemant.pushButton_Exit.ClickButton();
+    
+    logout.logout();
+    exit.exit();
+}

@@ -1,10 +1,8 @@
-﻿var indelplanUI = require("indelplanUI");
-var utilsfunction = require("utilsfunction");
+﻿var utilsfunction = require("utilsfunction");
 var userfunction = require("userfunction");
 var findItemInList = require("findItemInList");
 
-function editUser(editusername,edituserpassword,editusertype)
-{
+function editUser(editusername,edituserpassword,editusertype) {
     let field = 'User Name';
     let wantField = 'User Type';
     let indel = Project.Variables.indel;

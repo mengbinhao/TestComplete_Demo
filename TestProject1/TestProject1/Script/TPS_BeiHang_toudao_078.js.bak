@@ -1,0 +1,43 @@
+﻿var login = require("login");
+var exit = require("exit");
+var logout = require("logout");
+var launchwithlogic = require("launchwithlogic");
+
+function editCollimatorTab(loginUserName, loginPassword) {    
+    let indel = Project.Variables.indel,
+        machineList = indel.machine_management.ConfigList,
+        tab = indel.machine_physical_configs.tabWidget.qt_tabwidget_stackedwidget.tab_2;
+        
+//    launchwithlogic.launchWithLogic();
+//    login.login(loginUserName, loginPassword);
+
+//    indel.PatientManagementWidget.groupBox.frame.pushButton_PhyData.ClickButton();
+    
+    if (machineList.wRowCount > 0) {
+        //default edit first item
+        indel.machine_management.pushButton_2.ClickButton();
+        indel.machine_physical_configs.tabWidget.setCurrentIndex(1);
+        
+        tab.tableWidget_SourceList.selectColumn(1)
+        
+        
+//        aqObject.CheckProperty(tab.label, "VisibleOnScreen", cmpEqual, true);
+//        aqObject.CheckProperty(tab.label_2, "VisibleOnScreen", cmpEqual, true);
+//        aqObject.CheckProperty(tab.label_3, "VisibleOnScreen", cmpEqual, true);
+//        aqObject.CheckProperty(tab.label_4, "VisibleOnScreen", cmpEqual, true);
+//        aqObject.CheckProperty(tab.label_5, "VisibleOnScreen", cmpEqual, true);
+//        aqObject.CheckProperty(tab.label_6, "VisibleOnScreen", cmpEqual, true);
+//        aqObject.CheckProperty(tab.label_7, "VisibleOnScreen", cmpEqual, true);
+//        aqObject.CheckProperty(tab.label_15, "VisibleOnScreen", cmpEqual, true);
+
+    
+        indel.machine_physical_configs.pushButton_2.ClickButton();
+    } else {
+        Log.Error('there is no machine to edit');
+    }
+    
+//    indel.machine_management.Close();
+    
+//    logout.logout();
+//    exit.exit();
+}

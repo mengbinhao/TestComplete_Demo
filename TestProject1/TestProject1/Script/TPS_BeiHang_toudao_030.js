@@ -1,0 +1,25 @@
+﻿var login = require("login");
+var exitwithlogic = require("exitwithlogic");
+var logout = require("logout");
+var launchwithlogic = require("launchwithlogic");
+
+function checkController(loginUserName, loginPassword) {    
+    let indel = Project.Variables.indel,
+        controllerBox = indel.DlgOptionClass.tabWidget.qt_tabwidget_stackedwidget.tab.groupBox_4;
+
+    launchwithlogic.launchWithLogic();
+    login.login(loginUserName, loginPassword);
+    
+    indel.PatientManagementWidget.groupBox.frame.pushButton_SystemSetting.ClickButton();
+
+    aqObject.CheckProperty(controllerBox.label_8, "VisibleOnScreen", cmpEqual, true);
+    aqObject.CheckProperty(controllerBox.label_9, "VisibleOnScreen", cmpEqual, true);
+    aqObject.CheckProperty(controllerBox.label_11, "VisibleOnScreen", cmpEqual, true);
+    aqObject.CheckProperty(controllerBox.label_10, "VisibleOnScreen", cmpEqual, true);
+    aqObject.CheckProperty(controllerBox.label_15, "VisibleOnScreen", cmpEqual, true);
+    
+    indel.DlgOptionClass.pushButton_Cancel.ClickButton();
+    
+    logout.logout();
+    exitwithlogic.exitWithLogic()
+}

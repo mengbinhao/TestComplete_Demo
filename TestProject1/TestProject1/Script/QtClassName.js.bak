@@ -1,0 +1,31 @@
+﻿var login = require("login");
+var exit = require("exit");
+var logout = require("logout");
+var launchwithlogic = require("launchwithlogic");
+var finditeminlist = require("finditeminlist");
+
+function checkNewMachineColor(loginUserName, loginPassword) {    
+    let indel = Project.Variables.indel,
+        machineList = indel.machine_management.ConfigList,
+        checkColumns = 'Config Name,Creator,Create Time,Last Editor,Last Edit Time';
+        
+//    launchwithlogic.launchWithLogic();
+//    login.login(loginUserName, loginPassword);
+
+//    indel.PatientManagementWidget.groupBox.frame.pushButton_PhyData.ClickButton();
+
+//     var role = machineList.palette.QPalette_foreground();
+//     var role2 = machineList.palette.QPalette_background();
+     for (let i = 0; i < machineList.ChildCount; i++) {
+         Log.Message(machineList(i).QtClassName)
+     }
+     
+     //var color = lbl.palette.QPalette_color(role);
+     //Log.Message(color.QColor_value());
+
+
+//    indel.machine_management.Close();
+    
+//    logout.logout();
+//    exit.exit();
+}

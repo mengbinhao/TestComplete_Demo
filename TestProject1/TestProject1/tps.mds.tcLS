@@ -27,10 +27,10 @@
 			<Node name="variables">
 				<Node name="datav3">
 					<Node name="var0">
-						<Prp name="name" type="S" value="username"/>
+						<Prp name="name" type="S" value="loginUserName"/>
 					</Node>
 					<Node name="var1">
-						<Prp name="name" type="S" value="password"/>
+						<Prp name="name" type="S" value="loginPassword"/>
 					</Node>
 					<Node name="var10">
 						<Prp name="name" type="S" value="treatpart"/>
@@ -39,7 +39,7 @@
 						<Prp name="name" type="S" value="percentage"/>
 					</Node>
 					<Node name="var12">
-						<Prp name="name" type="S" value="dosevalue"/>
+						<Prp name="name" type="S" value="doseValue"/>
 					</Node>
 					<Node name="var13">
 						<Prp name="name" type="S" value="pointX"/>
@@ -63,7 +63,7 @@
 						<Prp name="name" type="S" value="areaX3"/>
 					</Node>
 					<Node name="var2">
-						<Prp name="name" type="S" value="newusername"/>
+						<Prp name="name" type="S" value="newUserName"/>
 					</Node>
 					<Node name="var20">
 						<Prp name="name" type="S" value="areaY3"/>
@@ -71,26 +71,47 @@
 					<Node name="var21">
 						<Prp name="name" type="S" value="indel"/>
 					</Node>
+					<Node name="var22">
+						<Prp name="name" type="S" value="newUserConfirmedPassword"/>
+					</Node>
+					<Node name="var23">
+						<Prp name="name" type="S" value="newConfigName"/>
+					</Node>
+					<Node name="var24">
+						<Prp name="name" type="S" value="editMachineTab"/>
+					</Node>
+					<Node name="var25">
+						<Prp name="name" type="S" value="editMachineProperty"/>
+					</Node>
+					<Node name="var26">
+						<Prp name="name" type="S" value="editMachinePropertyValue"/>
+					</Node>
+					<Node name="var27">
+						<Prp name="name" type="S" value="editMachineTabProperty"/>
+					</Node>
+					<Node name="var28">
+						<Prp name="name" type="S" value="editMachineTabPropertyValue"/>
+					</Node>
 					<Node name="var3">
-						<Prp name="name" type="S" value="newuserpassword"/>
+						<Prp name="name" type="S" value="newUserPassword"/>
 					</Node>
 					<Node name="var4">
-						<Prp name="name" type="S" value="newusertype"/>
+						<Prp name="name" type="S" value="newUserType"/>
 					</Node>
 					<Node name="var5">
-						<Prp name="name" type="S" value="editusertype"/>
+						<Prp name="name" type="S" value="editUserType"/>
 					</Node>
 					<Node name="var6">
-						<Prp name="name" type="S" value="edituserpassword"/>
+						<Prp name="name" type="S" value="editUserPassword"/>
 					</Node>
 					<Node name="var7">
-						<Prp name="name" type="S" value="newpatientname"/>
+						<Prp name="name" type="S" value="newPatientName"/>
 					</Node>
 					<Node name="var8">
-						<Prp name="name" type="S" value="newpatientid"/>
+						<Prp name="name" type="S" value="newPatientId"/>
 					</Node>
 					<Node name="var9">
-						<Prp name="name" type="S" value="editpatientname"/>
+						<Prp name="name" type="S" value="editPatientName"/>
 					</Node>
 				</Node>
 				<Prp name="version" type="I" value="3"/>

@@ -1,7 +1,5 @@
-﻿var indelplanUI = require("indelplanUI");
-
-function addtreatcourse() {
-    let indel = indelplanUI.getUI();
+﻿function addtreatcourse() {
+    let indel = Project.Variables.indel;
   
     aqObject.CheckProperty(indel.patientDataClass.groupBox_5.treeWidget_PlanList.wItems, "Count", cmpEqual, 0);
   

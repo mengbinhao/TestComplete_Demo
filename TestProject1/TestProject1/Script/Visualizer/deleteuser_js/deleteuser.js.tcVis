@@ -1,8 +1,4 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <Root signature="{42D2222C-ACA2-405F-8E67-05D5C42EB839}" version="2">
-	<data key="{5F6D9CC8-87AA-4A20-975B-6307804FFA21}">
-		<item typeId="{87B03792-E854-4F5D-9F33-165F1F874209}" version="2" lineNo="15" kind="0" dateTime="43314.2847222222" objectName="Aliases.INDELP_1.IntergratedGamaClass.centralWidget.stackedWidget.page.PatientManagementWidget.groupBox.frame.pushButton_UserManage" objectLeft="23" objectTop="697" objectRight="221" objectBottom="738" clickPointX="154" clickPointY="716" imageFileName="tcvi523107856133486.png" storageFileName="" needUpdate="False" rectColor="255" />
-		<item typeId="{87B03792-E854-4F5D-9F33-165F1F874209}" version="2" lineNo="34" kind="0" dateTime="43314.284837963" objectName="Aliases.INDELP_1.MessageBox3.qt_msgbox_buttonbox.buttonYes" objectLeft="118" objectTop="95" objectRight="193" objectBottom="122" clickPointX="151" clickPointY="108" imageFileName="tcvi5231181371334813.png" storageFileName="" needUpdate="False" rectColor="255" />
-		<item typeId="{87B03792-E854-4F5D-9F33-165F1F874209}" version="2" lineNo="35" kind="0" dateTime="43314.2848958333" objectName="Aliases.INDELP_1.QT6Class.pushButton_Exit" objectLeft="722" objectTop="592" objectRight="797" objectBottom="619" clickPointX="760" clickPointY="612" imageFileName="tcvi5231235191334815.png" storageFileName="" needUpdate="False" rectColor="255" />
-	</data>
+	<data key="{5F6D9CC8-87AA-4A20-975B-6307804FFA21}" />
 </Root>

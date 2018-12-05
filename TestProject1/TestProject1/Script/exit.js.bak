@@ -1,9 +1,7 @@
-﻿var indelplanUI = require("indelplanUI");
-
-function exit() {
-    let indel = indelplanUI.getUI();
+﻿function exit() {
+    let indel = Project.Variables.indel;
     //need logonClass active and at front
-    //indel.login.Close();
+    //indel.logonClass.Close();
     
     //too violence, unnormal exit, will have unnormal popup when next login
     //Sys.Process(indel.procesName).Terminate();
@@ -13,7 +11,7 @@ function exit() {
     Sys.Process(indel.procesName).Close();
     
     //Checks whether the 'Exists' property of the Aliases.INDELP_1.logonClass object equals False.
-    aqObject.CheckProperty(indel.login, "Exists", cmpEqual, false);
+    aqObject.CheckProperty(indel.logonClass, "Exists", cmpEqual, false);
 }
 
 module.exports.exit = exit;

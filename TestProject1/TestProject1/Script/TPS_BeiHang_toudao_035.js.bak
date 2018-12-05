@@ -1,0 +1,33 @@
+﻿var login = require("login");
+var exitwithlogic = require("exitwithlogic");
+var logout = require("logout");
+var launchwithlogic = require("launchwithlogic");
+var finditeminlist = require("finditeminlist");
+var utilsfunction = require("utilsfunction");
+
+function excuteSystemChecking(loginUserName, loginPassword) {    
+    let indel = Project.Variables.indel,
+        tabWidget = indel.DlgOptionClass.tabWidget,
+        tab_2 = tabWidget.qt_tabwidget_stackedwidget.tab_2,
+        resultList = tab_2.groupBox_6.treeWidget_Result,
+        colName = 'State',
+        result = 'Passed';
+
+    launchwithlogic.launchWithLogic();
+    login.login(loginUserName, loginPassword);
+    
+    indel.PatientManagementWidget.groupBox.frame.pushButton_SystemSetting.ClickButton();
+    //setCurrentIndex / setCurrentTab
+    tabWidget.qt_tabwidget_tabbar.setCurrentTab(1);
+    tab_2.pushButton_Check.ClickButton();
+    utilsfunction.delay(2000);
+    
+    for (let i = 0; i < resultList.wItems.Count; i++) {
+        aqObject.CompareProperty(finditeminlist.getFieldValueForMoreList(i, colName, resultList), cmpEqual, result, true, 3);
+    }
+
+    indel.DlgOptionClass.pushButton_Cancel.ClickButton();
+    
+    logout.logout();
+    exitwithlogic.exitwithlogic()
+}

@@ -35,7 +35,7 @@
 	<config language="{90F89436-9452-4F95-9882-6B5210079F13}" />
 	<testItems key="{F752D210-EF01-40B9-BDA2-E617EC1DA411}">
 		<children>
-			<testItem name="All" key="{94D93621-8C95-4A37-8BA1-6077B09E2E23}" group="True" enabled="True" testMoniker="" count="1" timeout="0" stopOnError="2" stopOnException="2" description="">
+			<testItem name="All" key="{94D93621-8C95-4A37-8BA1-6077B09E2E23}" group="True" enabled="False" testMoniker="" count="1" timeout="0" stopOnError="2" stopOnException="2" description="">
 				<testParameters />
 				<children>
 					<testItem name="login_and_logout" key="{B51B59D7-D2C7-410A-9C04-252E0F94EC89}" group="True" enabled="True" testMoniker="" count="1" timeout="0" stopOnError="2" stopOnException="2" description="">
@@ -47,8 +47,8 @@
 							</testItem>
 							<testItem name="login" key="{A081C105-4F2B-42CD-A531-D319F9F8CBC2}" group="False" enabled="True" testMoniker="{A303ABA3-29A1-40E4-B9EA-685430CF0937}login" count="1" timeout="0" stopOnError="2" stopOnException="2" description="">
 								<testParameters>
-									<param0 name="username" type="3" localVarName="username" localVarLevel="1" value="" />
-									<param1 name="password" type="3" localVarName="password" localVarLevel="1" value="" />
+									<param0 name="loginUserName" type="3" localVarName="" varType="0" value="" />
+									<param1 name="loginPassword" type="3" localVarName="" varType="0" value="" />
 								</testParameters>
 								<children />
 							</testItem>
@@ -57,96 +57,6 @@
 								<children />
 							</testItem>
 							<testItem name="exit" key="{A1A7188C-7619-44A5-AEAA-5C3224ED09AB}" group="False" enabled="True" testMoniker="{4562BB8E-9BF5-44DC-8B46-A42A91A50538}exit" count="1" timeout="0" stopOnError="2" stopOnException="2" description="">
-								<testParameters />
-								<children />
-							</testItem>
-						</children>
-					</testItem>
-					<testItem name="usermanagement" key="{0435AB0E-E54C-4B4F-BCD2-DE4914992EEE}" group="True" enabled="True" testMoniker="" count="1" timeout="0" stopOnError="2" stopOnException="2" description="">
-						<testParameters />
-						<children>
-							<testItem name="launchwithlogic" key="{29A33DB8-7425-4BEF-9061-28BC5977C60B}" group="False" enabled="True" testMoniker="{7F9FA413-E4BC-4613-9A2E-0D5597A168C9}launchWithLogic" count="1" timeout="2" stopOnError="1" stopOnException="1" description="">
-								<testParameters />
-								<children />
-							</testItem>
-							<testItem name="login" key="{6233401C-4001-4821-8158-672F6DF41C04}" group="False" enabled="True" testMoniker="{A303ABA3-29A1-40E4-B9EA-685430CF0937}login" count="1" timeout="0" stopOnError="2" stopOnException="2" description="">
-								<testParameters>
-									<param0 name="username" type="3" localVarName="username" localVarLevel="1" value="" />
-									<param1 name="password" type="3" localVarName="password" localVarLevel="1" value="" />
-								</testParameters>
-								<children />
-							</testItem>
-							<testItem name="adduser" key="{5DBDF859-8E19-4151-804A-24375189FCC2}" group="False" enabled="True" testMoniker="{F85E1C22-E146-440A-8570-EBFA048DD670}addUser" count="1" timeout="0" stopOnError="2" stopOnException="2" description="">
-								<testParameters>
-									<param0 name="newusername" type="3" localVarName="newusername" localVarLevel="1" value="" />
-									<param1 name="newuserpassword" type="3" localVarName="newuserpassword" localVarLevel="1" value="" />
-									<param2 name="usertype" type="3" localVarName="newusertype" localVarLevel="1" value="" />
-								</testParameters>
-								<children />
-							</testItem>
-							<testItem name="edituser" key="{C8A2E0B0-7F1B-4B99-98E6-157C9D029AD1}" group="False" enabled="True" testMoniker="{DB884D76-E677-4522-8EBA-7F92EC1187E1}editUser" count="1" timeout="0" stopOnError="2" stopOnException="2" description="">
-								<testParameters>
-									<param0 name="editusername" type="3" localVarName="newusername" localVarLevel="1" value="" />
-									<param1 name="edituserpassword" type="3" localVarName="edituserpassword" localVarLevel="1" value="" />
-									<param2 name="editusertype" type="3" localVarName="editusertype" localVarLevel="1" value="" />
-								</testParameters>
-								<children />
-							</testItem>
-							<testItem name="deleteuser" key="{D553A874-E4A9-418A-B7CD-C64B9CE88182}" group="False" enabled="True" testMoniker="{5F6D9CC8-87AA-4A20-975B-6307804FFA21}deleteUser" count="1" timeout="0" stopOnError="2" stopOnException="2" description="">
-								<testParameters>
-									<param0 name="deleteusername" type="3" localVarName="newusername" localVarLevel="1" value="" />
-								</testParameters>
-								<children />
-							</testItem>
-							<testItem name="logout" key="{73B36119-F9F1-4A41-BE26-3CB8DA446411}" group="False" enabled="True" testMoniker="{42373CDE-C63F-47E9-A1A8-BDB57F55A2F8}logout" count="1" timeout="0" stopOnError="2" stopOnException="2" description="">
-								<testParameters />
-								<children />
-							</testItem>
-							<testItem name="exit" key="{9C3CA43B-F4CF-4D05-9098-0311B3E654ED}" group="False" enabled="True" testMoniker="{4562BB8E-9BF5-44DC-8B46-A42A91A50538}exit" count="1" timeout="0" stopOnError="2" stopOnException="2" description="">
-								<testParameters />
-								<children />
-							</testItem>
-						</children>
-					</testItem>
-					<testItem name="patientmanagement" key="{22A6DF95-8859-4AB3-BB86-A06F6428A5D9}" group="True" enabled="True" testMoniker="" count="1" timeout="0" stopOnError="2" stopOnException="2" description="">
-						<testParameters />
-						<children>
-							<testItem name="launchwithlogic" key="{F879E05D-7BF4-43F2-BCAB-EC604B6939F8}" group="False" enabled="True" testMoniker="{7F9FA413-E4BC-4613-9A2E-0D5597A168C9}launchWithLogic" count="1" timeout="2" stopOnError="1" stopOnException="1" description="">
-								<testParameters />
-								<children />
-							</testItem>
-							<testItem name="login" key="{EEFE2A23-2571-4A9D-928F-F63EB58C8FA8}" group="False" enabled="True" testMoniker="{A303ABA3-29A1-40E4-B9EA-685430CF0937}login" count="1" timeout="0" stopOnError="2" stopOnException="2" description="">
-								<testParameters>
-									<param0 name="username" type="3" localVarName="username" localVarLevel="1" value="" />
-									<param1 name="password" type="3" localVarName="password" localVarLevel="1" value="" />
-								</testParameters>
-								<children />
-							</testItem>
-							<testItem name="addpatient" key="{30305D2E-0D0D-4F06-A05B-75749731C892}" group="False" enabled="True" testMoniker="{12DC4B05-CC3D-434C-B495-635437086ECC}addpatient" count="1" timeout="0" stopOnError="2" stopOnException="2" description="">
-								<testParameters>
-									<param0 name="name" type="3" localVarName="newpatientname" localVarLevel="1" value="" />
-									<param1 name="id" type="3" localVarName="newpatientid" localVarLevel="1" value="" />
-								</testParameters>
-								<children />
-							</testItem>
-							<testItem name="editpatient" key="{DB18DDEB-A664-4950-B3B4-D38B88F21752}" group="False" enabled="True" testMoniker="{83FBE314-FB37-4219-AC9E-B9C6B66EC613}editpatient" count="1" timeout="0" stopOnError="2" stopOnException="2" description="">
-								<testParameters>
-									<param0 name="patientId" type="3" localVarName="newpatientid" localVarLevel="1" value="" />
-									<param1 name="editname" type="3" localVarName="editpatientname" localVarLevel="1" value="" />
-								</testParameters>
-								<children />
-							</testItem>
-							<testItem name="deletepatient" key="{6648D729-1F40-479C-8B02-3F9B71061375}" group="False" enabled="True" testMoniker="{5657FD70-101F-4B3E-9ED6-C1345CE45A72}deletepatient" count="1" timeout="0" stopOnError="2" stopOnException="2" description="">
-								<testParameters>
-									<param0 name="patientId" type="3" localVarName="newpatientid" localVarLevel="1" value="" />
-								</testParameters>
-								<children />
-							</testItem>
-							<testItem name="logout" key="{24F385A6-CCC4-4F68-BADE-D8D71B7C4A7C}" group="False" enabled="True" testMoniker="{42373CDE-C63F-47E9-A1A8-BDB57F55A2F8}logout" count="1" timeout="0" stopOnError="2" stopOnException="2" description="">
-								<testParameters />
-								<children />
-							</testItem>
-							<testItem name="exit" key="{A2DD8E8C-227D-4EA4-B74D-0B785D454A05}" group="False" enabled="True" testMoniker="{4562BB8E-9BF5-44DC-8B46-A42A91A50538}exit" count="1" timeout="0" stopOnError="2" stopOnException="2" description="">
 								<testParameters />
 								<children />
 							</testItem>
@@ -163,8 +73,8 @@
 					</testItem>
 					<testItem name="login" key="{CD220F50-D66C-4B4A-B883-94181E98F7DB}" group="False" enabled="True" testMoniker="{A303ABA3-29A1-40E4-B9EA-685430CF0937}login" count="1" timeout="0" stopOnError="2" stopOnException="2" description="">
 						<testParameters>
-							<param0 name="username" type="3" localVarName="username" localVarLevel="1" value="" />
-							<param1 name="password" type="3" localVarName="password" localVarLevel="1" value="" />
+							<param0 name="loginUserName" type="3" localVarName="" varType="0" value="" />
+							<param1 name="loginPassword" type="3" localVarName="" varType="0" value="" />
 						</testParameters>
 						<children />
 					</testItem>
@@ -223,9 +133,9 @@
 					<testItem name="makeplan" key="{DFA673A3-7B60-4F79-8A00-CE796BA6D206}" group="False" enabled="True" testMoniker="{3C396E2A-CF90-4606-880A-697AB9EFBD91}makeplan" count="1" timeout="0" stopOnError="2" stopOnException="2" description="">
 						<testParameters>
 							<param0 name="percentage" type="3" localVarName="percentage" localVarLevel="1" value="" />
-							<param1 name="dosevalue" type="3" localVarName="dosevalue" localVarLevel="1" value="" />
-							<param2 name="confirmusername" type="3" localVarName="username" localVarLevel="1" value="" />
-							<param3 name="confirmpassword" type="3" localVarName="password" localVarLevel="1" value="" />
+							<param1 name="doseValue" type="3" localVarName="" varType="0" value="" />
+							<param2 name="confirmUserName" type="3" localVarName="" varType="0" value="" />
+							<param3 name="confirmPassword" type="3" localVarName="" varType="0" value="" />
 							<param4 name="x" type="3" localVarName="pointX" localVarLevel="1" value="" />
 							<param5 name="y" type="3" localVarName="pointY" localVarLevel="1" value="" />
 						</testParameters>
@@ -257,10 +167,486 @@
 					<testItem name="patientmanagement" key="{9AFE79C3-9CE7-4721-B059-E8859A20A334}" group="True" enabled="True" testMoniker="" count="1" timeout="0" stopOnError="2" stopOnException="2" description="">
 						<testParameters />
 						<children>
-							<testItem name="case016" key="{7EDD5070-2F01-42E9-8FA4-E0E660C36310}" group="False" enabled="True" testMoniker="{7369E56D-E08B-415E-AA86-068716DDD21E}case016" count="1" timeout="0" stopOnError="2" stopOnException="2" description="">
+							<testItem name="case016" key="{807AA443-433B-40F6-B310-92B642C2D13F}" group="False" enabled="True" testMoniker="{7369E56D-E08B-415E-AA86-068716DDD21E}TPS_BeiHang_toudao_016" count="1" timeout="0" stopOnError="2" stopOnException="2" description="">
 								<testParameters>
-									<param0 name="username" type="3" localVarName="username" localVarLevel="1" value="" />
-									<param1 name="password" type="3" localVarName="password" localVarLevel="1" value="" />
+									<param0 name="loginUserName" type="3" localVarName="loginUserName" localVarLevel="1" value="" />
+									<param1 name="loginPassword" type="3" localVarName="loginPassword" localVarLevel="1" value="" />
+								</testParameters>
+								<children />
+							</testItem>
+						</children>
+					</testItem>
+					<testItem name="usermanagement" key="{B11845C3-9CCC-4FE0-9400-B051D50FAB50}" group="True" enabled="True" testMoniker="" count="1" timeout="0" stopOnError="2" stopOnException="2" description="">
+						<testParameters />
+						<children>
+							<testItem name="case037" key="{570A6207-8A33-4C68-8B28-38535C650FA3}" group="False" enabled="True" testMoniker="{2E0F6BF6-F8CC-4F91-9F31-78241F45E4BD}changeUserPassword" count="1" timeout="0" stopOnError="2" stopOnException="2" description="">
+								<testParameters>
+									<param0 name="loginUserName" type="3" localVarName="loginUserName" localVarLevel="1" value="" />
+									<param1 name="loginPassword" type="3" localVarName="loginPassword" localVarLevel="1" value="" />
+									<param2 name="newUserName" type="3" localVarName="newUserName" localVarLevel="1" value="" />
+									<param3 name="newUserPassword" type="3" localVarName="newUserPassword" localVarLevel="1" value="" />
+									<param4 name="editUserPassword" type="3" localVarName="editUserPassword" localVarLevel="1" value="" />
+								</testParameters>
+								<children />
+							</testItem>
+							<testItem name="case038" key="{E9B7DE06-3D07-4F6A-B26F-AE8F8F7ABF42}" group="False" enabled="True" testMoniker="{273AE414-91F1-48DE-BEB7-D9F2D3FB40B7}changeUserPasswordWithInvalidCharacter" count="1" timeout="0" stopOnError="2" stopOnException="2" description="">
+								<testParameters>
+									<param0 name="loginUserName" type="3" localVarName="loginUserName" localVarLevel="1" value="" />
+									<param1 name="loginPassword" type="3" localVarName="loginPassword" localVarLevel="1" value="" />
+									<param2 name="newUserName" type="3" localVarName="newUserName" localVarLevel="1" value="" />
+									<param3 name="newUserPassword" type="3" localVarName="newUserPassword" localVarLevel="1" value="" />
+								</testParameters>
+								<children />
+							</testItem>
+							<testItem name="case039" key="{DA62D3D2-E127-4E3C-9EAA-79625529709E}" group="False" enabled="True" testMoniker="{A10EB4BD-7C74-4A4F-876B-3FF8D694FAE4}changeUserPasswordFail" count="1" timeout="0" stopOnError="2" stopOnException="2" description="">
+								<testParameters>
+									<param0 name="loginUserName" type="3" localVarName="loginUserName" localVarLevel="1" value="" />
+									<param1 name="loginPassword" type="3" localVarName="loginPassword" localVarLevel="1" value="" />
+									<param2 name="newUserName" type="3" localVarName="newUserName" localVarLevel="1" value="" />
+									<param3 name="newUserPassword" type="3" localVarName="newUserPassword" localVarLevel="1" value="" />
+									<param4 name="editUserPassword" type="3" localVarName="editUserPassword" localVarLevel="1" value="" />
+								</testParameters>
+								<children />
+							</testItem>
+							<testItem name="case040" key="{96D15F67-BC64-41BF-934C-B047EA803E4C}" group="False" enabled="True" testMoniker="{9A430026-B557-460D-8707-3B3C83640F7B}checkNewUserAttribute" count="1" timeout="0" stopOnError="2" stopOnException="2" description="">
+								<testParameters>
+									<param0 name="loginUserName" type="3" localVarName="loginUserName" localVarLevel="1" value="" />
+									<param1 name="loginPassword" type="3" localVarName="loginPassword" localVarLevel="1" value="" />
+								</testParameters>
+								<children />
+							</testItem>
+							<testItem name="case041" key="{81DD0995-D207-49EF-81C7-B6DC0618BBA1}" group="False" enabled="True" testMoniker="{2741549B-2763-4DE8-AAF2-DA7FCC0B072B}changeUserPasswordThenCancel" count="1" timeout="0" stopOnError="2" stopOnException="2" description="">
+								<testParameters>
+									<param0 name="loginUserName" type="3" localVarName="loginUserName" localVarLevel="1" value="" />
+									<param1 name="loginPassword" type="3" localVarName="loginPassword" localVarLevel="1" value="" />
+									<param2 name="newUserName" type="3" localVarName="newUserName" localVarLevel="1" value="" />
+									<param3 name="newUserPassword" type="3" localVarName="newUserPassword" localVarLevel="1" value="" />
+									<param4 name="editUserPassword" type="3" localVarName="editUserPassword" localVarLevel="1" value="" />
+								</testParameters>
+								<children />
+							</testItem>
+							<testItem name="case042" key="{728C3AB8-1C3C-48A4-A453-393D58F38030}" group="False" enabled="True" testMoniker="{B92066C6-23B9-4D31-8B5B-F4EF82D6967E}checkUserManagementAttribute" count="1" timeout="0" stopOnError="2" stopOnException="2" description="">
+								<testParameters>
+									<param0 name="loginUserName" type="3" localVarName="loginUserName" localVarLevel="1" value="" />
+									<param1 name="loginPassword" type="3" localVarName="loginPassword" localVarLevel="1" value="" />
+								</testParameters>
+								<children />
+							</testItem>
+							<testItem name="case043" key="{0511A337-A646-4B6B-8CA0-A3C3B2770F07}" group="False" enabled="True" testMoniker="{6EF6D90F-332C-4CB7-9582-FAC1A0D3AB74}addNewUser" count="1" timeout="0" stopOnError="2" stopOnException="2" description="">
+								<testParameters>
+									<param0 name="loginUserName" type="3" localVarName="loginUserName" localVarLevel="1" value="" />
+									<param1 name="loginPassword" type="3" localVarName="loginPassword" localVarLevel="1" value="" />
+									<param2 name="newUserName" type="3" localVarName="newUserName" localVarLevel="1" value="" />
+									<param3 name="newUserPassword" type="3" localVarName="newUserPassword" localVarLevel="1" value="" />
+									<param4 name="newUserType" type="3" localVarName="newUserType" localVarLevel="1" value="" />
+								</testParameters>
+								<children />
+							</testItem>
+							<testItem name="case044" key="{5A2AA556-3F8D-4275-B010-B226693B1083}" group="False" enabled="True" testMoniker="{B46999BD-2591-42F5-8BBE-FBF2A8917DEC}checkAddnewUserInputCharacter" count="1" timeout="0" stopOnError="2" stopOnException="2" description="">
+								<testParameters>
+									<param0 name="loginUserName" type="3" localVarName="loginUserName" localVarLevel="1" value="" />
+									<param1 name="loginPassword" type="3" localVarName="loginPassword" localVarLevel="1" value="" />
+								</testParameters>
+								<children />
+							</testItem>
+							<testItem name="case045" key="{9059C1A4-52FB-4731-8B98-74C431334443}" group="False" enabled="True" testMoniker="{9C483CC3-A801-47FD-9D5A-5FD461EF06CA}addNewUserWithTypoPassword" count="1" timeout="0" stopOnError="2" stopOnException="2" description="">
+								<testParameters>
+									<param0 name="loginUserName" type="3" localVarName="loginUserName" localVarLevel="1" value="" />
+									<param1 name="loginPassword" type="3" localVarName="loginPassword" localVarLevel="1" value="" />
+									<param2 name="newUserName" type="3" localVarName="newUserName" localVarLevel="1" value="" />
+									<param3 name="newUserPassword" type="3" localVarName="newUserPassword" localVarLevel="1" value="" />
+									<param4 name="newUserConfirmPassword" type="3" localVarName="newUserConfirmedPassword" localVarLevel="1" value="" />
+								</testParameters>
+								<children />
+							</testItem>
+							<testItem name="case046" key="{07BA0C37-8CCD-4187-8904-D1FFF692554E}" group="False" enabled="True" testMoniker="{ED9700AB-EEDC-46AE-B698-7DDF2135E108}addNewUserThenCancel" count="1" timeout="0" stopOnError="2" stopOnException="2" description="">
+								<testParameters>
+									<param0 name="loginUserName" type="3" localVarName="loginUserName" localVarLevel="1" value="" />
+									<param1 name="loginPassword" type="3" localVarName="loginPassword" localVarLevel="1" value="" />
+									<param2 name="newUserName" type="3" localVarName="newUserName" localVarLevel="1" value="" />
+									<param3 name="newUserPassword" type="3" localVarName="newUserPassword" localVarLevel="1" value="" />
+									<param4 name="newUserType" type="3" localVarName="newUserType" localVarLevel="1" value="" />
+								</testParameters>
+								<children />
+							</testItem>
+							<testItem name="case047" key="{DC71B4CB-1478-4E43-94E7-0A66F4763A21}" group="False" enabled="True" testMoniker="{CF858DAD-76C0-45AB-8BD3-696EE965070A}editNewUser" count="1" timeout="0" stopOnError="2" stopOnException="2" description="">
+								<testParameters>
+									<param0 name="loginUserName" type="3" localVarName="loginUserName" localVarLevel="1" value="" />
+									<param1 name="loginPassword" type="3" localVarName="loginPassword" localVarLevel="1" value="" />
+									<param2 name="newUserName" type="3" localVarName="newUserName" localVarLevel="1" value="" />
+									<param3 name="newUserPassword" type="3" localVarName="newUserPassword" localVarLevel="1" value="" />
+									<param4 name="newUserType" type="3" localVarName="newUserType" localVarLevel="1" value="" />
+									<param5 name="editUserPassword" type="3" localVarName="editUserPassword" localVarLevel="1" value="" />
+									<param6 name="editUserType" type="3" localVarName="editUserType" localVarLevel="1" value="" />
+								</testParameters>
+								<children />
+							</testItem>
+							<testItem name="case048" key="{4187D1C3-912A-49D8-8264-C4ACE3D214C2}" group="False" enabled="True" testMoniker="{E6F63BEF-A8EA-4744-953C-53405FC5A7E4}editnewUserWithInvalidCharacter" count="1" timeout="0" stopOnError="2" stopOnException="2" description="">
+								<testParameters>
+									<param0 name="loginUserName" type="3" localVarName="loginUserName" localVarLevel="1" value="" />
+									<param1 name="loginPassword" type="3" localVarName="loginPassword" localVarLevel="1" value="" />
+									<param2 name="newUserName" type="3" localVarName="newUserName" localVarLevel="1" value="" />
+									<param3 name="newUserPassword" type="3" localVarName="newUserPassword" localVarLevel="1" value="" />
+									<param4 name="newUserType" type="3" localVarName="newUserType" localVarLevel="1" value="" />
+								</testParameters>
+								<children />
+							</testItem>
+							<testItem name="case049" key="{8FB415CC-E9C1-4173-943B-6E0A61AAFA05}" group="False" enabled="True" testMoniker="{4ECA6F79-82B2-4CD9-9DFE-4EC3889380C9}defaultEditFirstUser" count="1" timeout="0" stopOnError="2" stopOnException="2" description="">
+								<testParameters>
+									<param0 name="loginUserName" type="3" localVarName="loginUserName" localVarLevel="1" value="" />
+									<param1 name="loginPassword" type="3" localVarName="loginPassword" localVarLevel="1" value="" />
+								</testParameters>
+								<children />
+							</testItem>
+							<testItem name="case050" key="{DF1D3107-AAB5-4968-B9C4-FCDFF594C10E}" group="False" enabled="True" testMoniker="{6435CFA6-4296-46AE-ACA2-6A9517E01234}defaultEditFirstUserThenCancel" count="1" timeout="0" stopOnError="2" stopOnException="2" description="">
+								<testParameters>
+									<param0 name="loginUserName" type="3" localVarName="loginUserName" localVarLevel="1" value="" />
+									<param1 name="loginPassword" type="3" localVarName="loginPassword" localVarLevel="1" value="" />
+								</testParameters>
+								<children />
+							</testItem>
+							<testItem name="case051" key="{B1B05430-F55C-4A0D-BFA9-466E4B66A327}" group="False" enabled="True" testMoniker="{7F064810-3D47-4B45-A0D4-14D1176BBA82}editFirstUserWithDifferentPassword" count="1" timeout="0" stopOnError="2" stopOnException="2" description="">
+								<testParameters>
+									<param0 name="loginUserName" type="3" localVarName="loginUserName" localVarLevel="1" value="" />
+									<param1 name="loginPassword" type="3" localVarName="loginPassword" localVarLevel="1" value="" />
+									<param2 name="newUserName" type="3" localVarName="newUserName" localVarLevel="1" value="" />
+									<param3 name="newUserPassword" type="3" localVarName="newUserPassword" localVarLevel="1" value="" />
+									<param4 name="newUserType" type="3" localVarName="newUserType" localVarLevel="1" value="" />
+								</testParameters>
+								<children />
+							</testItem>
+							<testItem name="case052" key="{28B1282C-3E7A-47B5-ADE5-5FDA8BE20659}" group="False" enabled="True" testMoniker="{AF98BDD2-189B-4CCE-8F05-7DDD5070B0EF}deleteUser" count="1" timeout="0" stopOnError="2" stopOnException="2" description="">
+								<testParameters>
+									<param0 name="loginUserName" type="3" localVarName="loginUserName" localVarLevel="1" value="" />
+									<param1 name="loginPassword" type="3" localVarName="loginPassword" localVarLevel="1" value="" />
+									<param2 name="newUserName" type="3" localVarName="newUserName" localVarLevel="1" value="" />
+									<param3 name="newUserPassword" type="3" localVarName="newUserPassword" localVarLevel="1" value="" />
+									<param4 name="newUserType" type="3" localVarName="newUserType" localVarLevel="1" value="" />
+								</testParameters>
+								<children />
+							</testItem>
+							<testItem name="case053" key="{B67DDD44-54D8-4B11-BE8E-42FECD4135D0}" group="False" enabled="True" testMoniker="{49B7A272-E783-42C1-81D5-AB2C1473BAB0}deleteUserThenCancel" count="1" timeout="0" stopOnError="2" stopOnException="2" description="">
+								<testParameters>
+									<param0 name="loginUserName" type="3" localVarName="loginUserName" localVarLevel="1" value="" />
+									<param1 name="loginPassword" type="3" localVarName="loginPassword" localVarLevel="1" value="" />
+									<param2 name="newUserName" type="3" localVarName="newUserName" localVarLevel="1" value="" />
+									<param3 name="newUserPassword" type="3" localVarName="newUserPassword" localVarLevel="1" value="" />
+									<param4 name="newUserType" type="3" localVarName="newUserType" localVarLevel="1" value="" />
+								</testParameters>
+								<children />
+							</testItem>
+							<testItem name="case054" key="{24D33E6C-96A3-4ED9-9CDD-7CDB2F984657}" group="False" enabled="True" testMoniker="{2C35CC28-5C3E-410A-A0C4-EB07AF9FB623}deleteDefaultFirstUser" count="1" timeout="0" stopOnError="2" stopOnException="2" description="">
+								<testParameters>
+									<param0 name="loginUserName" type="3" localVarName="loginUserName" localVarLevel="1" value="" />
+									<param1 name="loginPassword" type="3" localVarName="loginPassword" localVarLevel="1" value="" />
+								</testParameters>
+								<children />
+							</testItem>
+						</children>
+					</testItem>
+					<testItem name="systemsetting" key="{301D356D-C21D-43EE-9284-FF3E3BBE610A}" group="True" enabled="True" testMoniker="" count="1" timeout="0" stopOnError="2" stopOnException="2" description="">
+						<testParameters />
+						<children>
+							<testItem name="case023" key="{19740CFE-F8B0-4136-AFF7-038AC32F4B65}" group="False" enabled="True" testMoniker="{04A96F90-A36F-4CDA-9BC0-665ECD751C7A}changeSettingAll" count="1" timeout="0" stopOnError="2" stopOnException="2" description="">
+								<testParameters>
+									<param0 name="loginUserName" type="3" localVarName="loginUserName" localVarLevel="1" value="" />
+									<param1 name="loginPassword" type="3" localVarName="loginPassword" localVarLevel="1" value="" />
+								</testParameters>
+								<children />
+							</testItem>
+							<testItem name="case024" key="{9464222D-DCB7-4402-A519-3830072F02CF}" group="False" enabled="True" testMoniker="{7CEDD1A8-2D51-4378-A0F4-9219E4C622C3}checkLocalPath" count="1" timeout="0" stopOnError="2" stopOnException="2" description="">
+								<testParameters>
+									<param0 name="loginUserName" type="3" localVarName="loginUserName" localVarLevel="1" value="" />
+									<param1 name="loginPassword" type="3" localVarName="loginPassword" localVarLevel="1" value="" />
+								</testParameters>
+								<children />
+							</testItem>
+							<testItem name="case025" key="{1826B929-B657-4857-A58F-91D0EF0A9470}" group="False" enabled="True" testMoniker="{3D6C8A7E-32E0-4821-B6E3-35006C6FE776}changeLocalPath" count="1" timeout="0" stopOnError="2" stopOnException="2" description="">
+								<testParameters>
+									<param0 name="loginUserName" type="3" localVarName="loginUserName" localVarLevel="1" value="" />
+									<param1 name="loginPassword" type="3" localVarName="loginPassword" localVarLevel="1" value="" />
+								</testParameters>
+								<children />
+							</testItem>
+							<testItem name="case026" key="{278DF59F-4156-4FDD-B2B1-E7FFB1D8F1A5}" group="False" enabled="True" testMoniker="{D8E65B95-4384-4F67-9B0C-E4BB6BA776BB}checkServerPath" count="1" timeout="0" stopOnError="2" stopOnException="2" description="">
+								<testParameters>
+									<param0 name="loginUserName" type="3" localVarName="loginUserName" localVarLevel="1" value="" />
+									<param1 name="loginPassword" type="3" localVarName="loginPassword" localVarLevel="1" value="" />
+								</testParameters>
+								<children />
+							</testItem>
+							<testItem name="case027" key="{B293E9E5-93DB-4E13-8519-3F625C9011C8}" group="False" enabled="True" testMoniker="{AD309EDE-B51C-4755-B480-E5AE871D6E8D}changeServerPath" count="1" timeout="0" stopOnError="2" stopOnException="2" description="">
+								<testParameters>
+									<param0 name="loginUserName" type="3" localVarName="loginUserName" localVarLevel="1" value="" />
+									<param1 name="loginPassword" type="3" localVarName="loginPassword" localVarLevel="1" value="" />
+								</testParameters>
+								<children />
+							</testItem>
+							<testItem name="case028" key="{5EC8450C-14C7-443C-A5B9-3ADA6850761D}" group="False" enabled="True" testMoniker="{DAF439F0-80AC-40D3-BFA0-6686E021B094}checkDatabase" count="1" timeout="0" stopOnError="2" stopOnException="2" description="">
+								<testParameters>
+									<param0 name="loginUserName" type="3" localVarName="loginUserName" localVarLevel="1" value="" />
+									<param1 name="loginPassword" type="3" localVarName="loginPassword" localVarLevel="1" value="" />
+								</testParameters>
+								<children />
+							</testItem>
+							<testItem name="case029" key="{D976B6F5-34E2-4F53-BBA1-CDEBEF300D13}" group="False" enabled="True" testMoniker="{B5E0EB99-3671-4F83-A1DD-4CF9F73CEEA1}changeDatabase" count="1" timeout="0" stopOnError="2" stopOnException="2" description="">
+								<testParameters>
+									<param0 name="loginUserName" type="3" localVarName="loginUserName" localVarLevel="1" value="" />
+									<param1 name="loginPassword" type="3" localVarName="loginPassword" localVarLevel="1" value="" />
+								</testParameters>
+								<children />
+							</testItem>
+							<testItem name="case030" key="{555594F1-75D2-4DE1-A12E-365789D5D0F4}" group="False" enabled="True" testMoniker="{3221D9BE-EB7E-46A4-8F93-58393AD26844}checkController" count="1" timeout="0" stopOnError="2" stopOnException="2" description="">
+								<testParameters>
+									<param0 name="loginUserName" type="3" localVarName="loginUserName" localVarLevel="1" value="" />
+									<param1 name="loginPassword" type="3" localVarName="loginPassword" localVarLevel="1" value="" />
+								</testParameters>
+								<children />
+							</testItem>
+							<testItem name="case031" key="{AAABD761-3413-44A6-81A9-3C1CAEE8F21B}" group="False" enabled="True" testMoniker="{6D766D3B-CE7C-4DF7-A9F0-9AF7A48A5648}changeController" count="1" timeout="0" stopOnError="2" stopOnException="2" description="">
+								<testParameters>
+									<param0 name="loginUserName" type="3" localVarName="loginUserName" localVarLevel="1" value="" />
+									<param1 name="loginPassword" type="3" localVarName="loginPassword" localVarLevel="1" value="" />
+								</testParameters>
+								<children />
+							</testItem>
+							<testItem name="case032" key="{B77B9997-82AE-4B18-8629-3FE0144F1DBA}" group="False" enabled="True" testMoniker="{E8775A44-35AB-4737-B332-98DF18645B12}checkIGRT" count="1" timeout="0" stopOnError="2" stopOnException="2" description="">
+								<testParameters>
+									<param0 name="loginUserName" type="3" localVarName="loginUserName" localVarLevel="1" value="" />
+									<param1 name="loginPassword" type="3" localVarName="loginPassword" localVarLevel="1" value="" />
+								</testParameters>
+								<children />
+							</testItem>
+							<testItem name="case033" key="{537C21AB-70E6-4671-B6D9-894300542F92}" group="False" enabled="True" testMoniker="{6C9EECDD-175F-4B11-9AC4-C233D7805451}changeIGRT" count="1" timeout="0" stopOnError="2" stopOnException="2" description="">
+								<testParameters>
+									<param0 name="loginUserName" type="3" localVarName="loginUserName" localVarLevel="1" value="" />
+									<param1 name="loginPassword" type="3" localVarName="loginPassword" localVarLevel="1" value="" />
+								</testParameters>
+								<children />
+							</testItem>
+							<testItem name="case034" key="{7EB7D9AB-A2CB-4EC2-91DC-DEAFC2FD024E}" group="False" enabled="True" testMoniker="{CFE52A97-EFF6-4AF4-861C-FED6BE437CD8}checkSystemChecking" count="1" timeout="0" stopOnError="2" stopOnException="2" description="">
+								<testParameters>
+									<param0 name="loginUserName" type="3" localVarName="loginUserName" localVarLevel="1" value="" />
+									<param1 name="loginPassword" type="3" localVarName="loginPassword" localVarLevel="1" value="" />
+								</testParameters>
+								<children />
+							</testItem>
+							<testItem name="case035" key="{D3202863-724C-4194-BFAF-818B03A814CA}" group="False" enabled="True" testMoniker="{F6A23162-57A8-43D8-A4AE-C6F1D11297C4}excuteSystemChecking" count="1" timeout="0" stopOnError="2" stopOnException="2" description="">
+								<testParameters>
+									<param0 name="loginUserName" type="3" localVarName="loginUserName" localVarLevel="1" value="" />
+									<param1 name="loginPassword" type="3" localVarName="loginPassword" localVarLevel="1" value="" />
+								</testParameters>
+								<children />
+							</testItem>
+							<testItem name="case036" key="{F6C19E28-85B5-4D25-924E-9E52FC2E8CF7}" group="False" enabled="True" testMoniker="{ED1CEF01-86A5-4AF9-84D0-C22F088D3866}cancelSetting" count="1" timeout="0" stopOnError="2" stopOnException="2" description="">
+								<testParameters>
+									<param0 name="loginUserName" type="3" localVarName="loginUserName" localVarLevel="1" value="" />
+									<param1 name="loginPassword" type="3" localVarName="loginPassword" localVarLevel="1" value="" />
+								</testParameters>
+								<children />
+							</testItem>
+						</children>
+					</testItem>
+					<testItem name="physicalparameter" key="{06E04C79-600E-44B6-8B1E-31A8DFC7D709}" group="True" enabled="True" testMoniker="" count="1" timeout="0" stopOnError="2" stopOnException="2" description="">
+						<testParameters />
+						<children>
+							<testItem name="case063" key="{2B7743DE-0804-4DE8-89C0-8CD6B15E77FE}" group="False" enabled="True" testMoniker="{8534ED78-51D8-4E94-8811-9D882FCC2236}checkMachineManagement" count="1" timeout="0" stopOnError="2" stopOnException="2" description="">
+								<testParameters>
+									<param0 name="loginUserName" type="3" localVarName="loginUserName" localVarLevel="1" value="" />
+									<param1 name="loginPassword" type="3" localVarName="loginPassword" localVarLevel="1" value="" />
+								</testParameters>
+								<children />
+							</testItem>
+							<testItem name="case064" key="{A2B2E5E8-BD33-4EA0-8E22-42A1E9159B0F}" group="False" enabled="True" testMoniker="{5101C04C-9842-41C8-9106-D957C6948639}addMachineManagement" count="1" timeout="0" stopOnError="2" stopOnException="2" description="">
+								<testParameters>
+									<param0 name="loginUserName" type="3" localVarName="loginUserName" localVarLevel="1" value="" />
+									<param1 name="loginPassword" type="3" localVarName="loginPassword" localVarLevel="1" value="" />
+									<param2 name="newConfigName" type="3" localVarName="newConfigName" localVarLevel="1" value="" />
+								</testParameters>
+								<children />
+							</testItem>
+							<testItem name="case065" key="{73B55B12-A3E4-4DEC-954E-1C5F7B6CFBD6}" group="False" enabled="True" testMoniker="{D7CDE840-3091-4164-94A1-437A46349BCD}checkPhysicalConfig" count="1" timeout="0" stopOnError="2" stopOnException="2" description="">
+								<testParameters>
+									<param0 name="loginUserName" type="3" localVarName="loginUserName" localVarLevel="1" value="" />
+									<param1 name="loginPassword" type="3" localVarName="loginPassword" localVarLevel="1" value="" />
+								</testParameters>
+								<children />
+							</testItem>
+							<testItem name="case067" key="{9F9D3635-64B8-4BFB-B85E-51F679A8A73E}" group="False" enabled="True" testMoniker="{3809A7C2-41BA-4AEB-A8AC-5AE9320B8E03}addMachineManagementCheck" count="1" timeout="0" stopOnError="2" stopOnException="2" description="">
+								<testParameters>
+									<param0 name="loginUserName" type="3" localVarName="loginUserName" localVarLevel="1" value="" />
+									<param1 name="loginPassword" type="3" localVarName="loginPassword" localVarLevel="1" value="" />
+									<param2 name="newConfigName" type="3" localVarName="newConfigName" localVarLevel="1" value="" />
+								</testParameters>
+								<children />
+							</testItem>
+							<testItem name="case068" key="{68B04170-046A-453F-BD9C-1093A91F47F8}" group="False" enabled="True" testMoniker="{8FD1656D-7965-46D2-977F-A972A41EA8BD}addMachineManagementThenCancel" count="1" timeout="0" stopOnError="2" stopOnException="2" description="">
+								<testParameters>
+									<param0 name="loginUserName" type="3" localVarName="loginUserName" localVarLevel="1" value="" />
+									<param1 name="loginPassword" type="3" localVarName="loginPassword" localVarLevel="1" value="" />
+									<param2 name="newConfigName" type="3" localVarName="newConfigName" localVarLevel="1" value="" />
+								</testParameters>
+								<children />
+							</testItem>
+							<testItem name="case069" key="{22066115-2004-434C-9E66-D4AADABCC15E}" group="False" enabled="True" testMoniker="{46E14987-E1FA-4DA9-B1F5-6FF4F1AF16BF}checkPhysicalConfigWhileEdit" count="1" timeout="0" stopOnError="2" stopOnException="2" description="">
+								<testParameters>
+									<param0 name="loginUserName" type="3" localVarName="loginUserName" localVarLevel="1" value="" />
+									<param1 name="loginPassword" type="3" localVarName="loginPassword" localVarLevel="1" value="" />
+								</testParameters>
+								<children />
+							</testItem>
+							<testItem name="case070" key="{1AAC84F8-4F0E-4ED5-BD18-32F7C7B48700}" group="False" enabled="True" testMoniker="{562746E5-6947-450D-B2D4-F8ADACEB0A4A}addExistingMachineManagement" count="1" timeout="0" stopOnError="2" stopOnException="2" description="">
+								<testParameters>
+									<param0 name="loginUserName" type="3" localVarName="loginUserName" localVarLevel="1" value="" />
+									<param1 name="loginPassword" type="3" localVarName="loginPassword" localVarLevel="1" value="" />
+									<param2 name="newConfigName" type="3" localVarName="newConfigName" localVarLevel="1" value="" />
+								</testParameters>
+								<children />
+							</testItem>
+							<testItem name="case071" key="{592BCCDE-8132-478C-B0AD-4E6C861FFE6B}" group="False" enabled="True" testMoniker="{9A754312-DFA6-4917-9CA7-292298FB2BFB}editMachineManagementAll" count="1" timeout="0" stopOnError="2" stopOnException="2" description="">
+								<testParameters>
+									<param0 name="loginUserName" type="3" localVarName="loginUserName" localVarLevel="1" value="" />
+									<param1 name="loginPassword" type="3" localVarName="loginPassword" localVarLevel="1" value="" />
+									<param2 name="newConfigName" type="3" localVarName="newConfigName" localVarLevel="1" value="" />
+									<param3 name="editMachineTab" type="3" localVarName="editMachineTab" localVarLevel="1" value="" />
+									<param4 name="editMachineProperty" type="3" localVarName="editMachineProperty" localVarLevel="1" value="" />
+									<param5 name="editMachinePropertyValue" type="3" localVarName="editMachinePropertyValue" localVarLevel="1" value="" />
+								</testParameters>
+								<children />
+							</testItem>
+							<testItem name="case072" key="{01C45390-D08B-4B53-B663-7DEA484F89C4}" group="False" enabled="True" testMoniker="{023D2EAB-9E29-46C1-8769-B404DAC86111}editMachineManagementThenCancel" count="1" timeout="0" stopOnError="2" stopOnException="2" description="">
+								<testParameters>
+									<param0 name="loginUserName" type="3" localVarName="loginUserName" localVarLevel="1" value="" />
+									<param1 name="loginPassword" type="3" localVarName="loginPassword" localVarLevel="1" value="" />
+									<param2 name="newConfigName" type="3" localVarName="newConfigName" localVarLevel="1" value="" />
+									<param3 name="editMachineTab" type="3" localVarName="editMachineTab" localVarLevel="1" value="" />
+									<param4 name="editMachineProperty" type="3" localVarName="editMachineProperty" localVarLevel="1" value="" />
+									<param5 name="editMachinePropertyValue" type="3" localVarName="editMachinePropertyValue" localVarLevel="1" value="" />
+								</testParameters>
+								<children />
+							</testItem>
+							<testItem name="case073" key="{D5BAC40F-AC54-4DE5-9083-80B5E8C0CED2}" group="False" enabled="True" testMoniker="{F460830D-202F-482A-B0F0-9477CB15177C}editMachineManagement" count="1" timeout="0" stopOnError="2" stopOnException="2" description="">
+								<testParameters>
+									<param0 name="loginUserName" type="3" localVarName="loginUserName" localVarLevel="1" value="" />
+									<param1 name="loginPassword" type="3" localVarName="loginPassword" localVarLevel="1" value="" />
+									<param2 name="newConfigName" type="3" localVarName="newConfigName" localVarLevel="1" value="" />
+									<param3 name="editMachineProperty" type="3" localVarName="editMachineProperty" localVarLevel="1" value="" />
+									<param4 name="editMachinePropertyValue" type="3" localVarName="editMachinePropertyValue" localVarLevel="1" value="" />
+								</testParameters>
+								<children />
+							</testItem>
+							<testItem name="case074" key="{5DF0A63A-8E13-4D9E-B5C1-8521E897F793}" group="False" enabled="True" testMoniker="{22788C44-A129-42EA-8CAF-C83DE411B3D2}checkGeneralInformationTab" count="1" timeout="0" stopOnError="2" stopOnException="2" description="">
+								<testParameters>
+									<param0 name="loginUserName" type="3" localVarName="loginUserName" localVarLevel="1" value="" />
+									<param1 name="loginPassword" type="3" localVarName="loginPassword" localVarLevel="1" value="" />
+									<param2 name="newConfigName" type="3" localVarName="newConfigName" localVarLevel="1" value="" />
+								</testParameters>
+								<children />
+							</testItem>
+							<testItem name="case079" key="{00C48F8D-6ACB-407B-9A75-76DBC13D909E}" group="False" enabled="True" testMoniker="{691EB4E9-793F-414C-8595-5814E1AC84CC}checkMachineTab" count="1" timeout="0" stopOnError="2" stopOnException="2" description="">
+								<testParameters>
+									<param0 name="loginUserName" type="3" localVarName="loginUserName" localVarLevel="1" value="" />
+									<param1 name="loginPassword" type="3" localVarName="loginPassword" localVarLevel="1" value="" />
+									<param2 name="newConfigName" type="3" localVarName="editMachinePropertyValue" localVarLevel="1" value="" />
+								</testParameters>
+								<children />
+							</testItem>
+							<testItem name="case080" key="{40DBD813-93A5-405C-9FA9-BA75FED96EE1}" group="False" enabled="True" testMoniker="{67895007-CDBB-440F-87E6-25DB594A7E4A}editMachineTab" count="1" timeout="0" stopOnError="2" stopOnException="2" description="">
+								<testParameters>
+									<param0 name="loginUserName" type="3" localVarName="loginUserName" localVarLevel="1" value="" />
+									<param1 name="loginPassword" type="3" localVarName="loginPassword" localVarLevel="1" value="" />
+									<param2 name="newConfigName" type="3" localVarName="newConfigName" localVarLevel="1" value="" />
+									<param3 name="editMachineTabProperty" type="3" localVarName="editMachineTabProperty" localVarLevel="1" value="" />
+									<param4 name="editMachineTabPropertyValue" type="3" localVarName="editMachineTabPropertyValue" localVarLevel="1" value="" />
+								</testParameters>
+								<children />
+							</testItem>
+							<testItem name="case087" key="{9ABDC6EC-5764-4394-8C96-A165FD2EE44A}" group="False" enabled="True" testMoniker="{F5E974C1-3A59-4484-AE02-062F41BF491E}checkFrameParametersTab" count="1" timeout="0" stopOnError="2" stopOnException="2" description="">
+								<testParameters>
+									<param0 name="loginUserName" type="3" localVarName="loginUserName" localVarLevel="1" value="" />
+									<param1 name="loginPassword" type="3" localVarName="loginPassword" localVarLevel="1" value="" />
+									<param2 name="newConfigName" type="3" localVarName="newConfigName" localVarLevel="1" value="" />
+								</testParameters>
+								<children />
+							</testItem>
+							<testItem name="case088" key="{017BAB2D-036B-4BB7-921D-D2340C7684EE}" group="False" enabled="True" testMoniker="{04E9DB85-8819-4ACB-BBB5-E2874089339A}editFrameParametersTab" count="1" timeout="0" stopOnError="2" stopOnException="2" description="">
+								<testParameters>
+									<param0 name="loginUserName" type="3" localVarName="loginUserName" localVarLevel="1" value="" />
+									<param1 name="loginPassword" type="3" localVarName="loginPassword" localVarLevel="1" value="" />
+									<param2 name="newConfigName" type="3" localVarName="newConfigName" localVarLevel="1" value="" />
+								</testParameters>
+								<children />
+							</testItem>
+							<testItem name="case089" key="{66303086-C465-41DF-94D0-CC214D17513C}" group="False" enabled="True" testMoniker="{3855F315-4382-4278-8193-4F06D382A267}deleteMachineManagement" count="1" timeout="0" stopOnError="2" stopOnException="2" description="">
+								<testParameters>
+									<param0 name="loginUserName" type="3" localVarName="loginUserName" localVarLevel="1" value="" />
+									<param1 name="loginPassword" type="3" localVarName="loginPassword" localVarLevel="1" value="" />
+									<param2 name="newConfigName" type="3" localVarName="newConfigName" localVarLevel="1" value="" />
+								</testParameters>
+								<children />
+							</testItem>
+							<testItem name="case090" key="{46EC73EF-B6D0-4ECF-90D4-8FD1590CB922}" group="False" enabled="True" testMoniker="{AD0BDE92-F19F-4CBF-8CA1-87C60B6D9E73}deleteMachineManagementThenCancel" count="1" timeout="0" stopOnError="2" stopOnException="2" description="">
+								<testParameters>
+									<param0 name="loginUserName" type="3" localVarName="loginUserName" localVarLevel="1" value="" />
+									<param1 name="loginPassword" type="3" localVarName="loginPassword" localVarLevel="1" value="" />
+									<param2 name="newConfigName" type="3" localVarName="newConfigName" localVarLevel="1" value="" />
+								</testParameters>
+								<children />
+							</testItem>
+							<testItem name="case091" key="{6E2B7E27-F166-45C9-8C57-BBEA2097F8AE}" group="False" enabled="True" testMoniker="{7D1664D7-9F11-404D-8D1D-369789679726}exportMachineManagement" count="1" timeout="0" stopOnError="2" stopOnException="2" description="">
+								<testParameters>
+									<param0 name="loginUserName" type="3" localVarName="loginUserName" localVarLevel="1" value="" />
+									<param1 name="loginPassword" type="3" localVarName="loginPassword" localVarLevel="1" value="" />
+									<param2 name="newConfigName" type="3" localVarName="newConfigName" localVarLevel="1" value="" />
+								</testParameters>
+								<children />
+							</testItem>
+							<testItem name="case092" key="{87C03130-97E0-4B27-A9E2-9299832ACD16}" group="False" enabled="True" testMoniker="{2A83BD22-DA58-43BD-9645-2AAD95E9015A}importMachineManagement" count="1" timeout="0" stopOnError="2" stopOnException="2" description="">
+								<testParameters>
+									<param0 name="loginUserName" type="3" localVarName="loginUserName" localVarLevel="1" value="" />
+									<param1 name="loginPassword" type="3" localVarName="loginPassword" localVarLevel="1" value="" />
+									<param2 name="newConfigName" type="3" localVarName="newConfigName" localVarLevel="1" value="" />
+								</testParameters>
+								<children />
+							</testItem>
+							<testItem name="case093_todo" key="{8B514FAE-69F1-4553-AE75-ECB113FF26D6}" group="False" enabled="True" testMoniker="{551FAEDC-51C8-4916-9E53-B9999FA82437}setCurrentMachineManagement" count="1" timeout="0" stopOnError="2" stopOnException="2" description="">
+								<testParameters>
+									<param0 name="loginUserName" type="3" localVarName="loginUserName" localVarLevel="1" value="" />
+									<param1 name="loginPassword" type="3" localVarName="loginPassword" localVarLevel="1" value="" />
+									<param2 name="newConfigName" type="3" localVarName="newConfigName" localVarLevel="1" value="" />
+								</testParameters>
+								<children />
+							</testItem>
+							<testItem name="case094" key="{EBB1CD34-8FBF-456E-A247-7AD4640E479F}" group="False" enabled="True" testMoniker="{4276CC5A-94E7-4638-A1AA-83DA0B37A22B}defaultEditFirstMachineManagement" count="1" timeout="0" stopOnError="2" stopOnException="2" description="">
+								<testParameters>
+									<param0 name="loginUserName" type="3" localVarName="loginUserName" localVarLevel="1" value="" />
+									<param1 name="loginPassword" type="3" localVarName="loginPassword" localVarLevel="1" value="" />
+								</testParameters>
+								<children />
+							</testItem>
+							<testItem name="case095" key="{39A1813E-9DC3-4778-BBF5-79DDABBB98F2}" group="False" enabled="True" testMoniker="{263B3CC8-0D14-4D68-9837-4ACD7E6BBA60}deleteDefaultFirstMachineManagement" count="1" timeout="0" stopOnError="2" stopOnException="2" description="">
+								<testParameters>
+									<param0 name="loginUserName" type="3" localVarName="loginUserName" localVarLevel="1" value="" />
+									<param1 name="loginPassword" type="3" localVarName="loginPassword" localVarLevel="1" value="" />
+									<param2 name="patientId" type="3" localVarName="newPatientId" localVarLevel="1" value="" />
+									<param3 name="patientName" type="3" localVarName="newPatientName" localVarLevel="1" value="" />
+									<param4 name="newConfigName" type="3" localVarName="newConfigName" localVarLevel="1" value="" />
+								</testParameters>
+								<children />
+							</testItem>
+							<testItem name="case096" key="{2A9DE39A-B79E-4011-B3DD-EBBE242D8373}" group="False" enabled="True" testMoniker="{3DC1B963-047D-4107-9150-2AD91B9FF602}deleteCurrentMachineManagementThenCancel" count="1" timeout="0" stopOnError="2" stopOnException="2" description="">
+								<testParameters>
+									<param0 name="loginUserName" type="3" localVarName="loginUserName" localVarLevel="1" value="" />
+									<param1 name="loginPassword" type="3" localVarName="loginPassword" localVarLevel="1" value="" />
+								</testParameters>
+								<children />
+							</testItem>
+							<testItem name="case097_todo" key="{A5960A40-EA48-46BB-BED5-A22C7368EE71}" group="False" enabled="True" testMoniker="{EE977968-5B90-4B5A-968C-25DD86F19B8E}deleteCurrentMachineManagementThenCancel" count="1" timeout="0" stopOnError="2" stopOnException="2" description="">
+								<testParameters>
+									<param0 name="loginUserName" type="3" localVarName="loginUserName" localVarLevel="1" value="" />
+									<param1 name="loginPassword" type="3" localVarName="loginPassword" localVarLevel="1" value="" />
+									<param2 name="patientId" type="3" localVarName="newPatientId" localVarLevel="1" value="" />
+									<param3 name="patientName" type="3" localVarName="newPatientName" localVarLevel="1" value="" />
 								</testParameters>
 								<children />
 							</testItem>
@@ -285,35 +671,35 @@
 	<variables key="{E49587B3-76C8-4ED6-94EC-B7DED7D37C22}">
 		<data Version="3">
 			<Items>
-				<Variable Name="username" Type="{123F0C0F-44B4-4BAF-B0E6-F3F89FD873B5}" Local="False">
+				<Variable Name="loginUserName" Type="{123F0C0F-44B4-4BAF-B0E6-F3F89FD873B5}" Local="False">
 					<DefValue StrValue="6F0075007200" />
 				</Variable>
-				<Variable Name="password" Type="{123F0C0F-44B4-4BAF-B0E6-F3F89FD873B5}" Local="False">
+				<Variable Name="loginPassword" Type="{123F0C0F-44B4-4BAF-B0E6-F3F89FD873B5}" Local="False">
 					<DefValue StrValue="310032003300" />
 				</Variable>
-				<Variable Name="newusername" Type="{123F0C0F-44B4-4BAF-B0E6-F3F89FD873B5}" Local="False">
-					<DefValue StrValue="7400650073007400" />
+				<Variable Name="newUserName" Type="{123F0C0F-44B4-4BAF-B0E6-F3F89FD873B5}" Local="False">
+					<DefValue StrValue="6100750074006F007500730065007200" />
 				</Variable>
-				<Variable Name="newuserpassword" Type="{123F0C0F-44B4-4BAF-B0E6-F3F89FD873B5}" Local="False">
+				<Variable Name="newUserPassword" Type="{123F0C0F-44B4-4BAF-B0E6-F3F89FD873B5}" Local="False">
 					<DefValue StrValue="310032003300" />
 				</Variable>
-				<Variable Name="newusertype" Type="{123F0C0F-44B4-4BAF-B0E6-F3F89FD873B5}" Local="False">
+				<Variable Name="newUserType" Type="{123F0C0F-44B4-4BAF-B0E6-F3F89FD873B5}" Local="False">
 					<DefValue StrValue="54006500630068006E0069006300690061006E00" />
 				</Variable>
-				<Variable Name="editusertype" Type="{123F0C0F-44B4-4BAF-B0E6-F3F89FD873B5}" Local="False">
+				<Variable Name="editUserType" Type="{123F0C0F-44B4-4BAF-B0E6-F3F89FD873B5}" Local="False">
 					<DefValue StrValue="560069007300690074006F007200" />
 				</Variable>
-				<Variable Name="edituserpassword" Type="{123F0C0F-44B4-4BAF-B0E6-F3F89FD873B5}" Local="False">
-					<DefValue StrValue="3100320033003400" />
+				<Variable Name="editUserPassword" Type="{123F0C0F-44B4-4BAF-B0E6-F3F89FD873B5}" Local="False">
+					<DefValue StrValue="310031003100" />
 				</Variable>
-				<Variable Name="newpatientname" Type="{123F0C0F-44B4-4BAF-B0E6-F3F89FD873B5}" Local="False">
-					<DefValue StrValue="7A007400650073007400" />
+				<Variable Name="newPatientName" Type="{123F0C0F-44B4-4BAF-B0E6-F3F89FD873B5}" Local="False">
+					<DefValue StrValue="6100750074006F00500061007400690065006E007400" />
 				</Variable>
-				<Variable Name="newpatientid" Type="{123F0C0F-44B4-4BAF-B0E6-F3F89FD873B5}" Local="False">
-					<DefValue StrValue="7A007400650073007400" />
+				<Variable Name="newPatientId" Type="{123F0C0F-44B4-4BAF-B0E6-F3F89FD873B5}" Local="False">
+					<DefValue StrValue="6100750074006F0049006400" />
 				</Variable>
-				<Variable Name="editpatientname" Type="{123F0C0F-44B4-4BAF-B0E6-F3F89FD873B5}" Local="False">
-					<DefValue StrValue="7A0074006500730074007A007400650073007400" />
+				<Variable Name="editPatientName" Type="{123F0C0F-44B4-4BAF-B0E6-F3F89FD873B5}" Local="False">
+					<DefValue StrValue="700061007400690065006E0074006100750074006F006300680061006E0067006500" />
 				</Variable>
 				<Variable Name="treatpart" Type="{123F0C0F-44B4-4BAF-B0E6-F3F89FD873B5}" Local="False">
 					<DefValue StrValue="590041004E00470020004400410020005A0048004F004E004700" />
@@ -321,7 +707,7 @@
 				<Variable Name="percentage" Type="{123F0C0F-44B4-4BAF-B0E6-F3F89FD873B5}" Local="False">
 					<DefValue StrValue="35003000" />
 				</Variable>
-				<Variable Name="dosevalue" Type="{123F0C0F-44B4-4BAF-B0E6-F3F89FD873B5}" Local="False">
+				<Variable Name="doseValue" Type="{123F0C0F-44B4-4BAF-B0E6-F3F89FD873B5}" Local="False">
 					<DefValue StrValue="3200300030003000" />
 				</Variable>
 				<Variable Name="pointX" Type="{123F0C0F-44B4-4BAF-B0E6-F3F89FD873B5}" Local="False">
@@ -350,6 +736,27 @@
 				</Variable>
 				<Variable Name="indel" Type="{F38B9AD1-7B22-410F-95FC-6D9420FDE947}" Local="False">
 					<DefValue />
+				</Variable>
+				<Variable Name="newUserConfirmedPassword" Type="{123F0C0F-44B4-4BAF-B0E6-F3F89FD873B5}" Local="False">
+					<DefValue StrValue="3100320033003400" />
+				</Variable>
+				<Variable Name="newConfigName" Type="{123F0C0F-44B4-4BAF-B0E6-F3F89FD873B5}" Local="False">
+					<DefValue StrValue="6100750074006F0043006F006E00660069006700" />
+				</Variable>
+				<Variable Name="editMachineTab" Type="{123F0C0F-44B4-4BAF-B0E6-F3F89FD873B5}" Local="False" Descr="0-7&#32;&#32;General Information---FrameParamters">
+					<DefValue StrValue="3000" />
+				</Variable>
+				<Variable Name="editMachineProperty" Type="{123F0C0F-44B4-4BAF-B0E6-F3F89FD873B5}" Local="False">
+					<DefValue StrValue="48006F00730070006900740061006C0020004400650073006300720069007000740069006F006E00" />
+				</Variable>
+				<Variable Name="editMachinePropertyValue" Type="{123F0C0F-44B4-4BAF-B0E6-F3F89FD873B5}" Local="False">
+					<DefValue StrValue="700065006F00700065007200740079006100750074006F006300680061006E0067006500" />
+				</Variable>
+				<Variable Name="editMachineTabProperty" Type="{123F0C0F-44B4-4BAF-B0E6-F3F89FD873B5}" Local="False">
+					<DefValue StrValue="52006F0074006100740065002000540069006D006500" />
+				</Variable>
+				<Variable Name="editMachineTabPropertyValue" Type="{123F0C0F-44B4-4BAF-B0E6-F3F89FD873B5}" Local="False">
+					<DefValue StrValue="310031003100" />
 				</Variable>
 			</Items>
 		</data>
@@ -423,7 +830,7 @@
 		<setting name="{3FC03B2F-1B76-433D-86AE-20B18B2CA600}" type="1" value="True" />
 		<setting name="{A4D0B1B0-14DA-4AFA-8AFC-E82D0400E7E9}" type="1" value="True" />
 		<setting name="{542B9FA0-35EA-4C4D-BF0B-661005CB94E9}" type="2" value="60000" />
-		<setting name="CountProcessesOfAllUsers" type="1" value="True" />
+		<setting name="CountProcessesOfAllUsers" type="1" value="False" />
 		<setting name="{949057FA-CBDC-4A23-BB7F-9A25DCAE8729}" type="6" rowIndex="1" colIndex="0">
 			<columns>
 				<column type="5" enabled="True" />
@@ -543,7 +950,7 @@
 			<data />
 		</setting>
 		<setting name="{3FC2A7B4-F4AF-4807-8D37-C3EE096DD330}" type="2" value="1024" />
-		<setting name="{9EB8E8E6-D2F2-4A8A-ADFB-492E8C0EAFEF}" type="2" value="10000" />
+		<setting name="{9EB8E8E6-D2F2-4A8A-ADFB-492E8C0EAFEF}" type="2" value="5000" />
 		<setting name="{47A56F4F-F2D3-4697-BEC8-632B29D5A344}" type="6" rowIndex="11" colIndex="1">
 			<columns>
 				<column type="1" enabled="True" />

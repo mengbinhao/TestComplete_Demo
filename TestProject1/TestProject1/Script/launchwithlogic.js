@@ -1,26 +1,17 @@
-﻿var indelplanUI = require("indelplanUI");
-var launch = require("launch");
-var utilsfunction = require("utilsfunction");
+﻿var utilsfunction = require("utilsfunction");
+var exitwithlogic = require("exitwithlogic");
 
 function launchWithLogic() {
     let indel = Project.Variables.indel;
     //Exists: true if the object exist in the system
     //Visible: specifies whether an onscreen object is visible to user
-    if(indel.login.Exists == false) {
-        launch.launch();
+    if(!indel.logonClass.Exists) {
+        TestedApps.IndelPlanV2_0.Run();
     } else {
-        Sys.Process(indel.procesName).Close();
-        //handle locate main UI
-        if (indel.quit_popup.Exists) {
-            indel.quit_popup.qt_msgbox_buttonbox.buttonYes.ClickButton();
-        } else if (indel.update_popup.Exists) {
-            indel.update_popup.qt_msgbox_buttonbox.buttonNo.ClickButton();
-            utilsfunction.delay(5000);
-            indel.quit_popup.qt_msgbox_buttonbox.buttonYes.ClickButton();
-        }
-
-        utilsfunction.delay(3000);
-        launch.launch();
+        exitwithlogic.exitWithLogic();
+        //better to wait a while
+        utilsfunction.delay(5000);
+        TestedApps.IndelPlanV2_0.Run();
     }
 }
 

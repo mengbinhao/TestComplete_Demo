@@ -1,10 +1,10 @@
 ﻿function getVariableValue(variableName) {
-  let ret = '';
-  var Variables = Project.Variables;
-  if (Variables.VariableExists(variableName)) {
+    let ret = '';
+    var Variables = Project.Variables;
+    if (Variables.VariableExists(variableName)) {
       ret = Variables.GetVariableDefaultValue(variableName);
-  }
-  return ret; 
+    }
+    return ret; 
 }
 
 module.exports.getVariableValue = getVariableValue;

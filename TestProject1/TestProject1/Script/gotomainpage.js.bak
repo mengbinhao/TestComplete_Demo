@@ -1,43 +1,54 @@
-﻿var indelplanUI = require("indelplanUI");
-var utilsfunction = require("utilsfunction");
+﻿var utilsfunction = require("utilsfunction");
 
-function gotomainpage() {
-    let indel = indelplanUI.getUI();
+//from patient detail to main
+function gotoMainPage(isSavePatient = false, isFinish = false, isSavePlan = false) {
+    let indel = Project.Variables.indel;
     
-    indel.intergratedGamaClass.Close();
+    indel.IntergratedGamaClass.Close();    
+     
     
-    if (indel.update_popup.Exists) {
-        indel.update_popup.qt_msgbox_buttonbox.buttonYes.ClickButton();
-        utilsfunction.delay(60000)
-    }
-    
-    if (indel.contour_to_plan_popup.Exists) {
-        indel.contour_to_plan_popup.qt_msgbox_buttonbox.buttonYes.ClickButton();   
-    }
-    
-    if (indel.update_popup.Exists) {
-        indel.update_popup.qt_msgbox_buttonbox.buttonYes.ClickButton();   
-        utilsfunction.delay(60000)
-    }
-    
-    if (indel.update_then_save_popup.Exists) {
-        indel.update_then_save_popup.qt_msgbox_buttonbox.buttonYes.ClickButton();   
+    if (indel.stackedWidget.PlanGUI.Visible || !indel.groupBox.frame.pushButton_Logout.Visible) {
+        handler(indel, isSavePatient, isFinish, isSavePlan);
     }
 
-    if (indel.plan_finished_popup.Exists) {
-        indel.plan_finished_popup.qt_msgbox_buttonbox.buttonYes.ClickButton();   
-    }    
-    
-    //Here is a bug
-    //Here is a bug
-    while (indel.save_popup.Exists) {
-        indel.save_popup.qt_msgbox_buttonbox.buttonOk.ClickButton();   
-    }
-    
-    if (indel.confirm_popup.Exists) {
-        indel.confirm_popup.qt_msgbox_buttonbox.buttonOk.ClickButton();   
-    }
-    
+    //click cancel go to main UI
     indel.quit_popup.qt_msgbox_buttonbox.buttonCancel.ClickButton();
-    aqObject.CheckProperty(indel.patientManagementWidget.groupBox.frame.pushButton_SystemLog, "Visible", cmpEqual, true);
 }
+
+function handler(indel, isSavePatient, isFinish, isSavePlan) {
+    if (indel.patient_update_popup.Exists) {
+        let btnBox = indel.patient_update_popup.qt_msgbox_buttonbox;
+        isSavePatient ? btnBox.buttonYes.ClickButton() : btnBox.buttonNo.ClickButton();
+        utilsfunction.delay(10000);
+    }
+    
+    while (indel.contour_skin_incomplete_popup.Exists) {
+        indel.contour_skin_incomplete_popup.qt_msgbox_buttonbox.buttonYes.ClickButton();
+    }
+    
+    utilsfunction.delay(5000);
+    
+    if (indel.plan_want_save_popup.Exists) {
+        indel.plan_want_save_popup.qt_msgbox_buttonbox.buttonYes.ClickButton();
+    }
+    
+    if (indel.plan_finished_popup.Exists) {
+        let btnBox = indel.plan_finished_popup.qt_msgbox_buttonbox;
+        isFinish ? btnBox.buttonYes.ClickButton() : btnBox.buttonNo.ClickButton();
+    }
+    
+    if (indel.plan_finished_popup.Exists) {
+        let btnBox = indel.plan_finished_popup.qt_msgbox_buttonbox;
+        isFinish ? btnBox.buttonYes.ClickButton() : btnBox.buttonNo.ClickButton();
+    }
+    
+    if (isSavePlan) {
+        //Here has a bug, use while loop
+        //Here has a bug, use while loop
+        while (indel.plan_save_popup.Exists) {
+            indel.plan_save_popup.qt_msgbox_buttonbox.buttonOk.ClickButton();
+        }
+    }
+}
+
+module.exports.gotoMainPage = gotoMainPage;
